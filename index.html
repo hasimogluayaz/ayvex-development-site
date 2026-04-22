@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AyveX Development | Web, App, Digital Products</title>
+  <meta
+    name="description"
+    content="AyveX Development develops modern websites and web applications and launches products from idea to release."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#hero" aria-label="AyveX Development home">
+        <img class="brand-logo" src="./assets/ayvex-logo-light.png" alt="AyveX Development logo"
+          onload="this.nextElementSibling.style.display='none'"
+          onerror="this.style.display='none'">
+        <span class="brand-text">AyveX Development</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#services" data-i18n="nav.services">Hizmetler</a>
+        <a href="#work" data-i18n="nav.projects">Projeler</a>
+        <a href="#process" data-i18n="nav.process">Surec</a>
+        <a href="#contact" data-i18n="nav.contact">Iletisim</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="langToggle" class="lang-toggle" type="button">TR</button>
+        <a class="button button-ghost" href="#contact" data-i18n="nav.cta">Teklif Al</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Daha hizli gelistir. Daha akilli yayinla.</p>
+          <h1>
+            <span data-i18n="hero.titleLine1">Egitim ve dijital urun odakli</span>
+            <span data-i18n="hero.titleLine2">web siteleri ve uygulamalar gelistiriyoruz.</span>
+          </h1>
+          <p class="hero-text" data-i18n="hero.text">
+            AyveX Development, web ve mobil odakli urunler gelistirir. Kurumsal siteler, web
+            uygulamalari ve ozel araclar icin tasarim, gelistirme ve yayinlama surecini birlikte
+            yonetiriz.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#work" data-i18n="hero.primaryCta">Projeleri Incele</a>
+            <a class="button button-secondary" href="#contact" data-i18n="hero.secondaryCta">Iletisime Gec</a>
+          </div>
+          <ul class="hero-metrics">
+            <li>
+              <strong data-i18n="hero.metric1Title">Education Products</strong>
+              <span data-i18n="hero.metric1Text">Play Store ve web tabanli uygulamalar</span>
+            </li>
+            <li>
+              <strong data-i18n="hero.metric2Title">Tool Platforms</strong>
+              <span data-i18n="hero.metric2Text">Dosya araclari ve verimlilik odakli cozumler</span>
+            </li>
+            <li>
+              <strong data-i18n="hero.metric3Title">Launch Ready</strong>
+              <span data-i18n="hero.metric3Text">Domain, SSL, hosting ve performans kurulumu</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="orb orb-a"></div>
+          <div class="orb orb-b"></div>
+          <div class="dashboard-card glass">
+            <div class="card-topline">
+              <span class="status-dot"></span>
+              <span data-i18n="hero.panelTitle">Urun Ozeti</span>
+            </div>
+            <div class="card-grid">
+              <article>
+                <small data-i18n="hero.panel1Label">Play Store</small>
+                <strong data-i18n="hero.panel1Value">Yayinda</strong>
+              </article>
+              <article>
+                <small data-i18n="hero.panel2Label">Web Platform</small>
+                <strong data-i18n="hero.panel2Value">Yayinda</strong>
+              </article>
+              <article>
+                <small data-i18n="hero.panel3Label">Cok Dilli Site</small>
+                <strong data-i18n="hero.panel3Value">TR + EN</strong>
+              </article>
+              <article>
+                <small data-i18n="hero.panel4Label">Olceklenebilir</small>
+                <strong data-i18n="hero.panel4Value">Cloud</strong>
+              </article>
+            </div>
+            <div class="mini-panels">
+              <div class="mini-panel"></div>
+              <div class="mini-panel"></div>
+              <div class="mini-panel accent"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust reveal">
+        <p data-i18n="trust.text">Odaklandigimiz urun alanlari:</p>
+        <div class="trust-strip">
+          <span>Education Apps</span>
+          <span>Web Platforms</span>
+          <span>File Tools</span>
+          <span>Landing Pages</span>
+          <span>Company Websites</span>
+          <span>Automation Tools</span>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="services.eyebrow">Hizmetler</p>
+          <h2 data-i18n="services.title">Fikirden yayina kadar uctan uca gelistirme</h2>
+          <p data-i18n="services.text">
+            Musteri kazanimi, urun buyumesi ve operasyon verimliligi odakli dijital cozumler
+            tasarlayip gelistiriyoruz.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <h3 data-i18n="services.card1Title">Kurumsal Web Siteleri</h3>
+            <p data-i18n="services.card1Text">Marka degerinizi guclendiren, hizli ve mobil uyumlu web siteleri.</p>
+          </article>
+          <article class="service-card reveal">
+            <h3 data-i18n="services.card2Title">Egitim Uygulamalari</h3>
+            <p data-i18n="services.card2Text">Play Store ve webde calisan egitim odakli urunler.</p>
+          </article>
+          <article class="service-card reveal">
+            <h3 data-i18n="services.card3Title">Dosya Araclari Platformu</h3>
+            <p data-i18n="services.card3Text">Donusturme, duzenleme ve verimlilik odakli web araclari.</p>
+          </article>
+          <article class="service-card reveal">
+            <h3 data-i18n="services.card4Title">Yayinlama ve Optimizasyon</h3>
+            <p data-i18n="services.card4Text">Hosting, SSL, SEO, performans ve teknik yayina alma sureci.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section work-section" id="work">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="work.eyebrow">Projeler</p>
+          <h2 data-i18n="work.title">Gelistirdigimiz urunler</h2>
+          <p data-i18n="work.text">Fikir asamasindan yayina kadar tasarim, gelistirme ve buyumesini birlikte yurutugumuz canli urunler.</p>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card reveal">
+            <div class="work-art gradient-a"></div>
+            <div class="work-copy">
+              <p class="work-type" data-i18n="work.card1Type">Education App</p>
+              <h3 data-i18n="work.card1Title">Loguna</h3>
+              <p data-i18n="work.card1Text">TYT, AYT ve LGS ogrencileri icin mufredat takibi, net analizi, haftalik plan ve hata defteri — Play Store ve web uzerinde ucretsiz.</p>
+              <div class="work-links">
+                <a class="work-link" href="https://loguna.com.tr/" target="_blank" rel="noreferrer" data-i18n="work.card1Link1">Web Sitesi</a>
+                <a class="work-link" href="https://play.google.com/store/apps/details?id=com.loguna.app" target="_blank" rel="noreferrer" data-i18n="work.card1Link2">Play Store</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-art gradient-b"></div>
+            <div class="work-copy">
+              <p class="work-type" data-i18n="work.card2Type">Web Tool Suite</p>
+              <h3 data-i18n="work.card2Title">ZapFile</h3>
+              <p data-i18n="work.card2Text">71 dosya araci sunan tarayici tabanli platform — yukleme yok, hesap gerekmiyor, tamamen ucretsiz.</p>
+              <div class="work-links">
+                <a class="work-link" href="https://www.zapfile.xyz/" target="_blank" rel="noreferrer" data-i18n="work.card2Link1">zapfile.xyz</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-art gradient-c"></div>
+            <div class="work-copy">
+              <p class="work-type" data-i18n="work.card3Type">Company Web</p>
+              <h3 data-i18n="work.card3Title">AyveX Development</h3>
+              <p data-i18n="work.card3Text">Marka, hizmetler ve urun vitrinini bir araya getiren iki dilli sirket sitesi.</p>
+              <div class="work-links">
+                <a class="work-link" href="#hero" data-i18n="work.card3Link1">Bu Site</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section process-section" id="process">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="process.eyebrow">Calisma Modeli</p>
+          <h2 data-i18n="process.title">Hizli karar, temiz kod, net teslim</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span>01</span>
+            <h3 data-i18n="process.step1Title">Ihtiyac Analizi</h3>
+            <p data-i18n="process.step1Text">Hedef, hedef kitle, teknik kapsam ve sayfa yapisini netlestiririz.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <span>02</span>
+            <h3 data-i18n="process.step2Title">Tasarim Sistemi</h3>
+            <p data-i18n="process.step2Text">Marka diliyle uyumlu modern arayuz ve komponent yapisi kurariz.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <span>03</span>
+            <h3 data-i18n="process.step3Title">Gelistirme ve Test</h3>
+            <p data-i18n="process.step3Text">Responsive kodlama, hiz optimizasyonu ve kalite kontrolleri yapariz.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <span>04</span>
+            <h3 data-i18n="process.step4Title">Yayin ve Buyume</h3>
+            <p data-i18n="process.step4Text">Domain baglantisi, hosting, SSL ve sonraki gelisim adimlarini tamamlariz.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section about-section">
+        <div class="about-card reveal">
+          <div>
+            <p class="eyebrow" data-i18n="about.eyebrow">Neden AyveX?</p>
+            <h2 data-i18n="about.title">Urun odakli teknik kaliteyi sade bir deneyimle birlestiriyoruz</h2>
+          </div>
+          <p data-i18n="about.text">
+            Sadece tasarim degil, yayina alinmis ve kullanilan urunler uretmeye odaklaniyoruz.
+            Bu yaklasim, sirket sitenizi bir vitrin olmaktan cikarip bir buyume kanalina donusturur.
+          </p>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-panel reveal">
+          <div>
+            <p class="eyebrow" data-i18n="contact.eyebrow">Iletisim</p>
+            <h2 data-i18n="contact.title">Projenizi birlikte planlayalim</h2>
+            <p data-i18n="contact.text">
+              Yeni bir urun fikriniz mi var? Mevcut bir projeyi buyutmek mi istiyorsunuz?
+              Birlikte konusalim.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a class="button" href="mailto:info@ayvexdevelopment.com">info@ayvexdevelopment.com</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
