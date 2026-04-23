@@ -544,6 +544,10 @@ document.querySelectorAll(".button").forEach(btn => {
 (function initAurora() {
   const canvas = document.getElementById("aurora-canvas");
   if (!canvas) return;
+  if (prefersReducedMotion || window.matchMedia("(pointer: coarse)").matches) {
+    canvas.style.display = "none";
+    return;
+  }
   const ctx    = canvas.getContext("2d");
   let W, H, blobs;
   let mouse    = { x: 0, y: 0 };
