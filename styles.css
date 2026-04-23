@@ -258,7 +258,7 @@ body {
   color: #04090f;
   background: linear-gradient(135deg, var(--accent) 0%, #93e8d8 50%, var(--accent-2) 100%);
   background-size: 200% 200%;
-  animation: btn-shimmer 4s ease infinite;
+  background-position: 0% 50%;
   box-shadow: 0 0 24px var(--glow-cyan), 0 4px 16px rgba(0,0,0,0.3);
   cursor: pointer;
   overflow: hidden;
@@ -2626,4 +2626,40 @@ body::-webkit-scrollbar-thumb:hover {
   .footer {
     border-radius: 22px;
   }
+}
+
+/* ─────────────────────────────────────────
+   MOBILE PERFORMANCE — pointer:coarse
+   Disable all GPU-heavy infinite animations
+   and blur operations on touch devices
+───────────────────────────────────────── */
+@media (pointer: coarse) {
+  /* Kill infinite CSS animations */
+  .button                 { animation: none; }
+  .eyebrow                { animation: none; }
+  .hero-copy::before      { display: none; }
+  .hero h1::after         { animation: none; opacity: 0.35; transform: scaleX(0.8); }
+  .hero-visual            { animation: none; }
+  .dashboard-card::before { animation: none; filter: none !important; }
+  .dashboard-card::after  { display: none; }
+  .status-dot             { animation: none; box-shadow: 0 0 0 3px rgba(94,234,212,0.25); }
+  .trust-live-dot         { animation: none; }
+
+  /* Remove hero background blur layers */
+  .hero::before,
+  .hero::after            { display: none; }
+
+  /* Orbs — remove blur+animation (biggest single culprit) */
+  .orb                    { animation: none; filter: none; opacity: 0.35; }
+
+  /* Remove all backdrop-filter */
+  .dashboard-card         { backdrop-filter: none !important; background: rgba(6,14,30,0.92) !important; }
+  .hero-metrics li        { backdrop-filter: none; }
+  .glass                  { backdrop-filter: none; }
+
+  /* Disable 3D tilt hover transforms (JS sets inline style, override here) */
+  .work-card:not(:active),
+  .service-card:not(:active),
+  .timeline-item:not(:active),
+  .why-card:not(:active)  { transform: none !important; }
 }

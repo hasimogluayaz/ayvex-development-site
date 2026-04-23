@@ -500,6 +500,7 @@ sectionMap.forEach((_, section) => spyOb.observe(section));
 
 /* ─── 3D Tilt on Cards ──────────────────────────────────── */
 function initTilt(selector, intensity = 8) {
+  if (window.matchMedia("(pointer: coarse)").matches) return;
   document.querySelectorAll(selector).forEach(card => {
     card.addEventListener("mousemove", e => {
       const rect = card.getBoundingClientRect();
@@ -524,7 +525,8 @@ initTilt(".timeline-item", 4);
 initTilt(".why-card", 5);
 
 /* ─── Magnetic Buttons ──────────────────────────────────── */
-document.querySelectorAll(".button").forEach(btn => {
+if (window.matchMedia("(pointer: coarse)").matches) { /* skip on touch */ }
+else document.querySelectorAll(".button").forEach(btn => {
   if (btn.closest(".site-header")) return;
 
   btn.addEventListener("mousemove", e => {
