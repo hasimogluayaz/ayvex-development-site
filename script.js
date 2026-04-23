@@ -309,19 +309,7 @@ if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 /* ─── Reduced motion detection ──────────────────────────── */
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-/* ─── Cursor spotlight ──────────────────────────────────── */
-(() => {
-  if (prefersReducedMotion || window.matchMedia("(pointer: coarse)").matches) return;
-  let raf = 0;
-  window.addEventListener("pointermove", event => {
-    if (raf) return;
-    raf = requestAnimationFrame(() => {
-      document.documentElement.style.setProperty("--spot-x", `${event.clientX}px`);
-      document.documentElement.style.setProperty("--spot-y", `${event.clientY}px`);
-      raf = 0;
-    });
-  }, { passive: true });
-})();
+/* Cursor spotlight removed — body::after fixed layer caused compositor lag. */
 
 /* ─── Hero word rotator ─────────────────────────────────── */
 (() => {
@@ -498,142 +486,12 @@ const spyOb = new IntersectionObserver(entries => {
 
 sectionMap.forEach((_, section) => spyOb.observe(section));
 
-/* ─── 3D Tilt on Cards ──────────────────────────────────── */
-function initTilt(selector, intensity = 8) {
-  if (window.matchMedia("(pointer: coarse)").matches) return;
-  document.querySelectorAll(selector).forEach(card => {
-    card.addEventListener("mousemove", e => {
-      const rect = card.getBoundingClientRect();
-      const cx   = rect.left + rect.width  / 2;
-      const cy   = rect.top  + rect.height / 2;
-      const dx   = (e.clientX - cx) / (rect.width  / 2);
-      const dy   = (e.clientY - cy) / (rect.height / 2);
-      const rotX = -dy * intensity;
-      const rotY =  dx * intensity;
-      card.style.transform = `perspective(800px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.02)`;
-    });
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "";
-      card.style.transition = "transform 600ms cubic-bezier(0.16,1,0.3,1)";
-      setTimeout(() => { card.style.transition = ""; }, 650);
-    });
-  });
-}
-initTilt(".work-card", 7);
-initTilt(".service-card", 5);
-initTilt(".timeline-item", 4);
-initTilt(".why-card", 5);
+/* 3D tilt, magnetic buttons and aurora canvas removed for performance.
+   Kept lightweight interactions: reveal-on-scroll, word rotator,
+   count-up, back-to-top, cookie banner, mobile menu, scroll progress. */
 
-/* ─── Magnetic Buttons ──────────────────────────────────── */
-if (window.matchMedia("(pointer: coarse)").matches) { /* skip on touch */ }
-else document.querySelectorAll(".button").forEach(btn => {
-  if (btn.closest(".site-header")) return;
-
-  btn.addEventListener("mousemove", e => {
-    const rect = btn.getBoundingClientRect();
-    const dx   = e.clientX - (rect.left + rect.width  / 2);
-    const dy   = e.clientY - (rect.top  + rect.height / 2);
-    btn.style.transform = `translate(${dx * 0.22}px, ${dy * 0.22}px) translateY(-2px)`;
-  });
-  btn.addEventListener("mouseleave", () => {
-    btn.style.transform = "";
-    btn.style.transition = "transform 500ms cubic-bezier(0.16,1,0.3,1)";
-    setTimeout(() => { btn.style.transition = ""; }, 520);
-  });
-});
-
-/* ─── Aurora Canvas ─────────────────────────────────────── */
-(function initAurora() {
+/* Remove aurora canvas element from DOM if present */
+(function removeAurora() {
   const canvas = document.getElementById("aurora-canvas");
-  if (!canvas) return;
-  if (prefersReducedMotion || window.matchMedia("(pointer: coarse)").matches) {
-    canvas.style.display = "none";
-    return;
-  }
-  const ctx    = canvas.getContext("2d");
-  let W, H, blobs;
-  let mouse    = { x: 0, y: 0 };
-  let raf;
-
-  const COLORS = [
-    [129, 140, 248],   // violet
-    [ 94, 234, 212],   // cyan
-    [ 52, 211, 153],   // emerald
-    [167,  85, 247],   // purple
-    [ 99, 102, 241],   // indigo
-  ];
-
-  function makeBlob(i) {
-    return {
-      x:    Math.random() * W,
-      y:    Math.random() * H,
-      vx:   (Math.random() - 0.5) * 0.35,
-      vy:   (Math.random() - 0.5) * 0.35,
-      r:    Math.random() * 0.28 * Math.min(W, H) + 0.12 * Math.min(W, H),
-      col:  COLORS[i % COLORS.length],
-      phase:  Math.random() * Math.PI * 2,
-      speed:  0.004 + Math.random() * 0.003,
-    };
-  }
-
-  function resize() {
-    W = canvas.width  = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-    blobs = Array.from({ length: 6 }, (_, i) => makeBlob(i));
-  }
-
-  function draw(t) {
-    ctx.clearRect(0, 0, W, H);
-
-    blobs.forEach(b => {
-      const mx = (mouse.x / W - 0.5) * 60;
-      const my = (mouse.y / H - 0.5) * 40;
-
-      b.x += b.vx + Math.sin(t * b.speed + b.phase) * 0.4;
-      b.y += b.vy + Math.cos(t * b.speed + b.phase) * 0.3;
-
-      if (b.x < -b.r) b.x = W + b.r;
-      if (b.x > W + b.r) b.x = -b.r;
-      if (b.y < -b.r) b.y = H + b.r;
-      if (b.y > H + b.r) b.y = -b.r;
-
-      const px = b.x + mx;
-      const py = b.y + my;
-
-      const g = ctx.createRadialGradient(px, py, 0, px, py, b.r);
-      const [r, gr, bl] = b.col;
-      g.addColorStop(0,   `rgba(${r},${gr},${bl},0.22)`);
-      g.addColorStop(0.45,`rgba(${r},${gr},${bl},0.08)`);
-      g.addColorStop(1,   `rgba(${r},${gr},${bl},0)`);
-
-      ctx.beginPath();
-      ctx.arc(px, py, b.r, 0, Math.PI * 2);
-      ctx.fillStyle = g;
-      ctx.fill();
-    });
-
-    raf = requestAnimationFrame(draw);
-  }
-
-  window.addEventListener("mousemove", e => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-  }, { passive: true });
-
-  window.addEventListener("resize", () => {
-    cancelAnimationFrame(raf);
-    resize();
-    raf = requestAnimationFrame(draw);
-  });
-
-  resize();
-  raf = requestAnimationFrame(draw);
+  if (canvas) canvas.remove();
 })();
-
-/* ─── Topbar shadow on scroll ───────────────────────────── */
-const topbar = document.querySelector(".topbar");
-if (topbar) {
-  window.addEventListener("scroll", () => {
-    topbar.style.boxShadow = "";
-  }, { passive: true });
-}

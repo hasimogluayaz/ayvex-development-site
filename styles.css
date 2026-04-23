@@ -2,6 +2,13 @@
    AYVEX DEVELOPMENT — Next-gen design system
    ============================================================ */
 
+/* Performance overrides — disable all backdrop-filter globally
+   (each instance creates a GPU compositor layer) */
+* {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
 :root {
   --bg:          #04090f;
   --panel:       rgba(8, 18, 36, 0.6);
@@ -25,19 +32,8 @@ html { scroll-behavior: smooth; }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 
-/* ── Aurora canvas — desktop only ── */
-#aurora-canvas {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.55;
-}
-@media (pointer: coarse) {
-  #aurora-canvas { display: none; }
-}
+/* Aurora canvas removed for performance */
+#aurora-canvas { display: none; }
 
 /* ── Scroll progress ── */
 #scroll-progress {
@@ -65,21 +61,7 @@ body {
 
 /* Noise overlay — removed SVG feTurbulence (GPU expensive, barely visible) */
 
-@media (pointer: fine) {
-  body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    opacity: 0.72;
-    background:
-      radial-gradient(460px circle at var(--spot-x, 72%) var(--spot-y, 18%),
-        rgba(94,234,212,0.085),
-        rgba(129,140,248,0.045) 38%,
-        transparent 72%);
-  }
-}
+/* Cursor spotlight removed for performance */
 
 /* ── Shell ── */
 .site-shell {
@@ -279,11 +261,7 @@ body {
   transform: none;
 }
 
-@keyframes btn-shimmer {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+/* btn-shimmer removed for perf */
 
 .button-secondary, .button-ghost {
   color: var(--text);
@@ -391,13 +369,6 @@ h2 {
   text-transform: uppercase;
   color: var(--accent);
   background: rgba(94, 234, 212, 0.08);
-  box-shadow: 0 0 28px rgba(94,234,212,0.08);
-  animation: eyebrow-glow 3.6s ease-in-out infinite;
-}
-
-@keyframes eyebrow-glow {
-  0%, 100% { border-color: rgba(94,234,212,0.24); box-shadow: 0 0 18px rgba(94,234,212,0.06); }
-  50%      { border-color: rgba(94,234,212,0.52); box-shadow: 0 0 34px rgba(94,234,212,0.14); }
 }
 
 /* ─────────────────────────────────────────
@@ -417,37 +388,13 @@ h2 {
 .hero::before {
   content: "";
   position: absolute;
-  inset: -120px -22vw -150px;
+  inset: -60px -12vw -80px;
   z-index: -2;
-  opacity: 0.9;
+  opacity: 0.6;
   background:
-    radial-gradient(ellipse at 18% 24%, rgba(94,234,212,0.24), transparent 36%),
-    radial-gradient(ellipse at 76% 22%, rgba(129,140,248,0.22), transparent 34%),
-    radial-gradient(ellipse at 52% 84%, rgba(14,165,233,0.13), transparent 38%);
-  filter: blur(18px);
+    radial-gradient(ellipse at 18% 24%, rgba(94,234,212,0.18), transparent 36%),
+    radial-gradient(ellipse at 76% 22%, rgba(129,140,248,0.16), transparent 34%);
   pointer-events: none;
-  animation: hero-aurora-breathe 13s ease-in-out infinite alternate;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 8% -20vw auto;
-  height: 68%;
-  z-index: -1;
-  opacity: 0.5;
-  background:
-    linear-gradient(110deg,
-      transparent 8%,
-      rgba(94,234,212,0.15) 28%,
-      rgba(129,140,248,0.13) 52%,
-      rgba(251,146,60,0.06) 64%,
-      transparent 84%);
-  filter: blur(34px);
-  mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
-  pointer-events: none;
-  animation: hero-ribbon-drift 11s ease-in-out infinite alternate;
 }
 
 .hero-copy,
@@ -456,35 +403,7 @@ h2 {
   z-index: 1;
 }
 
-.hero-copy::before {
-  content: "";
-  position: absolute;
-  left: -18px;
-  top: 42px;
-  width: 3px;
-  height: 180px;
-  border-radius: 999px;
-  background: linear-gradient(to bottom, transparent, var(--accent), var(--accent-2), transparent);
-  opacity: 0.55;
-  box-shadow: 0 0 28px rgba(94,234,212,0.45);
-  animation: hero-scan-line 4.8s ease-in-out infinite;
-}
-
-@keyframes hero-aurora-breathe {
-  from { transform: translate3d(-2%, -1%, 0) scale(0.98); }
-  to   { transform: translate3d(2%, 3%, 0) scale(1.05); }
-}
-
-@keyframes hero-ribbon-drift {
-  from { transform: translate3d(-4%, 0, 0) rotate(-4deg); }
-  to   { transform: translate3d(4%, 12px, 0) rotate(3deg); }
-}
-
-@keyframes hero-scan-line {
-  0%, 100% { transform: translateY(0); opacity: 0.25; }
-  45%      { transform: translateY(220px); opacity: 0.7; }
-  70%      { transform: translateY(220px); opacity: 0; }
-}
+/* hero scan-line and aurora/ribbon animations removed for perf */
 
 .hero-text {
   max-width: 56ch;
@@ -507,13 +426,7 @@ h2 {
   width: min(360px, 70%);
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--accent), var(--accent-2), transparent);
-  box-shadow: 0 0 18px rgba(94,234,212,0.45);
-  animation: headline-light 4.2s ease-in-out infinite;
-}
-
-@keyframes headline-light {
-  0%, 100% { opacity: 0.18; transform: scaleX(0.45); transform-origin: left; }
-  50%      { opacity: 0.9; transform: scaleX(1); transform-origin: left; }
+  opacity: 0.55;
 }
 
 .hero-actions {
@@ -535,8 +448,7 @@ h2 {
   padding: 20px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: var(--panel);
-  backdrop-filter: blur(12px);
+  background: rgba(10, 20, 38, 0.65);
   transition: border-color 300ms, box-shadow 300ms, transform 300ms;
 }
 .hero-metrics li:hover {
@@ -567,37 +479,22 @@ h2 {
 .hero-visual {
   position: relative;
   min-height: 560px;
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-14px); }
 }
 
 .orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(48px);
-  animation: orb-drift 10s ease-in-out infinite;
+  opacity: 0.55;
 }
 .orb-a {
   width: 220px; height: 220px;
   top: 20px; right: 10px;
-  background: radial-gradient(circle, rgba(129,140,248,0.7), transparent 65%);
-  animation-delay: 0s;
+  background: radial-gradient(circle, rgba(129,140,248,0.5), transparent 70%);
 }
 .orb-b {
   width: 260px; height: 260px;
   bottom: 30px; left: 0;
-  background: radial-gradient(circle, rgba(94,234,212,0.65), transparent 65%);
-  animation-delay: -3s;
-}
-
-@keyframes orb-drift {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33%       { transform: translate(16px, -20px) scale(1.08); }
-  66%       { transform: translate(-12px, 12px) scale(0.94); }
+  background: radial-gradient(circle, rgba(94,234,212,0.45), transparent 70%);
 }
 
 /* Dashboard glass card */
@@ -608,53 +505,12 @@ h2 {
   border: 1px solid var(--line-bright);
   border-radius: var(--radius-lg);
   background:
-    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.015)),
-    radial-gradient(circle at 20% 0%, rgba(94,234,212,0.11), transparent 42%),
-    rgba(6, 14, 30, 0.62);
-  backdrop-filter: blur(32px) saturate(160%);
+    linear-gradient(180deg, rgba(18,28,48,0.95), rgba(10,18,36,0.92)),
+    radial-gradient(circle at 20% 0%, rgba(94,234,212,0.11), transparent 42%);
   box-shadow:
     0 0 0 1px rgba(255,255,255,0.06) inset,
-    0 32px 80px rgba(0,0,0,0.5),
-    0 0 80px rgba(94,234,212,0.12);
+    0 24px 60px rgba(0,0,0,0.45);
   overflow: hidden;
-}
-
-/* Animated gradient border on dashboard card */
-.dashboard-card::before {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: linear-gradient(135deg, rgba(94,234,212,0.3), transparent 40%, rgba(129,140,248,0.25), transparent 70%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  padding: 1px;
-  pointer-events: none;
-  animation: border-spin 6s linear infinite;
-}
-@keyframes border-spin {
-  to { filter: hue-rotate(360deg); }
-}
-
-.dashboard-card::after {
-  content: "";
-  position: absolute;
-  left: -20%;
-  right: -20%;
-  top: -40%;
-  height: 34%;
-  background: linear-gradient(to bottom, transparent, rgba(94,234,212,0.16), transparent);
-  transform: rotate(-8deg);
-  animation: dashboard-scan 5.2s ease-in-out infinite;
-  pointer-events: none;
-}
-
-@keyframes dashboard-scan {
-  0%   { transform: translateY(-40%) rotate(-8deg); opacity: 0; }
-  18%  { opacity: 0.9; }
-  58%  { opacity: 0.25; }
-  100% { transform: translateY(430%) rotate(-8deg); opacity: 0; }
 }
 
 .card-topline {
@@ -1056,7 +912,6 @@ h2 {
     radial-gradient(at 82% 30%, rgba(236,72,153,0.45) 0%, transparent 50%),
     radial-gradient(at 30% 78%, rgba(99,102,241,0.6) 0%, transparent 55%),
     radial-gradient(at 70% 85%, rgba(59,130,246,0.5) 0%, transparent 50%);
-  animation: mesh-drift 14s ease infinite;
 }
 .gradient-b {
   background-color: #031a1a;
@@ -1065,7 +920,6 @@ h2 {
     radial-gradient(at 78% 22%, rgba(94,234,212,0.6) 0%, transparent 50%),
     radial-gradient(at 30% 80%, rgba(16,185,129,0.55) 0%, transparent 50%),
     radial-gradient(at 80% 75%, rgba(45,212,191,0.5) 0%, transparent 55%);
-  animation: mesh-drift 16s ease infinite reverse;
 }
 .gradient-c {
   background-color: #130a28;
@@ -1074,7 +928,6 @@ h2 {
     radial-gradient(at 75% 30%, rgba(94,234,212,0.45) 0%, transparent 45%),
     radial-gradient(at 35% 80%, rgba(139,92,246,0.6) 0%, transparent 55%),
     radial-gradient(at 80% 85%, rgba(217,70,239,0.4) 0%, transparent 50%);
-  animation: mesh-drift 15s ease infinite;
 }
 
 @keyframes mesh-drift {
@@ -2315,15 +2168,8 @@ body::-webkit-scrollbar-thumb:hover {
     overflow: visible;
   }
   .hero::before {
-    inset: -80px -40vw -100px;
-    opacity: 0.64;
-    filter: blur(24px);
-  }
-  .hero::after {
-    inset: 2% -52vw auto;
-    height: 62%;
-    opacity: 0.32;
-    filter: blur(38px);
+    inset: -40px -20vw -60px;
+    opacity: 0.5;
   }
   .hero-copy::before {
     display: none;
@@ -2376,13 +2222,8 @@ body::-webkit-scrollbar-thumb:hover {
     gap: 22px;
   }
   .hero::before {
-    inset: -54px -68vw -74px;
-    opacity: 0.46;
-    filter: blur(28px);
-  }
-  .hero::after {
-    opacity: 0.24;
-    filter: blur(38px);
+    inset: -30px -30vw -40px;
+    opacity: 0.4;
   }
   .hero h1::after {
     width: 76%;
