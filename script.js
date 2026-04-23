@@ -444,12 +444,37 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
   }, { passive: true });
 })();
 
-const progressBar = document.getElementById("scroll-progress");
-window.addEventListener("scroll", () => {
-  const scrolled = window.scrollY;
-  const total    = document.documentElement.scrollHeight - window.innerHeight;
-  progressBar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + "%";
-}, { passive: true });
+/* Scroll progress — transform:scaleX + cached total (no forced reflow) */
+(() => {
+  const bar = document.getElementById("scroll-progress");
+  if (!bar) return;
+  bar.style.transformOrigin = "0 50%";
+  bar.style.width = "100%";
+
+  let total = 0;
+  let ticking = false;
+
+  const recalcTotal = () => {
+    total = document.documentElement.scrollHeight - window.innerHeight;
+  };
+  recalcTotal();
+  window.addEventListener("resize", recalcTotal, { passive: true });
+  // Recompute when fonts load / images lazy-size
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(recalcTotal);
+  window.addEventListener("load", recalcTotal);
+
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const p = total > 0 ? Math.min(1, window.scrollY / total) : 0;
+      bar.style.transform = `scaleX(${p})`;
+      ticking = false;
+    });
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+})();
 
 /* ─── Reveal on Scroll ──────────────────────────────────── */
 const reveals  = document.querySelectorAll(".reveal");

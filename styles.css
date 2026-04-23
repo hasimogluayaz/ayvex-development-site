@@ -40,11 +40,13 @@ img { display: block; max-width: 100%; }
   position: fixed;
   top: 0; left: 0;
   height: 3px;
-  width: 0%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
   background: linear-gradient(90deg, var(--accent-2), var(--accent));
   z-index: 1000;
   box-shadow: 0 0 12px var(--glow-cyan);
-  transition: width 0.1s linear;
+  will-change: transform;
 }
 
 /* ── Body ── */
@@ -524,15 +526,23 @@ h2 {
 }
 
 .status-dot {
+  position: relative;
   width: 8px; height: 8px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 3px rgba(94,234,212,0.2);
-  animation: pulse-dot 2s ease infinite;
 }
-@keyframes pulse-dot {
-  0%, 100% { box-shadow: 0 0 0 3px rgba(94,234,212,0.2); }
-  50%       { box-shadow: 0 0 0 7px rgba(94,234,212,0); }
+.status-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: dot-pulse 2s ease-out infinite;
+  will-change: transform, opacity;
+}
+@keyframes dot-pulse {
+  0%   { transform: scale(1);   opacity: 0.6; }
+  100% { transform: scale(2.6); opacity: 0; }
 }
 
 .card-grid {
@@ -659,13 +669,21 @@ h2 {
 }
 
 .trust-live-dot {
+  position: relative;
   width: 7px;
   height: 7px;
   flex: 0 0 7px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 0 rgba(94,234,212,0.55);
-  animation: live-pulse 1.8s ease infinite;
+}
+.trust-live-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: dot-pulse 1.8s ease-out infinite;
+  will-change: transform, opacity;
 }
 
 .stack-marquee {
@@ -1202,14 +1220,22 @@ h2 {
    LIVE DOT (Hero eyebrow)
 ───────────────────────────────────────── */
 .live-dot {
+  position: relative;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 0 rgba(94,234,212,0.6);
-  animation: live-pulse 1.8s ease infinite;
 }
-@keyframes live-pulse {
+.live-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: dot-pulse 1.8s ease-out infinite;
+  will-change: transform, opacity;
+}
+@keyframes live-pulse-unused {
   0%   { box-shadow: 0 0 0 0 rgba(94,234,212,0.6); }
   70%  { box-shadow: 0 0 0 8px rgba(94,234,212,0); }
   100% { box-shadow: 0 0 0 0 rgba(94,234,212,0); }
