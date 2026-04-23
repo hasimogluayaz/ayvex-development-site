@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /assets/.gitkeep
 
 Sitemap: https://ayvexdevelopment.com/sitemap.xml
