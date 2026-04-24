@@ -353,8 +353,15 @@ main { position: relative; z-index: 1; }
   width: 180px;
   height: 180px;
   display: block;
-  filter: drop-shadow(0 12px 32px rgba(91, 43, 255, 0.55))
-          drop-shadow(0 0 60px rgba(34, 211, 238, 0.25));
+  filter:
+    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.35))
+    drop-shadow(0 2px 1px rgba(255, 255, 255, 0.15))
+    drop-shadow(0 6px 6px rgba(0, 0, 0, 0.4))
+    drop-shadow(0 18px 24px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 20px 40px rgba(91, 43, 255, 0.5))
+    drop-shadow(0 0 60px rgba(34, 211, 238, 0.2))
+    saturate(1.1)
+    contrast(1.05);
 }
 
 @keyframes logo-float {
