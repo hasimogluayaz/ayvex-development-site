@@ -180,12 +180,17 @@ body::before {
   letter-spacing: -0.01em;
 }
 
+.nav-panel {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
 .nav {
   display: flex;
   align-items: center;
   gap: 2px;
   padding: 0 6px;
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav a {
@@ -208,8 +213,8 @@ body::before {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding-left: 6px;
+  gap: 8px;
+  padding-left: 14px;
   border-left: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -1377,12 +1382,13 @@ main { position: relative; z-index: 1; }
     border: 1px solid var(--border-strong);
     border-radius: var(--radius-lg);
     padding: 24px 20px;
-    display: none;
+    display: none !important;
     flex-direction: column;
     gap: 20px;
     backdrop-filter: blur(20px);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   }
+  .site-header.is-menu-open .nav-panel { display: flex !important; }
   .site-header.is-menu-open .nav-panel { display: flex; }
   .nav {
     flex-direction: column;
@@ -1396,8 +1402,9 @@ main { position: relative; z-index: 1; }
   .header-actions {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 16px;
+    padding: 16px 0 0;
     border-top: 1px solid var(--border);
+    border-left: none;
   }
   .header-actions .button-ghost { flex: 1; justify-content: center; }
 
