@@ -29,6 +29,7 @@ const translations = {
     "hero.metric1Text":  "Canlı ürün deneyimi",
     "hero.metric2Text":  "Tarayıcı aracı",
     "hero.metric3Text":  "İlk dönüş hedefi",
+    "hero.liveStatus":   "Şu an canlı · 2 ürün, 71 araç aktif",
 
     "hero.panelTitle":  "Ürün Komuta Merkezi",
     "hero.panel1Label": "Loguna",
@@ -93,6 +94,19 @@ const translations = {
     "process.step3Text":  "Responsive kodlama, performans optimizasyonu, iç test ve staging ortamı.",
     "process.step4Title": "Yayın + Destek",
     "process.step4Text":  "Domain, SSL, analytics, monitoring kurulur. Sonrasında içerik ve büyüme desteği sürer.",
+
+    "process.step1d1": "Keşif görüşmesi (45-60 dk, Google Meet)",
+    "process.step1d2": "Hedef ve başarı metriklerinin çıkarılması",
+    "process.step1d3": "Kapsam dokümanı + yazılı sabit fiyat teklifi",
+    "process.step2d1": "Wireframe + bilgi mimarisi",
+    "process.step2d2": "Figma'da komponent kütüphanesi",
+    "process.step2d3": "Prototip tarama, mobil + masaüstü onayı",
+    "process.step3d1": "Next.js / React / Flutter — ihtiyaca göre",
+    "process.step3d2": "Lighthouse 95+ ve Core Web Vitals optimizasyonu",
+    "process.step3d3": "Staging ortamı, iç QA ve kabul testleri",
+    "process.step4d1": "Vercel / Cloudflare üzerine production deploy",
+    "process.step4d2": "Plausible / GA4 + uptime monitoring kurulumu",
+    "process.step4d3": "1 ay garanti, sonrası aylık bakım paketi",
 
     "faq.eyebrow": "Sık Sorulan Sorular",
     "faq.title":   "Aklınıza takılan ilk sorular.",
@@ -163,6 +177,7 @@ const translations = {
     "hero.metric1Text":  "Live product experience",
     "hero.metric2Text":  "Browser tools",
     "hero.metric3Text":  "First reply target",
+    "hero.liveStatus":   "Live now · 2 products, 71 tools active",
 
     "hero.panelTitle":  "Product Command Center",
     "hero.panel1Label": "Loguna",
@@ -227,6 +242,19 @@ const translations = {
     "process.step3Text":  "Responsive coding, performance optimization, internal QA and a staging environment.",
     "process.step4Title": "Launch + Support",
     "process.step4Text":  "Domain, SSL, analytics, monitoring set up. Content and growth support continues afterwards.",
+
+    "process.step1d1": "Discovery call (45-60 min, Google Meet)",
+    "process.step1d2": "Goal definition and success metrics",
+    "process.step1d3": "Scope document + written fixed-price quote",
+    "process.step2d1": "Wireframes + information architecture",
+    "process.step2d2": "Component library in Figma",
+    "process.step2d3": "Prototype walkthrough, mobile + desktop sign-off",
+    "process.step3d1": "Next.js / React / Flutter — per project needs",
+    "process.step3d2": "Lighthouse 95+ and Core Web Vitals tuning",
+    "process.step3d3": "Staging environment, internal QA and acceptance tests",
+    "process.step4d1": "Production deploy on Vercel / Cloudflare",
+    "process.step4d2": "Plausible / GA4 + uptime monitoring setup",
+    "process.step4d3": "1 month warranty, then monthly care plans",
 
     "faq.eyebrow": "FAQ",
     "faq.title":   "The first questions people ask.",
@@ -590,5 +618,50 @@ sectionMap.forEach((_, section) => spyOb.observe(section));
       btn.style.transform  = "translate(0,0)";
       setTimeout(() => { btn.style.transition = ""; }, 460);
     }, { passive: true });
+  });
+})();
+
+/* ─── Process Timeline — Expand/Collapse ────────────────── */
+(() => {
+  const items = document.querySelectorAll(".timeline-item");
+  if (!items.length) return;
+
+  items.forEach(item => {
+    const toggle = item.querySelector(".timeline-toggle");
+    if (!toggle) return;
+    toggle.addEventListener("click", () => {
+      const isOpen = item.classList.contains("is-expanded");
+      // Close all others (accordion behavior)
+      items.forEach(i => {
+        i.classList.remove("is-expanded");
+        const t = i.querySelector(".timeline-toggle");
+        if (t) t.setAttribute("aria-expanded", "false");
+      });
+      if (!isOpen) {
+        item.classList.add("is-expanded");
+        toggle.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+})();
+
+/* ─── Footer mail copy ──────────────────────────────────── */
+(() => {
+  const btn = document.querySelector(".footer-mail-copy");
+  if (!btn) return;
+  btn.addEventListener("click", async () => {
+    const mail = btn.dataset.mail || "info@ayvexdevelopment.com";
+    try {
+      await navigator.clipboard.writeText(mail);
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = mail;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); } catch {}
+      ta.remove();
+    }
+    btn.classList.add("is-copied");
+    setTimeout(() => btn.classList.remove("is-copied"), 1800);
   });
 })();
