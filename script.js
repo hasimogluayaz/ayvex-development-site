@@ -128,6 +128,15 @@ const translations = {
     "cookie.text":   "Bu site yalnızca temel çalışma için tarayıcı depolamasını kullanır (dil tercihi). İzleme çerezi kullanmıyoruz.",
     "cookie.accept": "Tamam",
     "cookie.more":   "Detay",
+
+    "testimonials.eyebrow": "Kullanıcı Yorumları",
+    "testimonials.title":   "Gerçek kullanıcılar, gerçek deneyimler.",
+    "testimonials.q1":      "\"Loguna sayesinde TYT net ortalamalarım ciddi şekilde arttı. Her şey tek yerde, hata defteri özelliği harika.\"",
+    "testimonials.role1":   "TYT öğrencisi · Loguna",
+    "testimonials.q2":      "\"ZapFile'ı her gün kullanıyorum. Kayıt gerektirmiyor, dosyalarım cihazımda kalıyor. Çok güvenli ve hızlı.\"",
+    "testimonials.role2":   "Grafik Tasarımcı · ZapFile",
+    "testimonials.q3":      "\"AyveX ile çalışmak oldukça profesyoneldi. Teklif net, süreç şeffaf, teslim zamanında. Tekrar çalışırız.\"",
+    "testimonials.role3":   "Girişimci · Müşteri",
   },
 
   en: {
@@ -253,6 +262,15 @@ const translations = {
     "cookie.text":   "This site only uses browser storage for essentials (language preference). No tracking cookies.",
     "cookie.accept": "Got it",
     "cookie.more":   "Details",
+
+    "testimonials.eyebrow": "User Reviews",
+    "testimonials.title":   "Real users, real experiences.",
+    "testimonials.q1":      "\"Loguna seriously improved my TYT average scores. Everything in one place, the error journal is brilliant.\"",
+    "testimonials.role1":   "TYT Student · Loguna User",
+    "testimonials.q2":      "\"I use ZapFile every single day. No sign-up needed, my files stay on my device. Fast and trustworthy.\"",
+    "testimonials.role2":   "Graphic Designer · ZapFile User",
+    "testimonials.q3":      "\"Working with AyveX was professional from start to finish. Clear proposal, transparent process, on-time delivery. Would work again.\"",
+    "testimonials.role3":   "Entrepreneur · AyveX Client",
   }
 };
 
@@ -519,4 +537,58 @@ sectionMap.forEach((_, section) => spyOb.observe(section));
 (function removeAurora() {
   const canvas = document.getElementById("aurora-canvas");
   if (canvas) canvas.remove();
+})();
+
+/* ─── Cursor Glow Tracker ───────────────────────────────── */
+(() => {
+  const glow = document.getElementById("cursorGlow");
+  if (!glow) return;
+  if (!window.matchMedia("(pointer: fine)").matches) return;
+
+  let rafId = null;
+  let mx = window.innerWidth / 2;
+  let my = window.innerHeight / 2;
+
+  window.addEventListener("mousemove", e => {
+    mx = e.clientX;
+    my = e.clientY;
+    if (rafId) return;
+    rafId = requestAnimationFrame(() => {
+      glow.style.left = mx + "px";
+      glow.style.top  = my + "px";
+      rafId = null;
+    });
+  }, { passive: true });
+})();
+
+/* ─── Magnetic Buttons ──────────────────────────────────── */
+(() => {
+  if (prefersReducedMotion) return;
+  if (!window.matchMedia("(pointer: fine)").matches) return;
+
+  const STRENGTH = 0.35; // 0 = none, 1 = full follow
+
+  document.querySelectorAll(".button-primary, .button-ghost").forEach(btn => {
+    let rafId = null;
+
+    btn.addEventListener("mousemove", e => {
+      if (rafId) return;
+      rafId = requestAnimationFrame(() => {
+        const rect = btn.getBoundingClientRect();
+        const cx   = rect.left + rect.width  / 2;
+        const cy   = rect.top  + rect.height / 2;
+        const dx   = (e.clientX - cx) * STRENGTH;
+        const dy   = (e.clientY - cy) * STRENGTH;
+        btn.style.transform = `translate(${dx}px, ${dy}px)`;
+        rafId = null;
+      });
+    }, { passive: true });
+
+    btn.addEventListener("mouseleave", () => {
+      if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+      btn.style.transition = "transform 0.45s cubic-bezier(0.23,1,0.32,1)";
+      btn.style.transform  = "translate(0,0)";
+      setTimeout(() => { btn.style.transition = ""; }, 460);
+    }, { passive: true });
+  });
 })();
