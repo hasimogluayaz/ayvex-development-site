@@ -1,898 +1,1986 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="format-detection" content="telephone=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
 
-  <title>AyveX Development — Web, mobil ve SaaS ürün stüdyosu</title>
+    <title>AyveX Development — Web, mobil ve SaaS geliştirme stüdyosu</title>
 
-  <meta name="description" content="AyveX Development; web sitesi, mobil uygulama ve SaaS ürünleri için strateji, arayüz, yazılım, deploy ve büyüme sürecini tek ekipte yönetir. İstanbul.">
-  <meta name="keywords" content="yazılım stüdyosu, web geliştirme, mobil uygulama, SaaS, Loguna, ZapFile, İstanbul yazılım, Next.js, React, Flutter, product studio">
-  <meta name="author" content="AyveX Development">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="googlebot" content="index, follow">
-  <link rel="canonical" href="https://ayvexdevelopment.com/">
+    <meta
+      name="description"
+      content="AyveX Development; markalar ve girişimler için web sitesi, mobil uygulama ve SaaS projelerini strateji, tasarım, yazılım, deploy ve bakım dahil uçtan uca geliştirir. İstanbul."
+    />
+    <meta
+      name="keywords"
+      content="yazılım stüdyosu, web geliştirme, mobil uygulama, SaaS geliştirme, kurumsal site, özel yazılım, İstanbul yazılım, Next.js, React, Flutter"
+    />
+    <meta name="author" content="AyveX Development" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+    <link
+      id="canonicalLink"
+      rel="canonical"
+      href="https://ayvexdevelopment.com/"
+    />
+    <link
+      id="alternateTr"
+      rel="alternate"
+      hreflang="tr"
+      href="https://ayvexdevelopment.com/"
+    />
+    <link
+      id="alternateEn"
+      rel="alternate"
+      hreflang="en"
+      href="https://ayvexdevelopment.com/?lang=en"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://ayvexdevelopment.com/"
+    />
 
-  <!-- Open Graph -->
-  <meta property="og:type"        content="website">
-  <meta property="og:url"         content="https://ayvexdevelopment.com/">
-  <meta property="og:site_name"   content="AyveX Development">
-  <meta property="og:title"       content="AyveX Development — Web, mobil ve SaaS ürün stüdyosu">
-  <meta property="og:description" content="Stratejiden arayüze, yazılımdan deploy ve büyümeye kadar dijital ürünlerinizi tek teknik ekiple hayata geçiriyoruz.">
-  <meta property="og:image"       content="https://ayvexdevelopment.com/assets/ayvex-logo-alone.png">
-  <meta property="og:image:alt"   content="AyveX Development logosu">
-  <meta property="og:locale"      content="tr_TR">
-  <meta property="og:locale:alternate" content="en_US">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      id="ogUrl"
+      property="og:url"
+      content="https://ayvexdevelopment.com/"
+    />
+    <meta property="og:site_name" content="AyveX Development" />
+    <meta
+      id="ogTitle"
+      property="og:title"
+      content="AyveX Development — Web, mobil ve SaaS geliştirme stüdyosu"
+    />
+    <meta
+      id="ogDescription"
+      property="og:description"
+      content="Markalar ve girişimler için web sitesi, mobil uygulama ve SaaS projelerini tasarım, yazılım, deploy ve bakım dahil uçtan uca hayata geçiriyoruz."
+    />
+    <meta
+      property="og:image"
+      content="https://ayvexdevelopment.com/assets/ayvex-logo-alone.png"
+    />
+    <meta property="og:image:alt" content="AyveX Development logosu" />
+    <meta id="ogLocale" property="og:locale" content="tr_TR" />
+    <meta
+      id="ogLocaleAlternate"
+      property="og:locale:alternate"
+      content="en_US"
+    />
 
-  <!-- Twitter -->
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="AyveX Development — Web, mobil ve SaaS ürün stüdyosu">
-  <meta name="twitter:description" content="Web, mobil ve SaaS ürünleri için strateji, tasarım, yazılım, deploy ve büyüme desteği.">
-  <meta name="twitter:image"       content="https://ayvexdevelopment.com/assets/ayvex-logo-alone.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      id="twitterTitle"
+      name="twitter:title"
+      content="AyveX Development — Web, mobil ve SaaS geliştirme stüdyosu"
+    />
+    <meta
+      id="twitterDescription"
+      name="twitter:description"
+      content="Web, mobil ve SaaS projeleri için strateji, tasarım, yazılım, deploy ve bakım desteği."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ayvexdevelopment.com/assets/ayvex-logo-alone.png"
+    />
 
-  <!-- Theme / PWA -->
-  <meta name="theme-color" content="#04090f" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#04090f" media="(prefers-color-scheme: light)">
-  <meta name="color-scheme" content="dark">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="AyveX">
-  <meta name="application-name" content="AyveX Development">
-  <meta name="msapplication-TileColor" content="#04090f">
+    <!-- Theme / PWA -->
+    <meta
+      name="theme-color"
+      content="#04090f"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="theme-color"
+      content="#04090f"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta name="color-scheme" content="dark" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="AyveX" />
+    <meta name="application-name" content="AyveX Development" />
+    <meta name="msapplication-TileColor" content="#04090f" />
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/ayvex-logo-alone.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="./assets/ayvex-logo-alone.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/ayvex-logo-alone.png">
-  <link rel="mask-icon" href="./assets/ayvex-logo-alone.png" color="#5eead4">
-  <link rel="shortcut icon" href="./assets/ayvex-logo-alone.png">
-  <link rel="manifest" href="./site.webmanifest">
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/ayvex-logo-alone.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./assets/ayvex-logo-alone.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/ayvex-logo-alone.png"
+    />
+    <link
+      rel="mask-icon"
+      href="./assets/ayvex-logo-alone.png"
+      color="#5eead4"
+    />
+    <link rel="shortcut icon" href="./assets/ayvex-logo-alone.png" />
+    <link rel="manifest" href="./site.webmanifest" />
 
-  <!-- Performance hints -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Non-blocking font load: print trick defers until after render -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap"></noscript>
-  <link rel="stylesheet" href="./styles.css">
+    <!-- Performance hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Non-blocking font load: print trick defers until after render -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="./styles.css" />
 
-  <!-- Structured data: Organization + WebSite -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
+    <style>
+      /* Projects section: bilingual copy without changing the existing i18n system */
+      .work-section .project-en {
+        display: none;
+      }
+
+      .work-section.is-en .project-tr {
+        display: none;
+      }
+
+      .work-section.is-en .project-en {
+        display: inline;
+      }
+
+      .work-section.is-en .project-block {
+        display: block;
+      }
+
+      .work-section .project-block.project-en {
+        display: none;
+      }
+
+      .work-section.is-en .project-block.project-tr {
+        display: none;
+      }
+
+      .work-section.is-en .project-block.project-en {
+        display: block;
+      }
+    </style>
+
+    <!-- Structured data: Organization + WebSite -->
+    <script id="orgSchema" type="application/ld+json">
       {
-        "@type": "Organization",
-        "@id": "https://ayvexdevelopment.com/#organization",
-        "name": "AyveX Development",
-        "alternateName": "AyveX",
-        "url": "https://ayvexdevelopment.com/",
-        "logo": "https://ayvexdevelopment.com/assets/ayvex-logo-alone.png",
-        "image": "https://ayvexdevelopment.com/assets/ayvex-logo-alone.png",
-        "email": "info@ayvexdevelopment.com",
-        "description": "Web, mobil ve SaaS ürünleri için strateji, tasarım, yazılım ve deploy süreçlerini yöneten bağımsız teknoloji stüdyosu.",
-        "foundingLocation": {
-          "@type": "Place",
-          "address": { "@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR" }
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "İstanbul",
-          "addressCountry": "TR"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "info@ayvexdevelopment.com",
-          "contactType": "customer support",
-          "availableLanguage": ["Turkish", "English"]
-        },
-        "sameAs": [
-          "https://loguna.com.tr/",
-          "https://www.zapfile.xyz/",
-          "https://play.google.com/store/apps/details?id=com.loguna.app"
-        ],
-        "owns": [
-          { "@type": "SoftwareApplication", "name": "Loguna", "applicationCategory": "EducationApplication", "operatingSystem": "Web, Android", "url": "https://loguna.com.tr/" },
-          { "@type": "WebApplication", "name": "ZapFile", "applicationCategory": "UtilityApplication", "url": "https://www.zapfile.xyz/" }
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ayvexdevelopment.com/#organization",
+            "name": "AyveX Development",
+            "alternateName": "AyveX",
+            "url": "https://ayvexdevelopment.com/",
+            "logo": "https://ayvexdevelopment.com/assets/ayvex-logo-alone.png",
+            "image": "https://ayvexdevelopment.com/assets/ayvex-logo-alone.png",
+            "email": "info@ayvexdevelopment.com",
+            "description": "Markalar ve girişimler için web sitesi, mobil uygulama ve SaaS projelerini strateji, tasarım, yazılım ve yayına alma dahil uçtan uca geliştiren bağımsız teknoloji stüdyosu.",
+            "foundingLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "İstanbul",
+                "addressCountry": "TR"
+              }
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "İstanbul",
+              "addressCountry": "TR"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "info@ayvexdevelopment.com",
+              "contactType": "customer support",
+              "availableLanguage": ["Turkish", "English"]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ayvexdevelopment.com/#website",
+            "url": "https://ayvexdevelopment.com/",
+            "name": "AyveX Development",
+            "publisher": {
+              "@id": "https://ayvexdevelopment.com/#organization"
+            },
+            "inLanguage": ["tr", "en"]
+          }
         ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://ayvexdevelopment.com/#website",
-        "url": "https://ayvexdevelopment.com/",
-        "name": "AyveX Development",
-        "publisher": { "@id": "https://ayvexdevelopment.com/#organization" },
-        "inLanguage": ["tr", "en"]
       }
-    ]
-  }
-  </script>
+    </script>
 
-  <!-- Structured data: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    <!-- Structured data: FAQPage -->
+    <script id="faqSchema" type="application/ld+json">
       {
-        "@type": "Question",
-        "name": "Fiyatlandırma nasıl çalışıyor?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sabit fiyat veriyoruz. Keşif görüşmesinden sonra projenin kapsamına göre net bir teklif hazırlıyoruz. Küçük landing page'ler için daha ekonomik, tam uygulama için kapsamlı paketler."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Bir proje ne kadar sürede biter?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Basit kurumsal site: 1-2 hafta. Özellikli web uygulaması: 3-6 hafta. Mobil + web kombinasyonu: 6-10 hafta. Keşif aşamasında net süre paylaşılır."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Yayına aldıktan sonra destek veriyor musunuz?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Evet. 1 aylık garanti süresi standart. Sonrası için aylık bakım paketleri (içerik güncellemesi, güvenlik, analytics raporu) sunuyoruz."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Kodun sahipliği kimde?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sizde. Teslim sonrası kod tamamen size ait. İsterseniz başka bir ekiple devam edebilirsiniz. Repo, domain, hosting hesapları sizin adınıza açılır."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Tasarımını ben yaptım, sadece geliştirme yapar mısınız?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yaparız. Figma dosyası veya mevcut bir tasarımınız varsa sadece geliştirme + deploy adımlarında da çalışabiliriz."
-        }
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Fiyatlandırma nasıl çalışıyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sabit fiyat veriyoruz. Keşif görüşmesinden sonra projenin kapsamına göre net bir teklif hazırlıyoruz. Küçük landing page'ler için daha ekonomik, tam uygulama için kapsamlı paketler."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bir proje ne kadar sürede biter?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Basit kurumsal site: 1-2 hafta. Özellikli web uygulaması: 3-6 hafta. Mobil + web kombinasyonu: 6-10 hafta. Keşif aşamasında net süre paylaşılır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Yayına aldıktan sonra destek veriyor musunuz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. 1 aylık garanti süresi standart. Sonrası için aylık bakım paketleri (içerik güncellemesi, güvenlik, analytics raporu) sunuyoruz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kodun sahipliği kimde?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sizde. Teslim sonrası kod tamamen size ait. İsterseniz başka bir ekiple devam edebilirsiniz. Repo, domain, hosting hesapları sizin adınıza açılır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tasarımını ben yaptım, sadece geliştirme yapar mısınız?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yaparız. Figma dosyası veya mevcut bir tasarımınız varsa sadece geliştirme + deploy adımlarında da çalışabiliriz."
+            }
+          }
+        ]
       }
-    ]
-  }
-  </script>
-</head>
-<body>
-  <a class="skip-link" href="#hero" data-i18n="a11y.skipLink">İçeriğe geç</a>
-  <div id="scroll-progress"></div>
-  <canvas id="aurora-canvas" aria-hidden="true"></canvas>
-  <div class="site-shell">
-    <header class="site-header">
-      <a class="brand-standalone" href="#hero" aria-label="AyveX Development">
-        <img class="brand-mark-header" src="./assets/ayvex-logo-alone.png" alt="AyveX">
-      </a>
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#hero" data-i18n="a11y.skipLink">İçeriğe geç</a>
+    <div id="scroll-progress"></div>
+    <canvas id="aurora-canvas" aria-hidden="true"></canvas>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand-standalone" href="#hero" aria-label="AyveX Development">
+          <img
+            class="brand-mark-header"
+            src="./assets/ayvex-logo-alone.png"
+            alt="AyveX"
+          />
+        </a>
 
-      <a class="header-mini-cta" href="#contact" data-i18n="nav.cta">Teklif Al</a>
-
-      <button class="menu-toggle" type="button" aria-label="Menuyu ac" aria-controls="mobileMenu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <div id="mobileMenu" class="nav-panel">
-        <nav class="nav">
-          <a href="#work"     data-i18n="nav.projects">Ürünler</a>
-          <a href="#services" data-i18n="nav.services">Hizmetler</a>
-          <a href="#why"      data-i18n="nav.why">Neden Biz</a>
-          <a href="#process"  data-i18n="nav.process">Süreç</a>
-          <a href="#faq"      data-i18n="nav.faq">SSS</a>
-        </nav>
-
-        <div class="header-actions">
-          <button id="langToggle" class="lang-toggle" type="button">TR</button>
-          <a class="button button-ghost" href="#contact" data-i18n="nav.cta">Teklif Al</a>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <!-- ─── HERO ─── -->
-      <section class="hero" id="hero">
-        <div class="hero-copy reveal">
-          <p class="eyebrow" data-i18n="hero.eyebrow">
-            Web · Mobil · SaaS Ürün Stüdyosu
-          </p>
-          <div class="hero-logo" aria-hidden="true">
-            <img src="./assets/ayvex-logo-alone.png" alt="">
+        <div class="header-center">
+          <div
+            class="lang-switch"
+            role="group"
+            aria-label="Dil seçimi"
+            data-language-switcher
+            data-i18n-aria-label="a11y.languageSwitcher"
+          >
+            <button
+              class="lang-switch-button is-active"
+              type="button"
+              data-lang-switch="tr"
+              aria-label="Dili Türkçeye çevir"
+              aria-pressed="true"
+            >
+              TR
+            </button>
+            <button
+              class="lang-switch-button"
+              type="button"
+              data-lang-switch="en"
+              aria-label="Dili İngilizceye çevir"
+              aria-pressed="false"
+            >
+              EN
+            </button>
           </div>
-          <h1>
-            <span data-i18n="hero.titleLine1">Dijital ürününüzü</span>
-            <span class="gradient-word" data-i18n="hero.titleLine2">uçtan uca kurarız.</span>
-            <span class="rotator-line">
-              <span data-i18n="hero.titleLine3a">Sonra onu </span>
-              <span class="word-rotator" aria-live="polite">
-                <span class="word is-active" data-i18n="hero.rot1">yayına çıkarırız.</span>
-                <span class="word" data-i18n="hero.rot2">hızlandırırız.</span>
-                <span class="word" data-i18n="hero.rot3">ölçekleriz.</span>
-                <span class="word" data-i18n="hero.rot4">büyütürüz.</span>
+        </div>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Menüyü aç"
+          aria-controls="mobileMenu"
+          aria-expanded="false"
+          data-i18n-aria-label="a11y.menuOpen"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div id="mobileMenu" class="nav-panel">
+          <nav class="nav">
+            <a href="#work" data-i18n="nav.projects">Projeler</a>
+            <a href="#services" data-i18n="nav.services">Hizmetler</a>
+            <a href="#why" data-i18n="nav.why">Neden Biz</a>
+            <a href="#process" data-i18n="nav.process">Süreç</a>
+            <a href="#faq" data-i18n="nav.faq">SSS</a>
+          </nav>
+
+          <div class="header-actions">
+            <div
+              class="lang-switch"
+              role="group"
+              aria-label="Dil seçimi"
+              data-language-switcher
+              data-i18n-aria-label="a11y.languageSwitcher"
+            >
+              <button
+                class="lang-switch-button is-active"
+                type="button"
+                data-lang-switch="tr"
+                aria-label="Dili Türkçeye çevir"
+                aria-pressed="true"
+              >
+                TR
+              </button>
+              <button
+                class="lang-switch-button"
+                type="button"
+                data-lang-switch="en"
+                aria-label="Dili İngilizceye çevir"
+                aria-pressed="false"
+              >
+                EN
+              </button>
+            </div>
+            <a class="button button-ghost" href="#contact" data-i18n="nav.cta"
+              >Teklif Al</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- ─── HERO ─── -->
+        <section class="hero" id="hero">
+          <div class="hero-copy reveal">
+            <p class="eyebrow" data-i18n="hero.eyebrow">
+              Web · Mobil · SaaS Geliştirme Stüdyosu
+            </p>
+            <div class="hero-logo" aria-hidden="true">
+              <img src="./assets/ayvex-logo-alone.png" alt="" />
+            </div>
+            <h1>
+              <span data-i18n="hero.titleLine1">Dijital ürününüzü</span>
+              <span class="gradient-word" data-i18n="hero.titleLine2"
+                >uçtan uca kurarız.</span
+              >
+              <span class="rotator-line" aria-hidden="true">
+                <span data-i18n="hero.titleLine3a">Sonra onu </span>
+                <span class="word-rotator">
+                  <span class="word is-active" data-i18n="hero.rot1"
+                    >yayına çıkarırız.</span
+                  >
+                  <span class="word" data-i18n="hero.rot2">hızlandırırız.</span>
+                  <span class="word" data-i18n="hero.rot3">ölçekleriz.</span>
+                  <span class="word" data-i18n="hero.rot4">büyütürüz.</span>
+                </span>
               </span>
-            </span>
-          </h1>
-          <p class="hero-text" data-i18n="hero.text">
-            AyveX Development; web sitesi, mobil uygulama ve SaaS ürünleri için strateji,
-            arayüz, yazılım ve yayına alma sürecini tek ekipte toplar. Hızlı açılan,
-            güvenilir ve ölçeklenebilir ürünler geliştiririz.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#contact" data-i18n="hero.primaryCta">Projeni Başlatalım</a>
-            <a class="button button-secondary" href="#work" data-i18n="hero.secondaryCta">Canlı İşleri Gör</a>
-          </div>
-          <div class="live-status" aria-live="polite">
-            <span class="live-pulse" aria-hidden="true"></span>
-            <span class="live-text" data-i18n="hero.liveStatus">Şu an canlı · 2 ürün, 71 araç aktif</span>
-          </div>
-          <ul class="hero-metrics" role="list">
-            <li>
-              <strong data-count-to="2" data-suffix="">2</strong>
-              <span data-i18n="hero.metric1Text">Canlı ürün deneyimi</span>
-            </li>
-            <li>
-              <strong data-count-to="71" data-suffix="+">71+</strong>
-              <span data-i18n="hero.metric2Text">Tarayıcı aracı</span>
-            </li>
-            <li>
-              <strong data-count-to="24" data-suffix="h">24h</strong>
-              <span data-i18n="hero.metric3Text">İlk dönüş hedefi</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="hero-visual reveal" aria-hidden="true">
-          <div class="orb orb-a"></div>
-          <div class="orb orb-b"></div>
-          <div class="dashboard-card glass">
-            <div class="card-topline">
-              <span class="status-dot"></span>
-              <span data-i18n="hero.panelTitle">Ürün Komuta Merkezi</span>
-            </div>
-            <div class="card-grid">
-              <article>
-                <small data-i18n="hero.panel1Label">Loguna</small>
-                <strong data-i18n="hero.panel1Value">Canlı</strong>
-              </article>
-              <article>
-                <small data-i18n="hero.panel2Label">ZapFile</small>
-                <strong data-i18n="hero.panel2Value">Canlı</strong>
-              </article>
-              <article>
-                <small data-i18n="hero.panel3Label">Platform</small>
-                <strong data-i18n="hero.panel3Value">Web + Mobil</strong>
-              </article>
-              <article>
-                <small data-i18n="hero.panel4Label">Operasyon</small>
-                <strong data-i18n="hero.panel4Value">Deploy + Bakım</strong>
-              </article>
-            </div>
-            <div class="mini-panels">
-              <div class="mini-panel"></div>
-              <div class="mini-panel"></div>
-              <div class="mini-panel accent"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ─── TECH STACK RIBBON ─── -->
-      <section class="trust reveal">
-        <div class="trust-head">
-          <p data-i18n="trust.text">Çalıştığımız teknolojiler:</p>
-          <span class="trust-live"><span class="trust-live-dot"></span><span data-i18n="trust.live">Ürün hızında teknoloji seçimi</span></span>
-        </div>
-
-        <div class="stack-marquee" aria-label="Teknoloji altyapımız">
-          <div class="stack-track">
-            <div class="stack-group">
-              <span>Next.js</span>
-              <span>React</span>
-              <span>TypeScript</span>
-              <span>Tailwind</span>
-              <span>Node.js</span>
-              <span>Flutter</span>
-              <span>Vercel</span>
-              <span>Cloudflare</span>
-              <span>PostgreSQL</span>
-              <span>Supabase</span>
-              <span>Firebase</span>
-              <span>Prisma</span>
-            </div>
-            <div class="stack-group" aria-hidden="true">
-              <span>Next.js</span>
-              <span>React</span>
-              <span>TypeScript</span>
-              <span>Tailwind</span>
-              <span>Node.js</span>
-              <span>Flutter</span>
-              <span>Vercel</span>
-              <span>Cloudflare</span>
-              <span>PostgreSQL</span>
-              <span>Supabase</span>
-              <span>Firebase</span>
-              <span>Prisma</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="stack-marquee stack-marquee-alt" aria-label="Üretim ve büyüme kabiliyetlerimiz">
-          <div class="stack-track">
-            <div class="stack-group">
-              <span>Figma</span>
-              <span>Design System</span>
-              <span>SEO</span>
-              <span>Analytics</span>
-              <span>CI/CD</span>
-              <span>Monitoring</span>
-              <span>PWA</span>
-              <span>REST API</span>
-              <span>Realtime</span>
-              <span>Performance</span>
-              <span>Launch Ops</span>
-              <span>Growth</span>
-            </div>
-            <div class="stack-group" aria-hidden="true">
-              <span>Figma</span>
-              <span>Design System</span>
-              <span>SEO</span>
-              <span>Analytics</span>
-              <span>CI/CD</span>
-              <span>Monitoring</span>
-              <span>PWA</span>
-              <span>REST API</span>
-              <span>Realtime</span>
-              <span>Performance</span>
-              <span>Launch Ops</span>
-              <span>Growth</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ─── WORK / PROJECTS ─── -->
-      <section class="section work-section" id="work">
-        <div class="section-head reveal">
-          <p class="eyebrow" data-i18n="work.eyebrow">Ürünlerimiz</p>
-          <h2 class="gradient-heading" data-i18n="work.title">Canlı ürünler, gerçek sonuçlar.</h2>
-          <p data-i18n="work.text">
-            Sadece vitrin tasarlamıyoruz; kullanılan, ölçülen ve geliştirilen dijital ürünler kuruyoruz.
-            Aşağıda bu yaklaşımın çalışan örnekleri var.
-          </p>
-        </div>
-
-        <div class="work-grid">
-          <article class="work-card reveal" data-delay="1">
-            <div class="work-art gradient-a">
-              <div class="browser-window has-shot">
-                <div class="browser-chrome">
-                  <div class="chrome-dots"><span></span><span></span><span></span></div>
-                  <div class="chrome-url">loguna.com.tr</div>
-                </div>
-                <div class="browser-shot">
-                  <img src="./assets/mockup-loguna.png" alt="Loguna ekran görüntüsü" loading="lazy" onerror="this.classList.add('shot-missing')">
-                </div>
-              </div>
-            </div>
-            <div class="work-copy">
-              <p class="work-type" data-i18n="work.card1Type">Eğitim Teknolojisi</p>
-              <h3 data-i18n="work.card1Title">Loguna</h3>
-              <p data-i18n="work.card1Text">
-                TYT, AYT ve LGS öğrencileri için akıllı çalışma asistanı: müfredat takibi, net analizi,
-                haftalık plan ve hata defteri. Mobil + web, tek ürün — ücretsiz.
-              </p>
-              <div class="work-links">
-                <a class="work-link" href="https://loguna.com.tr/" target="_blank" rel="noreferrer" data-i18n="work.card1Link1">↗ loguna.com.tr</a>
-                <a class="work-link" href="https://play.google.com/store/apps/details?id=com.loguna.app" target="_blank" rel="noreferrer" data-i18n="work.card1Link2">↗ Play Store</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="work-card reveal" data-delay="2">
-            <div class="work-art gradient-b">
-              <div class="browser-window has-shot">
-                <div class="browser-chrome">
-                  <div class="chrome-dots"><span></span><span></span><span></span></div>
-                  <div class="chrome-url">zapfile.xyz</div>
-                </div>
-                <div class="browser-shot">
-                  <img src="./assets/mockup-zapfile.png" alt="ZapFile ekran görüntüsü" loading="lazy" onerror="this.classList.add('shot-missing')">
-                </div>
-              </div>
-            </div>
-            <div class="work-copy">
-              <p class="work-type" data-i18n="work.card2Type">Tarayıcı Araçları</p>
-              <h3 data-i18n="work.card2Title">ZapFile</h3>
-              <p data-i18n="work.card2Text">
-                Tarayıcıda çalışan 71 dosya aracı: dönüştürme, sıkıştırma, düzenleme.
-                Dosyalarınız cihazınızda kalır, sunucuya yüklenmez. Sınırsız ve ücretsiz.
-              </p>
-              <div class="work-links">
-                <a class="work-link" href="https://www.zapfile.xyz/" target="_blank" rel="noreferrer" data-i18n="work.card2Link1">↗ zapfile.xyz</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="work-card reveal" data-delay="3">
-            <div class="work-art gradient-c">
-              <div class="browser-window has-shot">
-                <div class="browser-chrome">
-                  <div class="chrome-dots"><span></span><span></span><span></span></div>
-                  <div class="chrome-url">hasimogluyapimantolama.com</div>
-                </div>
-                <div class="browser-shot">
-                  <img src="./assets/mockup-hasimoglu.png" alt="Haşimoğlu Yapı ve Mantolama ekran görüntüsü" loading="lazy" onerror="this.classList.add('shot-missing')">
-                </div>
-              </div>
-            </div>
-            <div class="work-copy">
-              <p class="work-type" data-i18n="work.card3Type">Kurumsal Site</p>
-              <h3 data-i18n="work.card3Title">Haşimoğlu Yapı ve Mantolama</h3>
-              <p data-i18n="work.card3Text">
-                İstanbul ve Tekirdağ genelinde mantolama ve dış cephe hizmeti veren
-                kurumsal site. Hızlı, SEO uyumlu ve mobil öncelikli yapı.
-              </p>
-              <div class="work-links">
-                <a class="work-link" href="https://hasimogluyapimantolama.com/" target="_blank" rel="noreferrer" data-i18n="work.card3Link1">↗ hasimogluyapimantolama.com</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- ─── SERVICES ─── -->
-      <section class="section" id="services">
-        <div class="section-head reveal">
-          <p class="eyebrow" data-i18n="services.eyebrow">Hizmetler</p>
-          <h2 class="gradient-heading" data-i18n="services.title">Stratejiden yayına, tek teknik ekip.</h2>
-          <p data-i18n="services.text">
-            Marka sitesi, web uygulaması, mobil uygulama veya SaaS aracınız için doğru kapsamı çıkarır;
-            tasarım, geliştirme, deploy ve bakım adımlarını tek planda yönetiriz.
-          </p>
-        </div>
-
-        <div class="bento-grid">
-          <article class="bento-card bento-large reveal" data-delay="1">
-            <span class="service-num">01</span>
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/>
-              </svg>
-            </div>
-            <h3 data-i18n="services.card1Title">Yüksek Performanslı Web Siteleri</h3>
-            <p data-i18n="services.card1Text">Güven veren, hızlı açılan, SEO uyumlu ve yönetilebilir web siteleri. Sadece güzel değil, ölçülebilir.</p>
-            <div class="bento-tags"><span>Next.js</span><span>React</span><span>SEO</span><span>Vercel</span></div>
-            <span class="service-arrow" aria-hidden="true">→</span>
-          </article>
-
-          <article class="bento-card reveal" data-delay="2">
-            <span class="service-num">02</span>
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="5" y="2.5" width="14" height="19" rx="2.5"/><path d="M9 6h6M9 10h6M9 14h4"/>
-              </svg>
-            </div>
-            <h3 data-i18n="services.card2Title">Mobil ve Web Uygulamaları</h3>
-            <p data-i18n="services.card2Text">Kullanıcı hesabı, panel, bildirim, abonelik ve içerik akışlarını aynı ürün deneyiminde kurgularız.</p>
-            <div class="bento-tags"><span>Flutter</span><span>React Native</span></div>
-            <span class="service-arrow" aria-hidden="true">→</span>
-          </article>
-
-          <article class="bento-card reveal" data-delay="3">
-            <span class="service-num">03</span>
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/>
-              </svg>
-            </div>
-            <h3 data-i18n="services.card3Title">SaaS ve İç Araçlar</h3>
-            <p data-i18n="services.card3Text">Dashboard, otomasyon, raporlama ve dosya işleme araçlarını ölçeklenebilir mimariyle geliştiririz.</p>
-            <div class="bento-tags"><span>Node.js</span><span>Supabase</span></div>
-            <span class="service-arrow" aria-hidden="true">→</span>
-          </article>
-
-          <article class="bento-card bento-wide reveal" data-delay="4">
-            <span class="service-num">04</span>
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4.5 16.5L3 21l4.5-1.5M14.5 4.5l5 5M7.5 19.5a8 8 0 01-3-3l9-9 6 6-9 9a8 8 0 01-3-3z"/>
-              </svg>
-            </div>
-            <h3 data-i18n="services.card4Title">Yayın, Bakım ve Büyüme</h3>
-            <p data-i18n="services.card4Text">Domain, SSL, CDN, analytics, monitoring ve güncelleme süreci. Yayına aldıktan sonra da yalnız bırakmayız.</p>
-            <div class="bento-tags"><span>CI/CD</span><span>Cloudflare</span><span>Analytics</span><span>Monitoring</span><span>Growth</span></div>
-            <span class="service-arrow" aria-hidden="true">→</span>
-          </article>
-        </div>
-      </section>
-
-      <!-- ─── WHY AYVEX ─── -->
-      <section class="section" id="why">
-        <div class="section-head reveal">
-          <p class="eyebrow" data-i18n="why.eyebrow">Neden AyveX</p>
-          <h2 class="gradient-heading" data-i18n="why.title">Teknolojiyi gösteriş için değil, sonuç için kullanıyoruz.</h2>
-          <p data-i18n="why.text">
-            Animasyon, performans, SEO, analytics ve temiz kod aynı hedefe hizmet eder:
-            kullanıcı güveni, hızlı deneyim ve dönüşüm.
-          </p>
-        </div>
-
-        <div class="why-grid">
-          <article class="why-card reveal" data-delay="1">
-            <div class="why-badge">01</div>
-            <h3 data-i18n="why.card1Title">Ürün mantığıyla geliştiririz</h3>
-            <p data-i18n="why.card1Text">
-              Her ekranı sadece güzel görünsün diye değil, kullanıcıyı doğru aksiyona
-              taşısın diye tasarlarız. Hedef, hız ve dönüşüm aynı planda ilerler.
+              <span class="sr-only" data-i18n="hero.titleLine3"
+                >Sonra onu yayına çıkarırız.</span
+              >
+            </h1>
+            <p class="hero-text" data-i18n="hero.text">
+              AyveX Development; markalar, girişimler ve uzman ekipler için web
+              sitesi, mobil uygulama ve SaaS projelerini strateji, arayüz,
+              yazılım ve yayına alma dahil uçtan uca geliştirir. Gerektiğinde
+              bakım ve büyüme tarafını da tek ekipte yönetiriz.
             </p>
-          </article>
-          <article class="why-card reveal" data-delay="2">
-            <div class="why-badge">02</div>
-            <h3 data-i18n="why.card2Title">Doğru teknoloji, temiz mimari</h3>
-            <p data-i18n="why.card2Text">
-              Next.js, React, Flutter, Node.js, Vercel, Cloudflare ve modern veri
-              araçlarını ihtiyaca göre seçeriz. Gereksiz teknoloji kalabalığı değil,
-              doğru çözüm.
-            </p>
-          </article>
-          <article class="why-card reveal" data-delay="3">
-            <div class="why-badge">03</div>
-            <h3 data-i18n="why.card3Title">Yayından sonra da yanınızdayız</h3>
-            <p data-i18n="why.card3Text">
-              Deploy sonrası performans, analytics, SEO, içerik güncellemeleri ve
-              bakım sürecini takip ederiz. Ürün yayına çıkınca iş bitmez; başlar.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <!-- ─── TESTIMONIALS ─── -->
-      <section class="section testimonials-section">
-        <div class="section-head reveal">
-          <p class="eyebrow" data-i18n="testimonials.eyebrow">Kullanıcı Yorumları</p>
-          <h2 class="gradient-heading" data-i18n="testimonials.title">Gerçek kullanıcılar, gerçek deneyimler.</h2>
-        </div>
-        <div class="testimonial-grid">
-          <blockquote class="testimonial-card reveal" data-delay="1">
-            <div class="testimonial-stars">★★★★★</div>
-            <p data-i18n="testimonials.q1">"Loguna sayesinde TYT net ortalamalarım ciddi şekilde arttı. Her şey tek yerde, hata defteri özelliği harika."</p>
-            <footer>
-              <div class="testimonial-avatar">M</div>
-              <div class="testimonial-meta">
-                <strong>Mert K.</strong>
-                <span data-i18n="testimonials.role1">TYT öğrencisi · Loguna</span>
-              </div>
-            </footer>
-          </blockquote>
-
-          <blockquote class="testimonial-card reveal" data-delay="2">
-            <div class="testimonial-stars">★★★★★</div>
-            <p data-i18n="testimonials.q2">"ZapFile'ı her gün kullanıyorum. Kayıt gerektirmiyor, dosyalarım cihazımda kalıyor. Çok güvenli ve hızlı."</p>
-            <footer>
-              <div class="testimonial-avatar">S</div>
-              <div class="testimonial-meta">
-                <strong>Selin A.</strong>
-                <span data-i18n="testimonials.role2">Grafik Tasarımcı · ZapFile</span>
-              </div>
-            </footer>
-          </blockquote>
-
-          <blockquote class="testimonial-card reveal" data-delay="3">
-            <div class="testimonial-stars">★★★★★</div>
-            <p data-i18n="testimonials.q3">"AyveX ile çalışmak oldukça profesyoneldi. Teklif net, süreç şeffaf, teslim zamanında. Tekrar çalışırız."</p>
-            <footer>
-              <div class="testimonial-avatar">A</div>
-              <div class="testimonial-meta">
-                <strong>Ahmet Y.</strong>
-                <span data-i18n="testimonials.role3">Girişimci · Müşteri</span>
-              </div>
-            </footer>
-          </blockquote>
-        </div>
-      </section>
-
-      <!-- ─── PROCESS ─── -->
-      <section class="section process-section" id="process">
-        <div class="section-head reveal">
-          <p class="eyebrow" data-i18n="process.eyebrow">Çalışma Modeli</p>
-          <h2 class="gradient-heading" data-i18n="process.title">Fikirden yayına net ve ölçülebilir süreç.</h2>
-          <p data-i18n="process.text">
-            Kapsamı, tasarımı, geliştirmeyi ve yayını adım adım planlarız; her aşamada
-            neyin ne zaman teslim edileceği nettir.
-          </p>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item reveal is-expanded" data-delay="1">
-            <button class="timeline-toggle" type="button" aria-expanded="true">
-              <div class="step-head">
-                <span class="step-num">01</span>
-                <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <circle cx="11" cy="11" r="7"/>
-                  <path d="M20 20l-4-4"/>
-                </svg>
-                <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-              </div>
-              <h3 data-i18n="process.step1Title">Keşif · 2-3 gün</h3>
-              <p data-i18n="process.step1Text">
-                Hedef kitle, kapsam, zaman çizelgesi ve bütçe netleşir. Yazılı teklif gelir.
-              </p>
-            </button>
-            <div class="timeline-detail">
-              <ul>
-                <li data-i18n="process.step1d1">Keşif görüşmesi (45-60 dk, Google Meet)</li>
-                <li data-i18n="process.step1d2">Hedef ve başarı metriklerinin çıkarılması</li>
-                <li data-i18n="process.step1d3">Kapsam dokümanı + yazılı sabit fiyat teklifi</li>
-              </ul>
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="#contact"
+                data-i18n="hero.primaryCta"
+                >Projeni Başlatalım</a
+              >
+              <a
+                class="button button-secondary"
+                href="#work"
+                data-i18n="hero.secondaryCta"
+                >Canlı İşleri Gör</a
+              >
             </div>
-          </article>
-          <article class="timeline-item reveal" data-delay="2">
-            <button class="timeline-toggle" type="button" aria-expanded="false">
-              <div class="step-head">
-                <span class="step-num">02</span>
-                <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M4 20l6-6-3-3-3 3v6h6z"/>
-                  <path d="M14 6l4 4M13 7l6-6 3 3-6 6"/>
-                </svg>
-                <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-              </div>
-              <h3 data-i18n="process.step2Title">Tasarım · 1-2 hafta</h3>
-              <p data-i18n="process.step2Text">
-                Figma'da komponent bazlı tasarım sistemi. Her sayfa prototip olarak onaylanır.
-              </p>
-            </button>
-            <div class="timeline-detail">
-              <ul>
-                <li data-i18n="process.step2d1">Wireframe + bilgi mimarisi</li>
-                <li data-i18n="process.step2d2">Figma'da komponent kütüphanesi</li>
-                <li data-i18n="process.step2d3">Prototip tarama, mobil + masaüstü onayı</li>
-              </ul>
+            <div class="live-status">
+              <span class="live-pulse" aria-hidden="true"></span>
+              <span class="live-text" data-i18n="hero.liveStatus"
+                >Şu an canlı · 3 yayındaki iş, 71 araç aktif</span
+              >
             </div>
-          </article>
-          <article class="timeline-item reveal" data-delay="3">
-            <button class="timeline-toggle" type="button" aria-expanded="false">
-              <div class="step-head">
-                <span class="step-num">03</span>
-                <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/>
-                </svg>
-                <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-              </div>
-              <h3 data-i18n="process.step3Title">Geliştirme · 2-4 hafta</h3>
-              <p data-i18n="process.step3Text">
-                Responsive kodlama, performans optimizasyonu, iç test ve staging ortamı.
-              </p>
-            </button>
-            <div class="timeline-detail">
-              <ul>
-                <li data-i18n="process.step3d1">Next.js / React / Flutter — ihtiyaca göre</li>
-                <li data-i18n="process.step3d2">Lighthouse 95+ ve Core Web Vitals optimizasyonu</li>
-                <li data-i18n="process.step3d3">Staging ortamı, iç QA ve kabul testleri</li>
-              </ul>
-            </div>
-          </article>
-          <article class="timeline-item reveal" data-delay="4">
-            <button class="timeline-toggle" type="button" aria-expanded="false">
-              <div class="step-head">
-                <span class="step-num">04</span>
-                <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M4.5 16.5L3 21l4.5-1.5M14.5 4.5l5 5M7.5 19.5a8 8 0 01-3-3l9-9 6 6-9 9a8 8 0 01-3-3z"/>
-                </svg>
-                <svg class="step-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-              </div>
-              <h3 data-i18n="process.step4Title">Yayın + Destek</h3>
-              <p data-i18n="process.step4Text">
-                Domain, SSL, analytics, monitoring kurulur. Sonrasında içerik ve büyüme desteği sürer.
-              </p>
-            </button>
-            <div class="timeline-detail">
-              <ul>
-                <li data-i18n="process.step4d1">Vercel / Cloudflare üzerine production deploy</li>
-                <li data-i18n="process.step4d2">Plausible / GA4 + uptime monitoring kurulumu</li>
-                <li data-i18n="process.step4d3">1 ay garanti, sonrası aylık bakım paketi</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- ─── FAQ ─── -->
-      <section class="section" id="faq">
-        <div class="section-head reveal">
-          <p class="eyebrow" data-i18n="faq.eyebrow">Sık Sorulan Sorular</p>
-          <h2 class="gradient-heading" data-i18n="faq.title">Aklınıza takılan ilk sorular.</h2>
-        </div>
-
-        <div class="faq-list">
-          <details class="faq-item reveal" data-delay="1">
-            <summary>
-              <span class="faq-num">Q1</span>
-              <span class="faq-question" data-i18n="faq.q1">Fiyatlandırma nasıl çalışıyor?</span>
-            </summary>
-            <p data-i18n="faq.a1">
-              Sabit fiyat veriyoruz. Keşif görüşmesinden sonra projenin kapsamına göre
-              net bir teklif hazırlıyoruz. Küçük landing page'ler için daha ekonomik,
-              tam uygulama için kapsamlı paketler.
-            </p>
-          </details>
-          <details class="faq-item reveal" data-delay="2">
-            <summary>
-              <span class="faq-num">Q2</span>
-              <span class="faq-question" data-i18n="faq.q2">Bir proje ne kadar sürede biter?</span>
-            </summary>
-            <p data-i18n="faq.a2">
-              Basit kurumsal site: 1-2 hafta. Özellikli web uygulaması: 3-6 hafta.
-              Mobil + web kombinasyonu: 6-10 hafta. Keşif aşamasında net süre paylaşılır.
-            </p>
-          </details>
-          <details class="faq-item reveal" data-delay="3">
-            <summary>
-              <span class="faq-num">Q3</span>
-              <span class="faq-question" data-i18n="faq.q3">Yayına aldıktan sonra destek veriyor musunuz?</span>
-            </summary>
-            <p data-i18n="faq.a3">
-              Evet. 1 aylık garanti süresi standart. Sonrası için aylık bakım paketleri
-              (içerik güncellemesi, güvenlik, analytics raporu) sunuyoruz.
-            </p>
-          </details>
-          <details class="faq-item reveal" data-delay="4">
-            <summary>
-              <span class="faq-num">Q4</span>
-              <span class="faq-question" data-i18n="faq.q4">Kodun sahipliği kimde?</span>
-            </summary>
-            <p data-i18n="faq.a4">
-              Sizde. Teslim sonrası kod tamamen size ait. İsterseniz başka bir ekiple
-              devam edebilirsiniz. Repo, domain, hosting hesapları sizin adınıza açılır.
-            </p>
-          </details>
-          <details class="faq-item reveal" data-delay="4">
-            <summary>
-              <span class="faq-num">Q5</span>
-              <span class="faq-question" data-i18n="faq.q5">Tasarımını ben yaptım, sadece geliştirme yapar mısınız?</span>
-            </summary>
-            <p data-i18n="faq.a5">
-              Yaparız. Figma dosyası veya mevcut bir tasarımınız varsa sadece
-              geliştirme + deploy adımlarında da çalışabiliriz.
-            </p>
-          </details>
-        </div>
-      </section>
-
-      <!-- ─── STATS / GÜVEN ─── -->
-      <section class="section stats-section reveal">
-        <div class="stats-panel">
-          <div class="stat-item">
-            <strong data-count-to="2" data-suffix="">0</strong>
-            <span data-i18n="stats.label1">Canlı ürün</span>
-          </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat-item">
-            <strong data-count-to="71" data-suffix="+">0</strong>
-            <span data-i18n="stats.label2">ZapFile aracı</span>
-          </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat-item">
-            <strong data-count-to="1500" data-suffix="+">0</strong>
-            <span data-i18n="stats.label3">Loguna içeriği</span>
-          </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat-item">
-            <strong data-count-to="24" data-suffix="h">0</strong>
-            <span data-i18n="stats.label4">Ortalama yanıt süresi</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- ─── CONTACT ─── -->
-      <section class="section contact-section" id="contact">
-        <div class="contact-panel reveal">
-          <div>
-            <p class="eyebrow" data-i18n="contact.eyebrow">İletişim</p>
-            <h2 class="gradient-heading" data-i18n="contact.title">Projenizi netleştirelim, doğru teknolojiyle başlatalım.</h2>
-            <p data-i18n="contact.text">
-              Kısa bir mesaj atın; hedefi, kapsamı ve en doğru teknik yolu birlikte
-              netleştirelim. Size süre, bütçe ve ilk adımları içeren somut bir planla dönelim.
-            </p>
-          </div>
-
-          <div class="contact-actions">
-            <a class="button" href="mailto:info@ayvexdevelopment.com">✉ info@ayvexdevelopment.com</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ─── FOOTER ─── -->
-      <footer class="footer reveal" id="footer">
-        <div class="footer-top">
-          <div class="footer-brand-block">
-            <img class="footer-wordmark" src="./assets/ayvex-logo-alone.png" alt="AyveX Development">
-            <p class="footer-tagline" data-i18n="footer.tagline">
-              Web, mobil ve SaaS ürünleri için strateji, tasarım, yazılım ve deploy stüdyosu.
-            </p>
-            <ul class="footer-socials" role="list" aria-label="Sosyal medya">
+            <ul class="hero-metrics" role="list">
               <li>
-                <a href="https://x.com/ayvexdev" target="_blank" rel="noreferrer" aria-label="X (Twitter)">
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2H21l-6.52 7.45L22 22h-6.18l-4.84-6.32L5.4 22H2.64l6.97-7.96L2 2h6.32l4.38 5.78L18.24 2zm-1.08 18h1.7L7.92 4h-1.8l11.04 16z"/></svg>
-                </a>
+                <strong data-count-to="3" data-suffix="">3</strong>
+                <span data-i18n="hero.metric1Text">Yayındaki müşteri işi</span>
               </li>
               <li>
-                <a href="https://www.linkedin.com/company/ayvexdevelopment" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
-                </a>
+                <strong data-count-to="71" data-suffix="+">71+</strong>
+                <span data-i18n="hero.metric2Text">Canlı araç</span>
               </li>
               <li>
-                <a href="https://github.com/ayvexdevelopment" target="_blank" rel="noreferrer" aria-label="GitHub">
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.13 0 1.54-.01 2.78-.01 3.16 0 .31.21.66.79.55C20.21 21.38 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
-                </a>
-              </li>
-              <li>
-                <button type="button" class="footer-mail-copy" data-mail="info@ayvexdevelopment.com" aria-label="E-postayı kopyala">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-                  <span class="copy-feedback" aria-hidden="true">Kopyalandı</span>
-                </button>
+                <strong data-count-to="24" data-suffix="h">24h</strong>
+                <span data-i18n="hero.metric3Text">İlk dönüş hedefi</span>
               </li>
             </ul>
           </div>
 
-          <div class="footer-grid">
-            <div class="footer-col">
-              <h4 data-i18n="footer.colNav">Keşfet</h4>
-              <a href="#work"     data-i18n="nav.projects">Ürünler</a>
-              <a href="#services" data-i18n="nav.services">Hizmetler</a>
-              <a href="#why"      data-i18n="nav.why">Neden Biz</a>
-              <a href="#process"  data-i18n="nav.process">Süreç</a>
-              <a href="#faq"      data-i18n="nav.faq">SSS</a>
-            </div>
-            <div class="footer-col">
-              <h4 data-i18n="footer.colProducts">Ürünlerimiz</h4>
-              <a href="https://loguna.com.tr/" target="_blank" rel="noreferrer">Loguna ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.loguna.app" target="_blank" rel="noreferrer">Loguna · Play Store ↗</a>
-              <a href="https://www.zapfile.xyz/" target="_blank" rel="noreferrer">ZapFile ↗</a>
-            </div>
-            <div class="footer-col">
-              <h4 data-i18n="footer.colContact">İletişim</h4>
-              <a href="mailto:info@ayvexdevelopment.com">info@ayvexdevelopment.com</a>
-              <p class="footer-loc" data-i18n="footer.location">İstanbul, Türkiye</p>
-              <p class="footer-loc" data-i18n="footer.hours">Hafta içi · 09:00 – 17:00</p>
+          <div class="hero-visual reveal" aria-hidden="true">
+            <div class="orb orb-a"></div>
+            <div class="orb orb-b"></div>
+            <div class="dashboard-card glass">
+              <div class="card-topline">
+                <span class="status-dot"></span>
+                <span data-i18n="hero.panelTitle">Teslim ve Operasyon</span>
+              </div>
+              <div class="card-grid">
+                <article>
+                  <small data-i18n="hero.panel1Label">Loguna</small>
+                  <strong data-i18n="hero.panel1Value">Canlı</strong>
+                </article>
+                <article>
+                  <small data-i18n="hero.panel2Label">ZapFile</small>
+                  <strong data-i18n="hero.panel2Value">Canlı</strong>
+                </article>
+                <article>
+                  <small data-i18n="hero.panel3Label">Platform</small>
+                  <strong data-i18n="hero.panel3Value">Web + Mobil</strong>
+                </article>
+                <article>
+                  <small data-i18n="hero.panel4Label">Operasyon</small>
+                  <strong data-i18n="hero.panel4Value">Deploy + Bakım</strong>
+                </article>
+              </div>
+              <div class="mini-panels">
+                <div class="mini-panel"></div>
+                <div class="mini-panel"></div>
+                <div class="mini-panel accent"></div>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="footer-bottom">
-          <p class="footer-brand">© <span id="yearSpan">2026</span> AyveX Development</p>
-          <p class="footer-note" data-i18n="footer.note">
-            Bağımsız yazılım stüdyosu · Tüm hakları saklıdır.
-          </p>
-        </div>
-      </footer>
+        <!-- ─── TECH STACK RIBBON ─── -->
+        <section class="trust reveal">
+          <div class="trust-head">
+            <p data-i18n="trust.text">Çalıştığımız teknolojiler:</p>
+            <span class="trust-live"
+              ><span class="trust-live-dot"></span
+              ><span data-i18n="trust.live"
+                >İşe göre teknoloji seçimi</span
+              ></span
+            >
+          </div>
 
-    </main>
-  </div>
+          <div
+            class="stack-marquee"
+            aria-label="Teknoloji altyapımız"
+            data-i18n-aria-label="a11y.stackPrimary"
+          >
+            <div class="stack-track">
+              <div class="stack-group">
+                <span>Next.js</span>
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Tailwind</span>
+                <span>Node.js</span>
+                <span>Flutter</span>
+                <span>Vercel</span>
+                <span>Cloudflare</span>
+                <span>PostgreSQL</span>
+                <span>Supabase</span>
+                <span>Firebase</span>
+                <span>Prisma</span>
+              </div>
+              <div class="stack-group" aria-hidden="true">
+                <span>Next.js</span>
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Tailwind</span>
+                <span>Node.js</span>
+                <span>Flutter</span>
+                <span>Vercel</span>
+                <span>Cloudflare</span>
+                <span>PostgreSQL</span>
+                <span>Supabase</span>
+                <span>Firebase</span>
+                <span>Prisma</span>
+              </div>
+            </div>
+          </div>
 
-  <!-- Back to top -->
-  <button id="backToTop" class="back-to-top" type="button" aria-label="Yukarı çık">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M12 19V5M5 12l7-7 7 7"/>
-    </svg>
-  </button>
+          <div
+            class="stack-marquee stack-marquee-alt"
+            aria-label="Üretim ve büyüme kabiliyetlerimiz"
+            data-i18n-aria-label="a11y.stackSecondary"
+          >
+            <div class="stack-track">
+              <div class="stack-group">
+                <span>Figma</span>
+                <span>Design System</span>
+                <span>SEO</span>
+                <span>Analytics</span>
+                <span>CI/CD</span>
+                <span>Monitoring</span>
+                <span>PWA</span>
+                <span>REST API</span>
+                <span>Realtime</span>
+                <span>Performance</span>
+                <span>Launch Ops</span>
+                <span>Growth</span>
+              </div>
+              <div class="stack-group" aria-hidden="true">
+                <span>Figma</span>
+                <span>Design System</span>
+                <span>SEO</span>
+                <span>Analytics</span>
+                <span>CI/CD</span>
+                <span>Monitoring</span>
+                <span>PWA</span>
+                <span>REST API</span>
+                <span>Realtime</span>
+                <span>Performance</span>
+                <span>Launch Ops</span>
+                <span>Growth</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
-  <!-- Cookie banner -->
-  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Çerez bilgilendirmesi" hidden>
-    <p data-i18n="cookie.text">
-      Bu site yalnızca temel çalışma için tarayıcı depolamasını kullanır (dil tercihi). İzleme çerezi kullanmıyoruz.
-    </p>
-    <div class="cookie-actions">
-      <button id="cookieAccept" class="button-pill" type="button" data-i18n="cookie.accept">Tamam</button>
-      <a class="cookie-link" href="#footer" data-i18n="cookie.more">Detay</a>
+        <!-- ─── WORK / PROJECTS ─── -->
+        <section class="section work-section" id="work">
+          <div class="section-head reveal">
+            <p class="eyebrow project-tr">Projeler</p>
+            <p class="eyebrow project-en">Projects</p>
+
+            <h2 class="gradient-heading project-tr">Seçili projeler.</h2>
+            <h2 class="gradient-heading project-en">Selected projects.</h2>
+
+            <p class="project-block project-tr">
+              Web siteleri, mobil uygulamalar, oyunlar ve SaaS ürünleri için
+              tasarladığımız, geliştirdiğimiz ve yayına aldığımız seçili
+              çalışmalar.
+            </p>
+            <p class="project-block project-en">
+              Selected work across websites, mobile apps, games and SaaS
+              products that we designed, developed and launched.
+            </p>
+          </div>
+
+          <div class="work-grid">
+            <!-- 01 · HAŞİMOĞLU -->
+            <article class="work-card reveal" data-delay="1">
+              <div class="work-art gradient-a">
+                <div class="browser-window has-shot">
+                  <div class="browser-chrome">
+                    <div class="chrome-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="chrome-url">hasimogluyapimantolama.com</div>
+                  </div>
+                  <div class="browser-shot">
+                    <img
+                      src="./assets/mockup-hasimoglu.jpg"
+                      alt="Haşimoğlu Yapı ve Mantolama web sitesi"
+                      loading="lazy"
+                      decoding="async"
+                      width="1900"
+                      height="906"
+                      onerror="this.classList.add('shot-missing')"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-copy">
+                <p class="work-type project-tr">
+                  KURUMSAL WEB SİTESİ · MÜŞTERİ PROJESİ
+                </p>
+                <p class="work-type project-en">
+                  CORPORATE WEBSITE · CLIENT PROJECT
+                </p>
+
+                <h3>Haşimoğlu Yapı ve Mantolama</h3>
+
+                <p class="project-block project-tr">
+                  Haşimoğlu Yapı ve Mantolama için modern, mobil öncelikli ve
+                  SEO odaklı kurumsal web sitesini tasarlayıp geliştirerek
+                  yayına aldık.
+                </p>
+                <p class="project-block project-en">
+                  We designed, developed and launched a modern, mobile-first and
+                  SEO-ready corporate website for Haşimoğlu Yapı ve Mantolama.
+                </p>
+
+                <div class="work-links">
+                  <a
+                    class="work-link"
+                    href="https://hasimogluyapimantolama.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    >↗ hasimogluyapimantolama.com</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- 02 · LOGUNA -->
+            <article class="work-card reveal" data-delay="2">
+              <div class="work-art gradient-b">
+                <div class="browser-window has-shot">
+                  <div class="browser-chrome">
+                    <div class="chrome-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="chrome-url">loguna.com.tr</div>
+                  </div>
+                  <div class="browser-shot">
+                    <img
+                      src="./assets/mockup-loguna-analysis.jpg"
+                      alt="Loguna YKS ve LGS analiz uygulaması"
+                      loading="lazy"
+                      decoding="async"
+                      width="1897"
+                      height="903"
+                      onerror="this.classList.add('shot-missing')"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-copy">
+                <p class="work-type project-tr">
+                  EĞİTİM / ANALİZ PLATFORMU · MÜŞTERİ PROJESİ
+                </p>
+                <p class="work-type project-en">
+                  EDUCATION / ANALYTICS PLATFORM · CLIENT PROJECT
+                </p>
+
+                <h3>Loguna</h3>
+
+                <p class="project-block project-tr">
+                  YKS ve LGS'ye hazırlanan öğrenciler için geliştirilen analiz
+                  uygulaması. Konu takibi, eksik analizi, performans takibi ve
+                  çalışma planını tek deneyimde bir araya getiriyoruz.
+                </p>
+                <p class="project-block project-en">
+                  An analytics platform for YKS and LGS students, bringing topic
+                  tracking, gap analysis, performance monitoring and study
+                  planning into one experience.
+                </p>
+
+                <div class="work-links">
+                  <a
+                    class="work-link"
+                    href="https://loguna.com.tr/"
+                    target="_blank"
+                    rel="noreferrer"
+                    >↗ loguna.com.tr</a
+                  >
+
+                  <a
+                    class="work-link"
+                    href="https://play.google.com/store/apps/details?id=com.loguna.app"
+                    target="_blank"
+                    rel="noreferrer"
+                    >↗ Play Store</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- 03 · PULSE -->
+            <article class="work-card reveal" data-delay="3">
+              <div class="work-art gradient-c">
+                <div class="browser-window has-shot">
+                  <div class="browser-chrome">
+                    <div class="chrome-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="chrome-url">PULSE · Reflect Game</div>
+                  </div>
+                  <div class="browser-shot">
+                    <img
+                      src="./assets/mockup-pulse.jpg"
+                      alt="PULSE Refleks Oyunu"
+                      loading="lazy"
+                      decoding="async"
+                      width="1663"
+                      height="903"
+                      onerror="this.classList.add('shot-missing')"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-copy">
+                <p class="work-type project-tr">
+                  MOBİL OYUN · AYVEX DEVELOPMENT
+                </p>
+                <p class="work-type project-en">
+                  MOBILE GAME · AYVEX DEVELOPMENT
+                </p>
+
+                <h3>PULSE: Refleks Oyunu</h3>
+
+                <p class="project-block project-tr">
+                  Hızlı tepki, zamanlama ve skor odaklı bir refleks oyunu.
+                  Modern arayüz, akıcı oyun döngüsü ve yüksek tekrar
+                  oynanabilirlik için tasarlandı.
+                </p>
+                <p class="project-block project-en">
+                  A reflex game built around fast reactions, timing and score
+                  chasing, with a modern interface and a tightly designed
+                  gameplay loop.
+                </p>
+
+                <div class="work-links">
+                  <a
+                    class="work-link"
+                    href="https://play.google.com/store/apps/details?id=com.ayvex.pulse"
+                    target="_blank"
+                    rel="noreferrer"
+                    >↗ Play Store</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- 04 · FRUIT MERGE -->
+            <article class="work-card reveal" data-delay="4">
+              <div class="work-art gradient-a">
+                <div class="browser-window has-shot">
+                  <div class="browser-chrome">
+                    <div class="chrome-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="chrome-url">Fruit Merge · Mobile Game</div>
+                  </div>
+                  <div class="browser-shot">
+                    <img
+                      src="./assets/mockup-fruit-merge.jpg"
+                      alt="Fruit Merge Meyve Birleştir mobil oyunu"
+                      loading="lazy"
+                      decoding="async"
+                      width="1663"
+                      height="903"
+                      onerror="this.classList.add('shot-missing')"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-copy">
+                <p class="work-type project-tr">
+                  MOBİL OYUN · AYVEX DEVELOPMENT
+                </p>
+                <p class="work-type project-en">
+                  MOBILE GAME · AYVEX DEVELOPMENT
+                </p>
+
+                <h3>Fruit Merge – Meyve Birleştir</h3>
+
+                <p class="project-block project-tr">
+                  Meyveleri birleştirerek ilerlediğiniz, sade ve renkli bir
+                  mobil oyun. Koleksiyon, tema ve skor sistemiyle uzun süreli
+                  oynanış için tasarlandı.
+                </p>
+                <p class="project-block project-en">
+                  A simple and colorful mobile game built around fruit merging,
+                  collection, themes and score-based progression.
+                </p>
+
+                <div class="work-links">
+                  <a
+                    class="work-link"
+                    href="https://play.google.com/store/apps/details?id=com.loguna.app"
+                    target="_blank"
+                    rel="noreferrer"
+                    >↗ Play Store</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- 05 · ZAPFILE -->
+            <article class="work-card reveal" data-delay="5">
+              <div class="work-art gradient-b">
+                <div class="browser-window has-shot">
+                  <div class="browser-chrome">
+                    <div class="chrome-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="chrome-url">zapfile.xyz</div>
+                  </div>
+                  <div class="browser-shot">
+                    <img
+                      src="./assets/mockup-zapfile.jpg"
+                      alt="ZapFile ekran görüntüsü"
+                      loading="lazy"
+                      decoding="async"
+                      width="1912"
+                      height="896"
+                      onerror="this.classList.add('shot-missing')"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-copy">
+                <p class="work-type project-tr">
+                  SAAS PLATFORMU · MÜŞTERİ PROJESİ
+                </p>
+                <p class="work-type project-en">
+                  SAAS PLATFORM · CLIENT PROJECT
+                </p>
+
+                <h3>ZapFile</h3>
+
+                <p class="project-block project-tr">
+                  Tarayıcı içinde çalışan çok araçlı dosya ve üretkenlik
+                  platformunu sıfırdan geliştirdik; bilgi mimarisi, arayüz
+                  sistemi, performans ve production yayınını birlikte
+                  kurguladık.
+                </p>
+                <p class="project-block project-en">
+                  We built a browser-based productivity and file-tools platform
+                  from the ground up, covering information architecture,
+                  interface systems, performance and production deployment.
+                </p>
+
+                <div class="work-links">
+                  <a
+                    class="work-link"
+                    href="https://www.zapfile.xyz/"
+                    target="_blank"
+                    rel="noreferrer"
+                    >↗ zapfile.xyz</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- 06 · NUR VAKTİ -->
+            <article class="work-card reveal" data-delay="6">
+              <div class="work-art gradient-c">
+                <div class="browser-window has-shot">
+                  <div class="browser-chrome">
+                    <div class="chrome-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="chrome-url">Nur Vakti</div>
+                  </div>
+                  <div class="browser-shot">
+                    <img
+                      src="./assets/mockup-nur-vakti.jpg"
+                      alt="Nur Vakti uygulaması"
+                      loading="lazy"
+                      decoding="async"
+                      width="1663"
+                      height="903"
+                      onerror="this.classList.add('shot-missing')"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-copy">
+                <p class="work-type project-tr">MOBİL UYGULAMA · YAKINDA</p>
+                <p class="work-type project-en">MOBILE APP · COMING SOON</p>
+
+                <h3>Nur Vakti</h3>
+
+                <p class="project-block project-tr">
+                  Günlük ibadet deneyimini sade ve modern bir arayüzle
+                  buluşturan mobil uygulama. Yakında yayında.
+                </p>
+                <p class="project-block project-en">
+                  A modern mobile app designed to make the daily prayer-time
+                  experience simpler and more focused. Launching soon.
+                </p>
+
+                <div class="work-links">
+                  <span class="work-link project-tr">Yakında ↗</span>
+                  <span class="work-link project-en">Coming Soon ↗</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ─── SERVICES ─── -->
+        <section class="section" id="services">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="services.eyebrow">Hizmetler</p>
+            <h2 class="gradient-heading" data-i18n="services.title">
+              Stratejiden yayına, tek teknik ekip.
+            </h2>
+            <p data-i18n="services.text">
+              Marka sitesi, web uygulaması, mobil uygulama veya SaaS aracınız
+              için doğru kapsamı çıkarır; tasarım, geliştirme, deploy ve bakım
+              adımlarını tek planda yönetiriz.
+            </p>
+          </div>
+
+          <div class="bento-grid">
+            <article class="bento-card bento-large reveal" data-delay="1">
+              <span class="service-num">01</span>
+              <div class="service-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18" />
+                </svg>
+              </div>
+              <h3 data-i18n="services.card1Title">
+                Yüksek Performanslı Web Siteleri
+              </h3>
+              <p data-i18n="services.card1Text">
+                Güven veren, hızlı açılan, SEO uyumlu ve yönetilebilir web
+                siteleri. Sadece güzel değil, ölçülebilir.
+              </p>
+              <div class="bento-tags">
+                <span>Next.js</span><span>React</span><span>SEO</span
+                ><span>Vercel</span>
+              </div>
+              <span class="service-arrow" aria-hidden="true">→</span>
+            </article>
+
+            <article class="bento-card reveal" data-delay="2">
+              <span class="service-num">02</span>
+              <div class="service-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="5" y="2.5" width="14" height="19" rx="2.5" />
+                  <path d="M9 6h6M9 10h6M9 14h4" />
+                </svg>
+              </div>
+              <h3 data-i18n="services.card2Title">Mobil ve Web Uygulamaları</h3>
+              <p data-i18n="services.card2Text">
+                Kullanıcı hesabı, panel, bildirim, abonelik ve içerik akışlarını
+                aynı ürün deneyiminde kurgularız.
+              </p>
+              <div class="bento-tags">
+                <span>Flutter</span><span>React Native</span>
+              </div>
+              <span class="service-arrow" aria-hidden="true">→</span>
+            </article>
+
+            <article class="bento-card reveal" data-delay="3">
+              <span class="service-num">03</span>
+              <div class="service-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" />
+                </svg>
+              </div>
+              <h3 data-i18n="services.card3Title">SaaS ve İç Araçlar</h3>
+              <p data-i18n="services.card3Text">
+                Dashboard, otomasyon, raporlama ve dosya işleme araçlarını
+                ölçeklenebilir mimariyle geliştiririz.
+              </p>
+              <div class="bento-tags">
+                <span>Node.js</span><span>Supabase</span>
+              </div>
+              <span class="service-arrow" aria-hidden="true">→</span>
+            </article>
+
+            <article class="bento-card bento-wide reveal" data-delay="4">
+              <span class="service-num">04</span>
+              <div class="service-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4.5 16.5L3 21l4.5-1.5M14.5 4.5l5 5M7.5 19.5a8 8 0 01-3-3l9-9 6 6-9 9a8 8 0 01-3-3z"
+                  />
+                </svg>
+              </div>
+              <h3 data-i18n="services.card4Title">Yayın, Bakım ve Büyüme</h3>
+              <p data-i18n="services.card4Text">
+                Domain, SSL, CDN, analytics, monitoring ve güncelleme süreci.
+                Yayına aldıktan sonra da yalnız bırakmayız.
+              </p>
+              <div class="bento-tags">
+                <span>CI/CD</span><span>Cloudflare</span><span>Analytics</span
+                ><span>Monitoring</span><span>Growth</span>
+              </div>
+              <span class="service-arrow" aria-hidden="true">→</span>
+            </article>
+          </div>
+        </section>
+
+        <!-- ─── WHY AYVEX ─── -->
+        <section class="section" id="why">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="why.eyebrow">Neden AyveX</p>
+            <h2 class="gradient-heading" data-i18n="why.title">
+              Teknolojiyi gösteriş için değil, sonuç için kullanıyoruz.
+            </h2>
+            <p data-i18n="why.text">
+              Animasyon, performans, SEO, analytics ve temiz kod aynı hedefe
+              hizmet eder: kullanıcı güveni, hızlı deneyim ve dönüşüm.
+            </p>
+          </div>
+
+          <div class="why-grid">
+            <article class="why-card reveal" data-delay="1">
+              <div class="why-badge">01</div>
+              <h3 data-i18n="why.card1Title">Ürün mantığıyla geliştiririz</h3>
+              <p data-i18n="why.card1Text">
+                Her ekranı sadece güzel görünsün diye değil, kullanıcıyı doğru
+                aksiyona taşısın diye tasarlarız. Hedef, hız ve dönüşüm aynı
+                planda ilerler.
+              </p>
+            </article>
+            <article class="why-card reveal" data-delay="2">
+              <div class="why-badge">02</div>
+              <h3 data-i18n="why.card2Title">Doğru teknoloji, temiz mimari</h3>
+              <p data-i18n="why.card2Text">
+                Next.js, React, Flutter, Node.js, Vercel, Cloudflare ve modern
+                veri araçlarını ihtiyaca göre seçeriz. Gereksiz teknoloji
+                kalabalığı değil, doğru çözüm.
+              </p>
+            </article>
+            <article class="why-card reveal" data-delay="3">
+              <div class="why-badge">03</div>
+              <h3 data-i18n="why.card3Title">Yayından sonra da yanınızdayız</h3>
+              <p data-i18n="why.card3Text">
+                Deploy sonrası performans, analytics, SEO, içerik güncellemeleri
+                ve bakım sürecini takip ederiz. Ürün yayına çıkınca iş bitmez;
+                başlar.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ─── TESTIMONIALS ─── -->
+        <section class="section testimonials-section">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="testimonials.eyebrow">
+              Müşteri Yorumları
+            </p>
+            <h2 class="gradient-heading" data-i18n="testimonials.title">
+              Birlikte çalıştığımız ekiplerden.
+            </h2>
+          </div>
+          <div class="testimonial-grid">
+            <blockquote class="testimonial-card reveal" data-delay="1">
+              <div class="testimonial-stars">★★★★★</div>
+              <p data-i18n="testimonials.q1">
+                "Kurumsal sitemizin hem güven veren hem de teklif getiren bir
+                yapıda olmasını istiyorduk. AyveX tasarım ve geliştirme tarafını
+                tek noktadan yönetti; süreç netti, teslim de beklediğimizden
+                hızlı oldu."
+              </p>
+              <footer>
+                <div class="testimonial-avatar">H</div>
+                <div class="testimonial-meta">
+                  <strong>Haşimoğlu Yapı</strong>
+                  <span data-i18n="testimonials.role1"
+                    >Kurucu · Haşimoğlu Yapı</span
+                  >
+                </div>
+              </footer>
+            </blockquote>
+
+            <blockquote class="testimonial-card reveal" data-delay="2">
+              <div class="testimonial-stars">★★★★★</div>
+              <p data-i18n="testimonials.q2">
+                "Ortada sadece bir fikir vardı; AyveX bunu gerçek bir web +
+                mobil ürüne çevirdi. Tasarım kararlarından Play Store yayınına
+                kadar tüm teknik süreci sahiplenmeleri bizim için büyük fark
+                yarattı."
+              </p>
+              <footer>
+                <div class="testimonial-avatar">L</div>
+                <div class="testimonial-meta">
+                  <strong>Loguna Ekibi</strong>
+                  <span data-i18n="testimonials.role2"
+                    >Kurucu Ekip · Loguna</span
+                  >
+                </div>
+              </footer>
+            </blockquote>
+
+            <blockquote class="testimonial-card reveal" data-delay="3">
+              <div class="testimonial-stars">★★★★★</div>
+              <p data-i18n="testimonials.q3">
+                "ZapFile tarafında geniş bir araç kütüphanesini hızlı ama
+                düzenli bir ürün deneyimine çevirmemiz gerekiyordu. AyveX
+                mimariyi, arayüz sistemini ve yayın akışını çok temiz kurdu."
+              </p>
+              <footer>
+                <div class="testimonial-avatar">Z</div>
+                <div class="testimonial-meta">
+                  <strong>ZapFile Ekibi</strong>
+                  <span data-i18n="testimonials.role3"
+                    >Ürün Sahibi · ZapFile</span
+                  >
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </section>
+
+        <!-- ─── PROCESS ─── -->
+        <section class="section process-section" id="process">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="process.eyebrow">Çalışma Modeli</p>
+            <h2 class="gradient-heading" data-i18n="process.title">
+              Fikirden yayına net ve ölçülebilir süreç.
+            </h2>
+            <p data-i18n="process.text">
+              Kapsamı, tasarımı, geliştirmeyi ve yayını adım adım planlarız; her
+              aşamada neyin ne zaman teslim edileceği nettir.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item reveal is-expanded" data-delay="1">
+              <button
+                class="timeline-toggle"
+                type="button"
+                aria-expanded="true"
+              >
+                <div class="step-head">
+                  <span class="step-num">01</span>
+                  <svg
+                    class="step-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="11" cy="11" r="7" />
+                    <path d="M20 20l-4-4" />
+                  </svg>
+                  <svg
+                    class="step-chevron"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </div>
+                <h3 data-i18n="process.step1Title">Keşif · 2-3 gün</h3>
+                <p data-i18n="process.step1Text">
+                  Hedef kitle, kapsam, zaman çizelgesi ve bütçe netleşir. Yazılı
+                  teklif gelir.
+                </p>
+              </button>
+              <div class="timeline-detail">
+                <ul>
+                  <li data-i18n="process.step1d1">
+                    Keşif görüşmesi (45-60 dk, Google Meet)
+                  </li>
+                  <li data-i18n="process.step1d2">
+                    Hedef ve başarı metriklerinin çıkarılması
+                  </li>
+                  <li data-i18n="process.step1d3">
+                    Kapsam dokümanı + yazılı sabit fiyat teklifi
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="timeline-item reveal" data-delay="2">
+              <button
+                class="timeline-toggle"
+                type="button"
+                aria-expanded="false"
+              >
+                <div class="step-head">
+                  <span class="step-num">02</span>
+                  <svg
+                    class="step-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M4 20l6-6-3-3-3 3v6h6z" />
+                    <path d="M14 6l4 4M13 7l6-6 3 3-6 6" />
+                  </svg>
+                  <svg
+                    class="step-chevron"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </div>
+                <h3 data-i18n="process.step2Title">Tasarım · 1-2 hafta</h3>
+                <p data-i18n="process.step2Text">
+                  Figma'da komponent bazlı tasarım sistemi. Her sayfa prototip
+                  olarak onaylanır.
+                </p>
+              </button>
+              <div class="timeline-detail">
+                <ul>
+                  <li data-i18n="process.step2d1">
+                    Wireframe + bilgi mimarisi
+                  </li>
+                  <li data-i18n="process.step2d2">
+                    Figma'da komponent kütüphanesi
+                  </li>
+                  <li data-i18n="process.step2d3">
+                    Prototip tarama, mobil + masaüstü onayı
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="timeline-item reveal" data-delay="3">
+              <button
+                class="timeline-toggle"
+                type="button"
+                aria-expanded="false"
+              >
+                <div class="step-head">
+                  <span class="step-num">03</span>
+                  <svg
+                    class="step-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M9 18l-6-6 6-6M15 6l6 6-6 6" />
+                  </svg>
+                  <svg
+                    class="step-chevron"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </div>
+                <h3 data-i18n="process.step3Title">Geliştirme · 2-4 hafta</h3>
+                <p data-i18n="process.step3Text">
+                  Responsive kodlama, performans optimizasyonu, iç test ve
+                  staging ortamı.
+                </p>
+              </button>
+              <div class="timeline-detail">
+                <ul>
+                  <li data-i18n="process.step3d1">
+                    Next.js / React / Flutter — ihtiyaca göre
+                  </li>
+                  <li data-i18n="process.step3d2">
+                    Lighthouse 95+ ve Core Web Vitals optimizasyonu
+                  </li>
+                  <li data-i18n="process.step3d3">
+                    Staging ortamı, iç QA ve kabul testleri
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="timeline-item reveal" data-delay="4">
+              <button
+                class="timeline-toggle"
+                type="button"
+                aria-expanded="false"
+              >
+                <div class="step-head">
+                  <span class="step-num">04</span>
+                  <svg
+                    class="step-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4.5 16.5L3 21l4.5-1.5M14.5 4.5l5 5M7.5 19.5a8 8 0 01-3-3l9-9 6 6-9 9a8 8 0 01-3-3z"
+                    />
+                  </svg>
+                  <svg
+                    class="step-chevron"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </div>
+                <h3 data-i18n="process.step4Title">Yayın + Destek</h3>
+                <p data-i18n="process.step4Text">
+                  Domain, SSL, analytics, monitoring kurulur. Sonrasında içerik
+                  ve büyüme desteği sürer.
+                </p>
+              </button>
+              <div class="timeline-detail">
+                <ul>
+                  <li data-i18n="process.step4d1">
+                    Vercel / Cloudflare üzerine production deploy
+                  </li>
+                  <li data-i18n="process.step4d2">
+                    Plausible / GA4 + uptime monitoring kurulumu
+                  </li>
+                  <li data-i18n="process.step4d3">
+                    1 ay garanti, sonrası aylık bakım paketi
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ─── FAQ ─── -->
+        <section class="section" id="faq">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="faq.eyebrow">Sık Sorulan Sorular</p>
+            <h2 class="gradient-heading" data-i18n="faq.title">
+              Aklınıza takılan ilk sorular.
+            </h2>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item reveal" data-delay="1">
+              <summary>
+                <span class="faq-num">Q1</span>
+                <span class="faq-question" data-i18n="faq.q1"
+                  >Fiyatlandırma nasıl çalışıyor?</span
+                >
+              </summary>
+              <p data-i18n="faq.a1">
+                Sabit fiyat veriyoruz. Keşif görüşmesinden sonra projenin
+                kapsamına göre net bir teklif hazırlıyoruz. Küçük landing
+                page'ler için daha ekonomik, tam uygulama için kapsamlı
+                paketler.
+              </p>
+            </details>
+            <details class="faq-item reveal" data-delay="2">
+              <summary>
+                <span class="faq-num">Q2</span>
+                <span class="faq-question" data-i18n="faq.q2"
+                  >Bir proje ne kadar sürede biter?</span
+                >
+              </summary>
+              <p data-i18n="faq.a2">
+                Basit kurumsal site: 1-2 hafta. Özellikli web uygulaması: 3-6
+                hafta. Mobil + web kombinasyonu: 6-10 hafta. Keşif aşamasında
+                net süre paylaşılır.
+              </p>
+            </details>
+            <details class="faq-item reveal" data-delay="3">
+              <summary>
+                <span class="faq-num">Q3</span>
+                <span class="faq-question" data-i18n="faq.q3"
+                  >Yayına aldıktan sonra destek veriyor musunuz?</span
+                >
+              </summary>
+              <p data-i18n="faq.a3">
+                Evet. 1 aylık garanti süresi standart. Sonrası için aylık bakım
+                paketleri (içerik güncellemesi, güvenlik, analytics raporu)
+                sunuyoruz.
+              </p>
+            </details>
+            <details class="faq-item reveal" data-delay="4">
+              <summary>
+                <span class="faq-num">Q4</span>
+                <span class="faq-question" data-i18n="faq.q4"
+                  >Kodun sahipliği kimde?</span
+                >
+              </summary>
+              <p data-i18n="faq.a4">
+                Sizde. Teslim sonrası kod tamamen size ait. İsterseniz başka bir
+                ekiple devam edebilirsiniz. Repo, domain, hosting hesapları
+                sizin adınıza açılır.
+              </p>
+            </details>
+            <details class="faq-item reveal" data-delay="4">
+              <summary>
+                <span class="faq-num">Q5</span>
+                <span class="faq-question" data-i18n="faq.q5"
+                  >Tasarımını ben yaptım, sadece geliştirme yapar mısınız?</span
+                >
+              </summary>
+              <p data-i18n="faq.a5">
+                Yaparız. Figma dosyası veya mevcut bir tasarımınız varsa sadece
+                geliştirme + deploy adımlarında da çalışabiliriz.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <!-- ─── STATS / GÜVEN ─── -->
+        <section class="section stats-section reveal">
+          <div class="stats-panel">
+            <div class="stat-item">
+              <strong data-count-to="3" data-suffix="">0</strong>
+              <span data-i18n="stats.label1">Yayındaki proje</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <strong data-count-to="71" data-suffix="+">0</strong>
+              <span data-i18n="stats.label2">Canlı araç</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <strong data-count-to="1500" data-suffix="+">0</strong>
+              <span data-i18n="stats.label3">Eğitim içeriği</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <strong data-count-to="24" data-suffix="h">0</strong>
+              <span data-i18n="stats.label4">Ortalama ilk dönüş</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── CONTACT ─── -->
+        <section class="section contact-section" id="contact">
+          <div class="contact-panel reveal">
+            <div class="contact-copy">
+              <p class="eyebrow" data-i18n="contact.eyebrow">İletişim</p>
+              <h2 class="gradient-heading" data-i18n="contact.title">
+                Projeyi netleştirelim, kapsamı doğru kuralım.
+              </h2>
+              <p class="contact-copy-text" data-i18n="contact.text">
+                Hedefinizi ve mevcut durumu paylaşın. Biz de kapsamı, teknik
+                yaklaşımı ve ilk zaman planını net bir çerçeveyle size geri
+                dönelim.
+              </p>
+              <div
+                class="contact-summary"
+                role="list"
+                aria-label="İlk iletişim çerçevesi"
+                data-i18n-aria-label="contact.summaryAria"
+              >
+                <div class="contact-summary-item" role="listitem">
+                  <span
+                    class="contact-summary-label"
+                    data-i18n="contact.summary1Label"
+                    >İlk yanıt</span
+                  >
+                  <strong data-i18n="contact.summary1Value"
+                    >24 saat içinde</strong
+                  >
+                </div>
+                <div class="contact-summary-item" role="listitem">
+                  <span
+                    class="contact-summary-label"
+                    data-i18n="contact.summary2Label"
+                    >İlk çıktı</span
+                  >
+                  <strong data-i18n="contact.summary2Value"
+                    >Kapsam ve teslim yaklaşımı</strong
+                  >
+                </div>
+                <div class="contact-summary-item" role="listitem">
+                  <span
+                    class="contact-summary-label"
+                    data-i18n="contact.summary3Label"
+                    >E-posta</span
+                  >
+                  <a
+                    class="contact-summary-link"
+                    href="mailto:info@ayvexdevelopment.com"
+                    data-i18n="contact.summary3Value"
+                    >info@ayvexdevelopment.com</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-actions">
+              <div class="contact-form-shell">
+                <div class="contact-form-head">
+                  <p class="contact-form-kicker" data-i18n="contact.formKicker">
+                    Proje bilgileri
+                  </p>
+                  <p class="contact-form-helper" data-i18n="contact.formHelper">
+                    Kısa bilgiler, size net bir ilk teklif çerçevesi
+                    hazırlamamız için yeterli.
+                  </p>
+                </div>
+
+                <form id="leadForm" class="contact-form">
+                  <div class="contact-form-grid">
+                    <label class="contact-field">
+                      <span data-i18n="contact.fieldName">Adınız</span>
+                      <input
+                        id="leadName"
+                        name="name"
+                        type="text"
+                        autocomplete="name"
+                        required
+                        placeholder="Adınız"
+                        data-i18n-placeholder="contact.placeholderName"
+                      />
+                    </label>
+
+                    <label class="contact-field">
+                      <span data-i18n="contact.fieldEmail">E-posta</span>
+                      <input
+                        id="leadEmail"
+                        name="email"
+                        type="email"
+                        inputmode="email"
+                        autocomplete="email"
+                        required
+                        placeholder="ornek@marka.com"
+                        data-i18n-placeholder="contact.placeholderEmail"
+                      />
+                    </label>
+
+                    <label class="contact-field">
+                      <span data-i18n="contact.fieldCompany"
+                        >Şirket / Marka</span
+                      >
+                      <input
+                        id="leadCompany"
+                        name="company"
+                        type="text"
+                        autocomplete="organization"
+                        placeholder="Marka adı"
+                        data-i18n-placeholder="contact.placeholderCompany"
+                      />
+                    </label>
+
+                    <div class="contact-field">
+                      <span data-i18n="contact.fieldProjectType"
+                        >Proje tipi</span
+                      >
+                      <select
+                        id="leadProjectType"
+                        name="projectType"
+                        data-custom-select
+                        data-required-select="true"
+                      >
+                        <option
+                          value=""
+                          selected
+                          data-i18n="contact.projectTypePlaceholder"
+                        >
+                          Bir kategori seçin
+                        </option>
+                        <option
+                          value="website"
+                          data-i18n="contact.projectTypeWebsite"
+                        >
+                          Kurumsal web sitesi
+                        </option>
+                        <option
+                          value="saas"
+                          data-i18n="contact.projectTypeSaas"
+                        >
+                          SaaS / panel
+                        </option>
+                        <option
+                          value="mobile"
+                          data-i18n="contact.projectTypeMobile"
+                        >
+                          Mobil uygulama
+                        </option>
+                        <option
+                          value="web-mobile"
+                          data-i18n="contact.projectTypeWebMobile"
+                        >
+                          Web + mobil ürün
+                        </option>
+                        <option
+                          value="other"
+                          data-i18n="contact.projectTypeOther"
+                        >
+                          Diğer
+                        </option>
+                      </select>
+                    </div>
+
+                    <div class="contact-field">
+                      <span data-i18n="contact.fieldBudget">Bütçe aralığı</span>
+                      <select id="leadBudget" name="budget" data-custom-select>
+                        <option
+                          value=""
+                          selected
+                          data-i18n="contact.budgetPlaceholder"
+                        >
+                          Henüz net değil
+                        </option>
+                        <option value="under-50k" data-i18n="contact.budget1">
+                          50.000 TL altı
+                        </option>
+                        <option value="50-150k" data-i18n="contact.budget2">
+                          50.000 – 150.000 TL
+                        </option>
+                        <option value="150-300k" data-i18n="contact.budget3">
+                          150.000 – 300.000 TL
+                        </option>
+                        <option value="300k-plus" data-i18n="contact.budget4">
+                          300.000 TL+
+                        </option>
+                      </select>
+                    </div>
+
+                    <div class="contact-field">
+                      <span data-i18n="contact.fieldTimeline"
+                        >Başlangıç zamanı</span
+                      >
+                      <select
+                        id="leadTimeline"
+                        name="timeline"
+                        data-custom-select
+                      >
+                        <option
+                          value=""
+                          selected
+                          data-i18n="contact.timelinePlaceholder"
+                        >
+                          Yaklaşık zamanı seçin
+                        </option>
+                        <option value="asap" data-i18n="contact.timeline1">
+                          Hemen / bu hafta
+                        </option>
+                        <option value="2-4-weeks" data-i18n="contact.timeline2">
+                          2-4 hafta içinde
+                        </option>
+                        <option
+                          value="1-2-months"
+                          data-i18n="contact.timeline3"
+                        >
+                          1-2 ay içinde
+                        </option>
+                        <option value="planning" data-i18n="contact.timeline4">
+                          Planlama aşamasındayım
+                        </option>
+                      </select>
+                    </div>
+
+                    <label class="contact-field contact-field-full">
+                      <span data-i18n="contact.fieldMessage"
+                        >Kısaca ne yapmak istiyorsunuz?</span
+                      >
+                      <textarea
+                        id="leadMessage"
+                        name="message"
+                        rows="5"
+                        required
+                        placeholder="Hedefinizi, istediğiniz özellikleri ve mevcut durumu birkaç cümleyle yazın."
+                        data-i18n-placeholder="contact.placeholderMessage"
+                      ></textarea>
+                    </label>
+                  </div>
+
+                  <p class="contact-form-note" data-i18n="contact.note">
+                    Gönderim, varsayılan e-posta uygulamanızda hazır bir proje
+                    e-postası açar.
+                  </p>
+
+                  <div class="contact-primary-action">
+                    <button
+                      class="button button-primary"
+                      type="submit"
+                      data-i18n="contact.submit"
+                    >
+                      Proje talebini hazırla
+                    </button>
+                  </div>
+
+                  <p class="contact-direct-line">
+                    <span data-i18n="contact.directLabel"
+                      >Doğrudan yazmak isterseniz</span
+                    >
+                    <a href="mailto:info@ayvexdevelopment.com"
+                      >info@ayvexdevelopment.com</a
+                    >
+                  </p>
+                  <p
+                    id="contactStatus"
+                    class="contact-status"
+                    aria-live="polite"
+                  ></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── FOOTER ─── -->
+        <footer class="footer reveal" id="footer">
+          <div class="footer-top">
+            <div class="footer-brand-block">
+              <img
+                class="footer-wordmark"
+                src="./assets/ayvex-logo-alone.png"
+                alt="AyveX Development"
+              />
+              <p class="footer-tagline" data-i18n="footer.tagline">
+                Markalar ve girişimler için web, mobil ve SaaS projelerini
+                tasarlayıp geliştiren bağımsız stüdyo.
+              </p>
+              <div class="footer-contact-card">
+                <a
+                  class="footer-email-link"
+                  href="mailto:info@ayvexdevelopment.com"
+                  >info@ayvexdevelopment.com</a
+                >
+                <button
+                  type="button"
+                  class="footer-mail-copy mail-copy-button"
+                  data-copy-mail="info@ayvexdevelopment.com"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="M3 7l9 6 9-6" />
+                  </svg>
+                  <span
+                    class="footer-mail-copy-label"
+                    data-i18n="footer.copyMail"
+                    >E-postayı kopyala</span
+                  >
+                  <span
+                    class="copy-feedback"
+                    data-i18n="footer.copied"
+                    aria-hidden="true"
+                    >Kopyalandı</span
+                  >
+                </button>
+              </div>
+            </div>
+
+            <div class="footer-grid">
+              <div class="footer-col">
+                <h4 data-i18n="footer.colNav">Keşfet</h4>
+                <a href="#work" data-i18n="nav.projects">Projeler</a>
+                <a href="#services" data-i18n="nav.services">Hizmetler</a>
+                <a href="#why" data-i18n="nav.why">Neden Biz</a>
+                <a href="#process" data-i18n="nav.process">Süreç</a>
+                <a href="#faq" data-i18n="nav.faq">SSS</a>
+              </div>
+              <div class="footer-col">
+                <h4 data-i18n="footer.colWork">Seçili Projeler</h4>
+                <a
+                  href="https://loguna.com.tr/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Loguna ↗</a
+                >
+                <a
+                  href="https://www.zapfile.xyz/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >ZapFile ↗</a
+                >
+                <a
+                  href="https://hasimogluyapimantolama.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Haşimoğlu Yapı ↗</a
+                >
+              </div>
+              <div class="footer-col">
+                <h4 data-i18n="footer.colLegal">Yasal</h4>
+                <a href="/privacy" data-i18n="footer.privacy"
+                  >Gizlilik Politikası</a
+                >
+                <a href="/terms" data-i18n="footer.terms">Kullanım Şartları</a>
+                <a href="/kvkk" data-i18n="footer.kvkk"
+                  >KVKK Aydınlatma Metni</a
+                >
+              </div>
+              <div class="footer-col">
+                <h4 data-i18n="footer.colContact">İletişim</h4>
+                <a href="mailto:info@ayvexdevelopment.com"
+                  >info@ayvexdevelopment.com</a
+                >
+                <p class="footer-loc" data-i18n="footer.location">
+                  İstanbul, Türkiye
+                </p>
+                <p class="footer-loc" data-i18n="footer.hours">
+                  Hafta içi · 09:00 – 17:00
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p class="footer-brand">
+              © <span id="yearSpan">2026</span> AyveX Development
+            </p>
+            <p class="footer-note" data-i18n="footer.note">
+              Bağımsız geliştirme stüdyosu · Tüm hakları saklıdır.
+            </p>
+          </div>
+        </footer>
+      </main>
     </div>
-  </div>
 
-  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-  <script src="./script.js" defer></script>
-</body>
+    <!-- Back to top -->
+    <button
+      id="backToTop"
+      class="back-to-top"
+      type="button"
+      aria-label="Yukarı çık"
+      data-i18n-aria-label="a11y.backToTop"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </button>
+
+    <!-- Cookie banner -->
+    <div
+      id="cookieBanner"
+      class="cookie-banner"
+      role="dialog"
+      aria-live="polite"
+      aria-label="Çerez bilgilendirmesi"
+      data-i18n-aria-label="a11y.cookieBanner"
+      hidden
+    >
+      <p data-i18n="cookie.text">
+        Bu site yalnızca temel çalışma için tarayıcı depolamasını kullanır (dil
+        tercihi). İzleme çerezi kullanmıyoruz.
+      </p>
+      <div class="cookie-actions">
+        <button
+          id="cookieAccept"
+          class="button-pill"
+          type="button"
+          data-i18n="cookie.accept"
+        >
+          Tamam
+        </button>
+        <a class="cookie-link" href="/privacy#cookies" data-i18n="cookie.more"
+          >Gizlilik</a
+        >
+      </div>
+    </div>
+
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <script>
+      // Keeps the new project section bilingual in sync with the site's TR/EN switch.
+      (function () {
+        const workSection = document.getElementById("work");
+        if (!workSection) return;
+
+        const sync = function () {
+          const params = new URLSearchParams(window.location.search);
+          const isEnglish =
+            document.documentElement.lang === "en" ||
+            params.get("lang") === "en";
+
+          workSection.classList.toggle("is-en", isEnglish);
+        };
+
+        sync();
+
+        document
+          .querySelectorAll("[data-lang-switch]")
+          .forEach(function (button) {
+            button.addEventListener("click", function () {
+              setTimeout(sync, 0);
+            });
+          });
+
+        new MutationObserver(sync).observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ["lang"],
+        });
+      })();
+    </script>
+
+    <script src="./script.js" defer></script>
+  </body>
 </html>

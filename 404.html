@@ -2,61 +2,35 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 — Sayfa bulunamadı · AyveX Development</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>404 | Sayfa bulunamadı | AyveX Development</title>
+  <meta name="description" content="Aradığınız sayfa bulunamadı. AyveX Development ana sayfasına dönebilir veya doğrudan iletişime geçebilirsiniz.">
   <meta name="robots" content="noindex, follow">
   <meta name="theme-color" content="#04090f">
   <link rel="icon" type="image/png" href="./assets/ayvex-logo-alone.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <canvas id="aurora-canvas" aria-hidden="true"></canvas>
-  <main class="error-shell">
-    <img class="error-icon" src="./assets/ayvex-logo-alone.png" alt="AyveX">
-    <p class="eyebrow">404 · Not Found</p>
-    <h1 class="error-title">Aradığın sayfa bulunamadı.</h1>
-    <p class="error-text">
-      Bağlantı taşınmış, silinmiş veya hiç var olmamış olabilir. Anasayfaya dönüp tekrar deneyebilirsin.
-    </p>
-    <div class="error-actions">
-      <a class="button" href="/">← Anasayfa</a>
-      <a class="button button-secondary" href="/#contact">İletişime geç</a>
-    </div>
+  <main class="legal-page-shell">
+    <a class="legal-back" href="/">&larr; Ana sayfaya dön</a>
+    <section class="legal-card">
+      <header class="legal-header">
+        <p class="eyebrow">404</p>
+        <div class="hero-logo" aria-hidden="true">
+          <img src="./assets/ayvex-logo-alone.png" alt="">
+        </div>
+        <h1>Aradığınız sayfa bulunamadı.</h1>
+        <p class="legal-summary">Bağlantı taşınmış, kaldırılmış veya hiç oluşmamış olabilir. Ana sayfaya dönebilir ya da doğrudan bizimle iletişime geçebilirsiniz.</p>
+      </header>
+      <div class="contact-quick-actions">
+        <a class="button button-primary" href="/">Ana sayfaya dön</a>
+        <a class="button button-secondary" href="/#contact">İletişime geç</a>
+      </div>
+    </section>
   </main>
-  <script>
-    // Aurora canvas — minimal copy from main
-    (() => {
-      const c = document.getElementById('aurora-canvas');
-      if (!c) return;
-      const ctx = c.getContext('2d');
-      let w, h;
-      const resize = () => { w = c.width = innerWidth; h = c.height = innerHeight; };
-      resize(); addEventListener('resize', resize);
-      const blobs = [
-        { x: .2, y: .3, r: 300, col: 'rgba(94,234,212,0.35)' },
-        { x: .8, y: .6, r: 340, col: 'rgba(129,140,248,0.35)' },
-        { x: .5, y: .8, r: 280, col: 'rgba(251,146,60,0.25)' }
-      ];
-      let t = 0;
-      const draw = () => {
-        ctx.clearRect(0,0,w,h);
-        ctx.globalCompositeOperation = 'lighter';
-        blobs.forEach((b,i) => {
-          const x = (b.x + Math.sin(t/60 + i) * .08) * w;
-          const y = (b.y + Math.cos(t/70 + i) * .08) * h;
-          const g = ctx.createRadialGradient(x,y,0,x,y,b.r);
-          g.addColorStop(0, b.col); g.addColorStop(1,'transparent');
-          ctx.fillStyle = g;
-          ctx.fillRect(0,0,w,h);
-        });
-        t++;
-        requestAnimationFrame(draw);
-      };
-      draw();
-    })();
-  </script>
 </body>
 </html>

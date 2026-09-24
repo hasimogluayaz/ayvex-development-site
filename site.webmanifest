@@ -1,7 +1,7 @@
 {
   "name": "AyveX Development",
   "short_name": "AyveX",
-  "description": "Bağımsız yazılım stüdyosu. Loguna & ZapFile'ın arkasındaki ekip.",
+  "description": "Ba\u011f\u0131ms\u0131z st\u00fcdyo; markalar, giri\u015fimler ve uzman ekipler i\u00e7in web, mobil ve SaaS projeleri tasarlar ve geli\u015ftirir.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

@@ -6,32 +6,30 @@
 /* ─── i18n Translations ─────────────────────────────────── */
 const translations = {
   tr: {
-    "nav.projects":  "Ürünler",
-    "nav.services":  "Hizmetler",
-    "nav.why":       "Neden Biz",
-    "nav.process":   "Süreç",
-    "nav.faq":       "SSS",
-    "nav.cta":       "Teklif Al",
-
-    "hero.eyebrow":      "Web · Mobil · SaaS Ürün Stüdyosu",
-    "hero.titleLine1":   "Dijital ürününüzü",
-    "hero.titleLine2":   "uçtan uca kurarız.",
-    "hero.titleLine3":   "Sonra onu yayına çıkarırız.",
-    "hero.titleLine3a":  "Sonra onu",
-    "hero.rot1":         "yayına çıkarırız.",
-    "hero.rot2":         "hızlandırırız.",
-    "hero.rot3":         "ölçekleriz.",
-    "hero.rot4":         "büyütürüz.",
-    "hero.text":         "AyveX Development; web sitesi, mobil uygulama ve SaaS ürünleri için strateji, arayüz, yazılım ve yayına alma sürecini tek ekipte toplar. Hızlı açılan, güvenilir ve ölçeklenebilir ürünler geliştirir; yayından sonra bakım ve büyüme tarafını da yönetiriz.",
-    "hero.primaryCta":   "Projeni Başlatalım",
+    "nav.projects": "Projeler",
+    "nav.services": "Hizmetler",
+    "nav.why": "Neden Biz",
+    "nav.process": "Süreç",
+    "nav.faq": "SSS",
+    "nav.cta": "Teklif Al",
+    "nav.formCta": "Form",
+    "hero.eyebrow": "Web · Mobil · SaaS Geliştirme Stüdyosu",
+    "hero.titleLine1": "Dijital ürününüzü",
+    "hero.titleLine2": "uçtan uca kurarız.",
+    "hero.titleLine3": "Sonra onu yayına çıkarırız.",
+    "hero.titleLine3a": "Sonra onu",
+    "hero.rot1": "yayına çıkarırız.",
+    "hero.rot2": "hızlandırırız.",
+    "hero.rot3": "ölçekleriz.",
+    "hero.rot4": "büyütürüz.",
+    "hero.text": "AyveX Development; markalar, girişimler ve uzman ekipler için web sitesi, mobil uygulama ve SaaS projelerini strateji, arayüz, yazılım ve yayına alma dahil uçtan uca geliştirir. Gerektiğinde bakım ve büyüme tarafını da tek ekipte yönetiriz.",
+    "hero.primaryCta": "Projeni Başlatalım",
     "hero.secondaryCta": "Canlı İşleri Gör",
-
-    "hero.metric1Text":  "Canlı ürün deneyimi",
-    "hero.metric2Text":  "Tarayıcı aracı",
-    "hero.metric3Text":  "İlk dönüş hedefi",
-    "hero.liveStatus":   "Şu an canlı · 2 ürün, 71 araç aktif",
-
-    "hero.panelTitle":  "Ürün Komuta Merkezi",
+    "hero.metric1Text": "Yayındaki proje",
+    "hero.metric2Text": "Canlı araç",
+    "hero.metric3Text": "İlk dönüş hedefi",
+    "hero.liveStatus": "Şu an canlı · 3 yayındaki iş, 71 araç aktif",
+    "hero.panelTitle": "Teslim ve Operasyon",
     "hero.panel1Label": "Loguna",
     "hero.panel1Value": "Canlı",
     "hero.panel2Label": "ZapFile",
@@ -40,61 +38,55 @@ const translations = {
     "hero.panel3Value": "Web + Mobil",
     "hero.panel4Label": "Operasyon",
     "hero.panel4Value": "Deploy + Bakım",
-
     "trust.text": "Çalıştığımız teknolojiler:",
-    "trust.live": "Ürün hızında teknoloji seçimi",
-
-    "work.eyebrow":    "Ürünlerimiz",
-    "work.title":      "Canlı ürünler, gerçek sonuçlar.",
-    "work.text":       "Sadece vitrin tasarlamıyoruz; kullanılan, ölçülen ve geliştirilen dijital ürünler kuruyoruz. Aşağıda bu yaklaşımın çalışan örnekleri var.",
-    "work.card1Type":  "Eğitim Teknolojisi",
+    "trust.live": "İşe göre teknoloji seçimi",
+    "work.eyebrow": "Projeler",
+    "work.title": "Müşteriler için tasarladık, geliştirdik, yayına aldık.",
+    "work.text": "Markalar, girişimler ve uzman ekipler için sıfırdan kurguladığımız; tasarım, yazılım ve yayın süreçlerini uçtan uca yönettiğimiz seçili işler.",
+    "work.card1Type": "Eğitim Platformu · Müşteri Projesi",
     "work.card1Title": "Loguna",
-    "work.card1Text":  "TYT, AYT ve LGS öğrencileri için akıllı çalışma asistanı: müfredat takibi, net analizi, haftalık plan ve hata defteri. Mobil + web, tek ürün — ücretsiz.",
+    "work.card1Text": "Loguna ekibi için uçtan uca ürün tasarımı ve geliştirme: Next.js web uygulaması, Flutter mobil uygulama, içerik kurgusu ve Play Store yayını.",
     "work.card1Link1": "↗ loguna.com.tr",
     "work.card1Link2": "↗ Play Store",
-    "work.card2Type":  "Tarayıcı Araçları",
+    "work.card2Type": "SaaS Platformu · Müşteri Projesi",
     "work.card2Title": "ZapFile",
-    "work.card2Text":  "Tarayıcıda çalışan 71 dosya aracı: dönüştürme, sıkıştırma, düzenleme. Dosyalarınız cihazınızda kalır, sunucuya yüklenmez. Sınırsız ve ücretsiz.",
+    "work.card2Text": "ZapFile için tarayıcı içinde çalışan 71 araçlık ürün deneyimini sıfırdan kurduk: bilgi mimarisi, arayüz sistemi, performans optimizasyonu ve production deploy.",
     "work.card2Link1": "↗ zapfile.xyz",
-    "work.card3Type":  "Kurumsal Site",
+    "work.card3Type": "Kurumsal Site · Müşteri Projesi",
     "work.card3Title": "Haşimoğlu Yapı ve Mantolama",
-    "work.card3Text":  "İstanbul ve Tekirdağ genelinde mantolama ve dış cephe hizmeti veren kurumsal site. Hızlı, SEO uyumlu ve mobil öncelikli yapı.",
+    "work.card3Text": "Haşimoğlu Yapı ve Mantolama için marka diliyle uyumlu, SEO odaklı ve mobil öncelikli kurumsal siteyi tasarlayıp geliştirerek yayına aldık.",
     "work.card3Link1": "↗ hasimogluyapimantolama.com",
-
-    "services.eyebrow":    "Hizmetler",
-    "services.title":      "Stratejiden yayına, tek teknik ekip.",
-    "services.text":       "Marka sitesi, web uygulaması, mobil uygulama veya SaaS aracınız için doğru kapsamı çıkarır; tasarım, geliştirme, deploy ve bakım adımlarını tek planda yönetiriz.",
+    "services.eyebrow": "Hizmetler",
+    "services.title": "Stratejiden yayına, tek teknik ekip.",
+    "services.text": "Marka sitesi, web uygulaması, mobil uygulama veya SaaS aracınız için doğru kapsamı çıkarır; tasarım, geliştirme, deploy ve bakım adımlarını tek planda yönetiriz.",
     "services.card1Title": "Yüksek Performanslı Web Siteleri",
-    "services.card1Text":  "Güven veren, hızlı açılan, SEO uyumlu ve yönetilebilir web siteleri. Sadece güzel değil, ölçülebilir.",
+    "services.card1Text": "Güven veren, hızlı açılan, SEO uyumlu ve yönetilebilir web siteleri. Sadece güzel değil, ölçülebilir.",
     "services.card2Title": "Mobil ve Web Uygulamaları",
-    "services.card2Text":  "Kullanıcı hesabı, panel, bildirim, abonelik ve içerik akışlarını aynı ürün deneyiminde kurgularız.",
+    "services.card2Text": "Kullanıcı hesabı, panel, bildirim, abonelik ve içerik akışlarını aynı ürün deneyiminde kurgularız.",
     "services.card3Title": "SaaS ve İç Araçlar",
-    "services.card3Text":  "Dashboard, otomasyon, raporlama ve dosya işleme araçlarını ölçeklenebilir mimariyle geliştiririz.",
+    "services.card3Text": "Dashboard, otomasyon, raporlama ve dosya işleme araçlarını ölçeklenebilir mimariyle geliştiririz.",
     "services.card4Title": "Yayın, Bakım ve Büyüme",
-    "services.card4Text":  "Domain, SSL, CDN, analytics, monitoring ve güncelleme süreci. Yayına aldıktan sonra da yalnız bırakmayız.",
-
-    "why.eyebrow":    "Neden AyveX",
-    "why.title":      "Teknolojiyi gösteriş için değil, sonuç için kullanıyoruz.",
-    "why.text":       "Animasyon, performans, SEO, analytics ve temiz kod aynı hedefe hizmet eder: kullanıcı güveni, hızlı deneyim ve dönüşüm.",
+    "services.card4Text": "Domain, SSL, CDN, analytics, monitoring ve güncelleme süreci. Yayına aldıktan sonra da yalnız bırakmayız.",
+    "why.eyebrow": "Neden AyveX",
+    "why.title": "Teknolojiyi gösteriş için değil, sonuç için kullanıyoruz.",
+    "why.text": "Animasyon, performans, SEO, analytics ve temiz kod aynı hedefe hizmet eder: kullanıcı güveni, hızlı deneyim ve dönüşüm.",
     "why.card1Title": "Ürün mantığıyla geliştiririz",
-    "why.card1Text":  "Her ekranı sadece güzel görünsün diye değil, kullanıcıyı doğru aksiyona taşısın diye tasarlarız. Hedef, hız ve dönüşüm aynı planda ilerler.",
+    "why.card1Text": "Her ekranı sadece güzel görünsün diye değil, kullanıcıyı doğru aksiyona taşısın diye tasarlarız. Hedef, hız ve dönüşüm aynı planda ilerler.",
     "why.card2Title": "Doğru teknoloji, temiz mimari",
-    "why.card2Text":  "Next.js, React, Flutter, Node.js, Vercel, Cloudflare ve modern veri araçlarını ihtiyaca göre seçeriz. Gereksiz teknoloji kalabalığı değil, doğru çözüm.",
+    "why.card2Text": "Next.js, React, Flutter, Node.js, Vercel, Cloudflare ve modern veri araçlarını ihtiyaca göre seçeriz. Gereksiz teknoloji kalabalığı değil, doğru çözüm.",
     "why.card3Title": "Yayından sonra da yanınızdayız",
-    "why.card3Text":  "Deploy sonrası performans, analytics, SEO, içerik güncellemeleri ve bakım sürecini takip ederiz. Ürün yayına çıkınca iş bitmez; başlar.",
-
-    "process.eyebrow":    "Çalışma Modeli",
-    "process.title":      "Fikirden yayına net ve ölçülebilir süreç.",
-    "process.text":       "Kapsamı, tasarımı, geliştirmeyi ve yayını adım adım planlarız; her aşamada neyin ne zaman teslim edileceği nettir.",
+    "why.card3Text": "Deploy sonrası performans, analytics, SEO, içerik güncellemeleri ve bakım sürecini takip ederiz. Ürün yayına çıkınca iş bitmez; başlar.",
+    "process.eyebrow": "Çalışma Modeli",
+    "process.title": "Fikirden yayına net ve ölçülebilir süreç.",
+    "process.text": "Kapsamı, tasarımı, geliştirmeyi ve yayını adım adım planlarız; her aşamada neyin ne zaman teslim edileceği nettir.",
     "process.step1Title": "Keşif · 2-3 gün",
-    "process.step1Text":  "Hedef kitle, kapsam, zaman çizelgesi ve bütçe netleşir. Yazılı teklif gelir.",
+    "process.step1Text": "Hedef kitle, kapsam, zaman çizelgesi ve bütçe netleşir. Yazılı teklif gelir.",
     "process.step2Title": "Tasarım · 1-2 hafta",
-    "process.step2Text":  "Figma'da komponent bazlı tasarım sistemi. Her sayfa prototip olarak onaylanır.",
+    "process.step2Text": "Figma'da komponent bazlı tasarım sistemi. Her sayfa prototip olarak onaylanır.",
     "process.step3Title": "Geliştirme · 2-4 hafta",
-    "process.step3Text":  "Responsive kodlama, performans optimizasyonu, iç test ve staging ortamı.",
+    "process.step3Text": "Responsive kodlama, performans optimizasyonu, iç test ve staging ortamı.",
     "process.step4Title": "Yayın + Destek",
-    "process.step4Text":  "Domain, SSL, analytics, monitoring kurulur. Sonrasında içerik ve büyüme desteği sürer.",
-
+    "process.step4Text": "Domain, SSL, analytics, monitoring kurulur. Sonrasında içerik ve büyüme desteği sürer.",
     "process.step1d1": "Keşif görüşmesi (45-60 dk, Google Meet)",
     "process.step1d2": "Hedef ve başarı metriklerinin çıkarılması",
     "process.step1d3": "Kapsam dokümanı + yazılı sabit fiyat teklifi",
@@ -107,79 +99,128 @@ const translations = {
     "process.step4d1": "Vercel / Cloudflare üzerine production deploy",
     "process.step4d2": "Plausible / GA4 + uptime monitoring kurulumu",
     "process.step4d3": "1 ay garanti, sonrası aylık bakım paketi",
-
     "faq.eyebrow": "Sık Sorulan Sorular",
-    "faq.title":   "Aklınıza takılan ilk sorular.",
-    "faq.q1":      "Fiyatlandırma nasıl çalışıyor?",
-    "faq.a1":      "Sabit fiyat veriyoruz. Keşif görüşmesinden sonra projenin kapsamına göre net bir teklif hazırlıyoruz. Küçük landing page'ler için daha ekonomik, tam uygulama için kapsamlı paketler.",
-    "faq.q2":      "Bir proje ne kadar sürede biter?",
-    "faq.a2":      "Basit kurumsal site: 1-2 hafta. Özellikli web uygulaması: 3-6 hafta. Mobil + web kombinasyonu: 6-10 hafta. Keşif aşamasında net süre paylaşılır.",
-    "faq.q3":      "Yayına aldıktan sonra destek veriyor musunuz?",
-    "faq.a3":      "Evet. 1 aylık garanti süresi standart. Sonrası için aylık bakım paketleri (içerik güncellemesi, güvenlik, analytics raporu) sunuyoruz.",
-    "faq.q4":      "Kodun sahipliği kimde?",
-    "faq.a4":      "Sizde. Teslim sonrası kod tamamen size ait. İsterseniz başka bir ekiple devam edebilirsiniz. Repo, domain, hosting hesapları sizin adınıza açılır.",
-    "faq.q5":      "Tasarımını ben yaptım, sadece geliştirme yapar mısınız?",
-    "faq.a5":      "Yaparız. Figma dosyası veya mevcut bir tasarımınız varsa sadece geliştirme + deploy adımlarında da çalışabiliriz.",
-
+    "faq.title": "Aklınıza takılan ilk sorular.",
+    "faq.q1": "Fiyatlandırma nasıl çalışıyor?",
+    "faq.a1": "Sabit fiyat veriyoruz. Keşif görüşmesinden sonra projenin kapsamına göre net bir teklif hazırlıyoruz. Küçük landing page'ler için daha ekonomik, tam uygulama için kapsamlı paketler.",
+    "faq.q2": "Bir proje ne kadar sürede biter?",
+    "faq.a2": "Basit kurumsal site: 1-2 hafta. Özellikli web uygulaması: 3-6 hafta. Mobil + web kombinasyonu: 6-10 hafta. Keşif aşamasında net süre paylaşılır.",
+    "faq.q3": "Yayına aldıktan sonra destek veriyor musunuz?",
+    "faq.a3": "Evet. 1 aylık garanti süresi standart. Sonrası için aylık bakım paketleri (içerik güncellemesi, güvenlik, analytics raporu) sunuyoruz.",
+    "faq.q4": "Kodun sahipliği kimde?",
+    "faq.a4": "Sizde. Teslim sonrası kod tamamen size ait. İsterseniz başka bir ekiple devam edebilirsiniz. Repo, domain, hosting hesapları sizin adınıza açılır.",
+    "faq.q5": "Tasarımını ben yaptım, sadece geliştirme yapar mısınız?",
+    "faq.a5": "Yaparız. Figma dosyası veya mevcut bir tasarımınız varsa sadece geliştirme + deploy adımlarında da çalışabiliriz.",
     "contact.eyebrow": "İletişim",
-    "contact.title":   "Projenizi netleştirelim, doğru teknolojiyle başlatalım.",
-    "contact.text":    "Kısa bir mesaj atın; hedefi, kapsamı ve en doğru teknik yolu birlikte netleştirelim. Size süre, bütçe ve ilk adımları içeren somut bir planla dönelim.",
-
-    "footer.note":        "Bağımsız yazılım stüdyosu · Tüm hakları saklıdır.",
-    "footer.tagline":     "Web, mobil ve SaaS ürünleri için strateji, tasarım, yazılım ve deploy stüdyosu.",
-    "footer.colNav":      "Keşfet",
+    "contact.title": "Projeyi netleştirelim, kapsamı doğru kuralım.",
+    "contact.text": "Hedefinizi ve mevcut durumu paylaşın. Biz de kapsamı, teknik yaklaşımı ve ilk zaman planını net bir çerçeveyle size geri dönelim.",
+    "contact.formKicker": "Proje bilgileri",
+    "contact.formHelper": "Kısa bilgiler, size net bir ilk teklif çerçevesi hazırlamamız için yeterli.",
+    "contact.summaryAria": "İlk iletişim çerçevesi",
+    "contact.summary1Label": "İlk yanıt",
+    "contact.summary1Value": "24 saat içinde",
+    "contact.summary2Label": "İlk çıktı",
+    "contact.summary2Value": "Kapsam ve teslim yaklaşımı",
+    "contact.summary3Label": "E-posta",
+    "contact.summary3Value": "info@ayvexdevelopment.com",
+    "contact.fieldName": "Adınız",
+    "contact.fieldEmail": "E-posta",
+    "contact.fieldCompany": "Şirket / Marka",
+    "contact.fieldProjectType": "Proje tipi",
+    "contact.fieldBudget": "Bütçe aralığı",
+    "contact.fieldTimeline": "Başlangıç zamanı",
+    "contact.fieldMessage": "Kısaca ne yapmak istiyorsunuz?",
+    "contact.placeholderName": "Adınız",
+    "contact.placeholderEmail": "ornek@marka.com",
+    "contact.placeholderCompany": "Marka adı",
+    "contact.placeholderMessage": "Hedefinizi, istediğiniz özellikleri ve mevcut durumu birkaç cümleyle yazın.",
+    "contact.projectTypePlaceholder": "Bir kategori seçin",
+    "contact.projectTypeWebsite": "Kurumsal web sitesi",
+    "contact.projectTypeSaas": "SaaS / panel",
+    "contact.projectTypeMobile": "Mobil uygulama",
+    "contact.projectTypeWebMobile": "Web + mobil ürün",
+    "contact.projectTypeOther": "Diğer",
+    "contact.budgetPlaceholder": "Henüz net değil",
+    "contact.budget1": "50.000 TL altı",
+    "contact.budget2": "50.000 – 150.000 TL",
+    "contact.budget3": "150.000 – 300.000 TL",
+    "contact.budget4": "300.000 TL+",
+    "contact.timelinePlaceholder": "Yaklaşık zamanı seçin",
+    "contact.timeline1": "Hemen / bu hafta",
+    "contact.timeline2": "2-4 hafta içinde",
+    "contact.timeline3": "1-2 ay içinde",
+    "contact.timeline4": "Planlama aşamasındayım",
+    "contact.note": "Gönderim, varsayılan e-posta uygulamanızda hazır bir proje e-postası açar.",
+    "contact.submit": "Proje talebini hazırla",
+    "contact.directLabel": "Doğrudan yazmak isterseniz",
+    "contact.validationProjectType": "Lütfen proje tipini seçin.",
+    "contact.statusOpening": "E-posta taslağı açılıyor. Açılmazsa doğrudan info@ayvexdevelopment.com adresine yazabilirsiniz.",
+    "footer.note": "Bağımsız geliştirme stüdyosu · Tüm hakları saklıdır.",
+    "footer.tagline": "Markalar ve girişimler için web, mobil ve SaaS projelerini tasarlayıp geliştiren bağımsız stüdyo.",
+    "footer.colNav": "Keşfet",
     "footer.colProducts": "Ürünlerimiz",
-    "footer.colContact":  "İletişim",
-    "footer.location":    "İstanbul, Türkiye",
-    "footer.hours":       "Hafta içi · 09:00 – 19:00",
-
-    "stats.label1":  "Canlı ürün",
-    "stats.label2":  "ZapFile aracı",
-    "stats.label3":  "Loguna içeriği",
-    "stats.label4":  "Ortalama yanıt süresi",
-
+    "footer.colContact": "İletişim",
+    "footer.location": "İstanbul, Türkiye",
+    "footer.hours": "Hafta içi · 09:00 – 17:00",
+    "stats.label1": "Yayındaki proje",
+    "stats.label2": "Canlı araç",
+    "stats.label3": "Yayınlanan içerik öğesi",
+    "stats.label4": "Ortalama ilk dönüş",
     "a11y.skipLink": "İçeriğe geç",
-    "cookie.text":   "Bu site yalnızca temel çalışma için tarayıcı depolamasını kullanır (dil tercihi). İzleme çerezi kullanmıyoruz.",
+    "cookie.text": "Bu site yalnızca temel çalışma için tarayıcı depolaması ve dil tercihi çerezi kullanır. İzleme veya reklam çerezi kullanmıyoruz.",
     "cookie.accept": "Tamam",
-    "cookie.more":   "Detay",
-
-    "testimonials.eyebrow": "Kullanıcı Yorumları",
-    "testimonials.title":   "Gerçek kullanıcılar, gerçek deneyimler.",
-    "testimonials.q1":      "\"Loguna sayesinde TYT net ortalamalarım ciddi şekilde arttı. Her şey tek yerde, hata defteri özelliği harika.\"",
-    "testimonials.role1":   "TYT öğrencisi · Loguna",
-    "testimonials.q2":      "\"ZapFile'ı her gün kullanıyorum. Kayıt gerektirmiyor, dosyalarım cihazımda kalıyor. Çok güvenli ve hızlı.\"",
-    "testimonials.role2":   "Grafik Tasarımcı · ZapFile",
-    "testimonials.q3":      "\"AyveX ile çalışmak oldukça profesyoneldi. Teklif net, süreç şeffaf, teslim zamanında. Tekrar çalışırız.\"",
-    "testimonials.role3":   "Girişimci · Müşteri",
+    "cookie.more": "Gizlilik",
+    "testimonials.eyebrow": "Müşteri Yorumları",
+    "testimonials.title": "Birlikte çalıştığımız ekiplerden.",
+    "testimonials.q1": "\"Kurumsal sitemizin hem güven veren hem de teklif getiren bir yapıda olmasını istiyorduk. AyveX tasarım ve geliştirme tarafını tek noktadan yönetti; süreç netti, teslim de beklediğimizden hızlı oldu.\"",
+    "testimonials.role1": "Kurucu · Haşimoğlu Yapı",
+    "testimonials.q2": "\"Ortada sadece bir fikir vardı; AyveX bunu gerçek bir web + mobil ürüne çevirdi. Tasarım kararlarından Play Store yayınına kadar tüm teknik süreci sahiplenmeleri bizim için büyük fark yarattı.\"",
+    "testimonials.role2": "Kurucu Ekip · Loguna",
+    "testimonials.q3": "\"ZapFile tarafında geniş bir araç kütüphanesini hızlı ama düzenli bir ürün deneyimine çevirmemiz gerekiyordu. AyveX mimariyi, arayüz sistemini ve yayın akışını çok temiz kurdu.\"",
+    "testimonials.role3": "Ürün Sahibi · ZapFile",
+    "footer.colWork": "Seçili Projeler",
+    "footer.colLegal": "Yasal",
+    "footer.privacy": "Gizlilik Politikası",
+    "footer.terms": "Kullanım Şartları",
+    "footer.kvkk": "KVKK Aydınlatma Metni",
+    "footer.copyMail": "E-postayı kopyala",
+    "footer.copied": "Kopyalandı",
+    "a11y.menuOpen": "Menüyü aç",
+    "a11y.menuClose": "Menüyü kapat",
+    "a11y.backToTop": "Yukarı çık",
+    "a11y.cookieBanner": "Çerez bilgilendirmesi",
+    "a11y.stackPrimary": "Teknoloji altyapımız",
+    "a11y.stackSecondary": "Üretim ve büyüme kabiliyetlerimiz",
+    "a11y.switchToEnglish": "Dili İngilizceye çevir",
+    "a11y.switchToTurkish": "Dili Türkçeye çevir",
+    "a11y.languageSwitcher": "Dil seçimi",
   },
 
   en: {
-    "nav.projects":  "Products",
-    "nav.services":  "Services",
-    "nav.why":       "Why Us",
-    "nav.process":   "Process",
-    "nav.faq":       "FAQ",
-    "nav.cta":       "Get Quote",
-
-    "hero.eyebrow":      "Web · Mobile · SaaS Product Studio",
-    "hero.titleLine1":   "We build your",
-    "hero.titleLine2":   "digital product end-to-end.",
-    "hero.titleLine3":   "Then we launch it.",
-    "hero.titleLine3a":  "Then we",
-    "hero.rot1":         "launch it.",
-    "hero.rot2":         "speed it up.",
-    "hero.rot3":         "scale it.",
-    "hero.rot4":         "grow it.",
-    "hero.text":         "AyveX Development brings strategy, interface design, software development and deployment into one team for websites, mobile apps and SaaS products. We build fast, reliable and scalable products, then support maintenance and growth after launch.",
-    "hero.primaryCta":   "Start Your Project",
+    "nav.projects": "Work",
+    "nav.services": "Services",
+    "nav.why": "Why Us",
+    "nav.process": "Process",
+    "nav.faq": "FAQ",
+    "nav.cta": "Get Quote",
+    "nav.formCta": "Form",
+    "hero.eyebrow": "Web · Mobile · SaaS Development Studio",
+    "hero.titleLine1": "We build your",
+    "hero.titleLine2": "digital product end-to-end.",
+    "hero.titleLine3": "Then we launch it.",
+    "hero.titleLine3a": "Then we",
+    "hero.rot1": "launch it.",
+    "hero.rot2": "speed it up.",
+    "hero.rot3": "scale it.",
+    "hero.rot4": "grow it.",
+    "hero.text": "AyveX Development helps brands, founders and specialist teams turn ideas into shipped websites, mobile apps and SaaS products. Strategy, interface design, software delivery, launch and post-launch care are handled in one technical team.",
+    "hero.primaryCta": "Start Your Project",
     "hero.secondaryCta": "See Live Work",
-
-    "hero.metric1Text":  "Live product experience",
-    "hero.metric2Text":  "Browser tools",
-    "hero.metric3Text":  "First reply target",
-    "hero.liveStatus":   "Live now · 2 products, 71 tools active",
-
-    "hero.panelTitle":  "Product Command Center",
+    "hero.metric1Text": "Live client launches",
+    "hero.metric2Text": "Live tools",
+    "hero.metric3Text": "First reply target",
+    "hero.liveStatus": "Live now · 3 launched projects, 71 tools active",
+    "hero.panelTitle": "Delivery & Operations",
     "hero.panel1Label": "Loguna",
     "hero.panel1Value": "Online",
     "hero.panel2Label": "ZapFile",
@@ -188,61 +229,55 @@ const translations = {
     "hero.panel3Value": "Web + Mobile",
     "hero.panel4Label": "Operations",
     "hero.panel4Value": "Deploy + Care",
-
     "trust.text": "Technologies we work with:",
-    "trust.live": "Product-speed stack choices",
-
-    "work.eyebrow":    "Our Products",
-    "work.title":      "Live products, real outcomes.",
-    "work.text":       "We do not build static showcases; we build digital products that are used, measured and improved. Below are working examples of that approach.",
-    "work.card1Type":  "Education Technology",
+    "trust.live": "Stack choices matched to the job",
+    "work.eyebrow": "Selected Work",
+    "work.title": "Designed, built and launched for clients.",
+    "work.text": "A selection of client work where we handled product thinking, design, development and release end-to-end.",
+    "work.card1Type": "Education Platform · Client Project",
     "work.card1Title": "Loguna",
-    "work.card1Text":  "Smart study assistant for TYT, AYT and LGS students: curriculum tracking, net analysis, weekly plans and error journal. Mobile + web, one product — free.",
+    "work.card1Text": "End-to-end product design and development for the Loguna team: Next.js web app, Flutter mobile app, content structure and Play Store release.",
     "work.card1Link1": "↗ loguna.com.tr",
     "work.card1Link2": "↗ Play Store",
-    "work.card2Type":  "Browser Tools",
+    "work.card2Type": "SaaS Platform · Client Project",
     "work.card2Title": "ZapFile",
-    "work.card2Text":  "71 file tools running in the browser: conversion, compression, editing. Your files stay on your device, nothing is uploaded. Unlimited and free.",
+    "work.card2Text": "We built ZapFile's 71-tool browser experience from the ground up: information architecture, interface system, performance work and production deployment.",
     "work.card2Link1": "↗ zapfile.xyz",
-    "work.card3Type":  "Corporate Website",
+    "work.card3Type": "Corporate Website · Client Project",
     "work.card3Title": "Haşimoğlu Yapı ve Mantolama",
-    "work.card3Text":  "Corporate site for a thermal insulation and facade company serving Istanbul and Tekirdağ. Fast, SEO-ready and mobile-first.",
+    "work.card3Text": "We designed, developed and launched a mobile-first, SEO-ready corporate site for Haşimoğlu Yapı ve Mantolama.",
     "work.card3Link1": "↗ hasimogluyapimantolama.com",
-
-    "services.eyebrow":    "Services",
-    "services.title":      "One technical team, strategy to launch.",
-    "services.text":       "For brand sites, web apps, mobile apps or SaaS tools, we define the right scope and manage design, development, deployment and maintenance in one plan.",
+    "services.eyebrow": "Services",
+    "services.title": "One technical team, strategy to launch.",
+    "services.text": "For brand sites, web apps, mobile apps or SaaS tools, we define the right scope and manage design, development, deployment and maintenance in one plan.",
     "services.card1Title": "High-Performance Websites",
-    "services.card1Text":  "Trustworthy, fast-loading, SEO-ready and manageable websites. Not just polished, measurable.",
+    "services.card1Text": "Trustworthy, fast-loading, SEO-ready and manageable websites. Not just polished, measurable.",
     "services.card2Title": "Mobile and Web Apps",
-    "services.card2Text":  "Accounts, dashboards, notifications, subscriptions and content flows designed as one product experience.",
+    "services.card2Text": "Accounts, dashboards, notifications, subscriptions and content flows designed as one product experience.",
     "services.card3Title": "SaaS and Internal Tools",
-    "services.card3Text":  "Dashboards, automations, reporting and file-processing tools built on scalable architecture.",
+    "services.card3Text": "Dashboards, automations, reporting and file-processing tools built on scalable architecture.",
     "services.card4Title": "Launch, Care and Growth",
-    "services.card4Text":  "Domain, SSL, CDN, analytics, monitoring and updates. We do not leave after launch.",
-
-    "why.eyebrow":    "Why AyveX",
-    "why.title":      "We use technology for outcomes, not decoration.",
-    "why.text":       "Animation, performance, SEO, analytics and clean code serve one goal: trust, speed and conversion.",
+    "services.card4Text": "Domain, SSL, CDN, analytics, monitoring and updates. We do not leave after launch.",
+    "why.eyebrow": "Why AyveX",
+    "why.title": "We use technology for outcomes, not decoration.",
+    "why.text": "Animation, performance, SEO, analytics and clean code serve one goal: trust, speed and conversion.",
     "why.card1Title": "We build with product logic",
-    "why.card1Text":  "Every screen is designed not only to look good, but to move users toward the right action. Goals, speed and conversion move together.",
+    "why.card1Text": "Every screen is designed not only to look good, but to move users toward the right action. Goals, speed and conversion move together.",
     "why.card2Title": "Right stack, clean architecture",
-    "why.card2Text":  "Next.js, React, Flutter, Node.js, Vercel, Cloudflare and modern data tools are selected by need. No tech clutter, just the right solution.",
+    "why.card2Text": "Next.js, React, Flutter, Node.js, Vercel, Cloudflare and modern data tools are selected by need. No tech clutter, just the right solution.",
     "why.card3Title": "We stay after launch",
-    "why.card3Text":  "After deploy, we track performance, analytics, SEO, content updates and maintenance. Launch is not the end of the product; it is the start.",
-
-    "process.eyebrow":    "Workflow",
-    "process.title":      "A clear, measurable path from idea to launch.",
-    "process.text":       "We plan scope, design, development and release step by step; every stage has a clear delivery target.",
+    "why.card3Text": "After deploy, we track performance, analytics, SEO, content updates and maintenance. Launch is not the end of the product; it is the start.",
+    "process.eyebrow": "Workflow",
+    "process.title": "A clear, measurable path from idea to launch.",
+    "process.text": "We plan scope, design, development and release step by step; every stage has a clear delivery target.",
     "process.step1Title": "Discovery · 2-3 days",
-    "process.step1Text":  "Audience, scope, timeline and budget get clear. Written proposal follows.",
+    "process.step1Text": "Audience, scope, timeline and budget get clear. Written proposal follows.",
     "process.step2Title": "Design · 1-2 weeks",
-    "process.step2Text":  "Component-based design system in Figma. Every page approved as a prototype.",
+    "process.step2Text": "Component-based design system in Figma. Every page approved as a prototype.",
     "process.step3Title": "Development · 2-4 weeks",
-    "process.step3Text":  "Responsive coding, performance optimization, internal QA and a staging environment.",
+    "process.step3Text": "Responsive coding, performance optimization, internal QA and a staging environment.",
     "process.step4Title": "Launch + Support",
-    "process.step4Text":  "Domain, SSL, analytics, monitoring set up. Content and growth support continues afterwards.",
-
+    "process.step4Text": "Domain, SSL, analytics, monitoring set up. Content and growth support continues afterwards.",
     "process.step1d1": "Discovery call (45-60 min, Google Meet)",
     "process.step1d2": "Goal definition and success metrics",
     "process.step1d3": "Scope document + written fixed-price quote",
@@ -255,97 +290,555 @@ const translations = {
     "process.step4d1": "Production deploy on Vercel / Cloudflare",
     "process.step4d2": "Plausible / GA4 + uptime monitoring setup",
     "process.step4d3": "1 month warranty, then monthly care plans",
-
     "faq.eyebrow": "FAQ",
-    "faq.title":   "The first questions people ask.",
-    "faq.q1":      "How does pricing work?",
-    "faq.a1":      "We quote fixed prices. After a discovery call, we prepare a clear proposal based on scope. Smaller landing pages are more affordable; full apps come with comprehensive packages.",
-    "faq.q2":      "How long does a project take?",
-    "faq.a2":      "Simple corporate site: 1-2 weeks. Feature-rich web app: 3-6 weeks. Mobile + web combo: 6-10 weeks. Exact timing is shared at discovery.",
-    "faq.q3":      "Do you support after launch?",
-    "faq.a3":      "Yes. 1 month warranty is standard. Beyond that, we offer monthly maintenance packages (content updates, security, analytics reports).",
-    "faq.q4":      "Who owns the code?",
-    "faq.a4":      "You do. The code is entirely yours after delivery. You can continue with any team. Repos, domains and hosting accounts are created in your name.",
-    "faq.q5":      "I already have a design, can you just build it?",
-    "faq.a5":      "Yes. If you have a Figma file or existing design, we can work only on development + deploy phases.",
-
+    "faq.title": "The first questions people ask.",
+    "faq.q1": "How does pricing work?",
+    "faq.a1": "We quote fixed prices. After a discovery call, we prepare a clear proposal based on scope. Smaller landing pages are more affordable; full apps come with comprehensive packages.",
+    "faq.q2": "How long does a project take?",
+    "faq.a2": "Simple corporate site: 1-2 weeks. Feature-rich web app: 3-6 weeks. Mobile + web combo: 6-10 weeks. Exact timing is shared at discovery.",
+    "faq.q3": "Do you support after launch?",
+    "faq.a3": "Yes. 1 month warranty is standard. Beyond that, we offer monthly maintenance packages (content updates, security, analytics reports).",
+    "faq.q4": "Who owns the code?",
+    "faq.a4": "You do. The code is entirely yours after delivery. You can continue with any team. Repos, domains and hosting accounts are created in your name.",
+    "faq.q5": "I already have a design, can you just build it?",
+    "faq.a5": "Yes. If you have a Figma file or existing design, we can work only on development + deploy phases.",
     "contact.eyebrow": "Contact",
-    "contact.title":   "Let's define the product and start with the right stack.",
-    "contact.text":    "Send a short message; we will clarify the goal, scope and technical route, then reply with a concrete plan covering timeline, budget and first steps.",
-
-    "footer.note":        "Independent software studio · All rights reserved.",
-    "footer.tagline":     "Strategy, design, software and deployment studio for web, mobile and SaaS products.",
-    "footer.colNav":      "Explore",
+    "contact.title": "Let's define the project and frame the scope clearly.",
+    "contact.text": "Share your goal and current stage. We will respond with a clear first frame around scope, technical direction and timing.",
+    "contact.formKicker": "Project details",
+    "contact.formHelper": "These short details are enough for us to prepare a clear first proposal frame.",
+    "contact.summaryAria": "Initial contact frame",
+    "contact.summary1Label": "First reply",
+    "contact.summary1Value": "Within 24 hours",
+    "contact.summary2Label": "First output",
+    "contact.summary2Value": "Scope and delivery approach",
+    "contact.summary3Label": "Email",
+    "contact.summary3Value": "info@ayvexdevelopment.com",
+    "contact.fieldName": "Your name",
+    "contact.fieldEmail": "Email",
+    "contact.fieldCompany": "Company / Brand",
+    "contact.fieldProjectType": "Project type",
+    "contact.fieldBudget": "Budget range",
+    "contact.fieldTimeline": "Preferred start time",
+    "contact.fieldMessage": "What are you trying to build?",
+    "contact.placeholderName": "Your name",
+    "contact.placeholderEmail": "hello@brand.com",
+    "contact.placeholderCompany": "Brand name",
+    "contact.placeholderMessage": "Describe the goal, desired features and current stage in a few sentences.",
+    "contact.projectTypePlaceholder": "Choose a category",
+    "contact.projectTypeWebsite": "Corporate website",
+    "contact.projectTypeSaas": "SaaS / dashboard",
+    "contact.projectTypeMobile": "Mobile app",
+    "contact.projectTypeWebMobile": "Web + mobile product",
+    "contact.projectTypeOther": "Other",
+    "contact.budgetPlaceholder": "Not clear yet",
+    "contact.budget1": "Under TRY 50,000",
+    "contact.budget2": "TRY 50,000 – 150,000",
+    "contact.budget3": "TRY 150,000 – 300,000",
+    "contact.budget4": "TRY 300,000+",
+    "contact.timelinePlaceholder": "Choose an approximate time",
+    "contact.timeline1": "ASAP / this week",
+    "contact.timeline2": "Within 2-4 weeks",
+    "contact.timeline3": "Within 1-2 months",
+    "contact.timeline4": "Still planning",
+    "contact.note": "Submitting opens a prepared project email in your default mail app.",
+    "contact.submit": "Prepare project inquiry",
+    "contact.directLabel": "If you prefer to write directly",
+    "contact.validationProjectType": "Please choose a project type.",
+    "contact.statusOpening": "Opening your draft. If nothing opens, you can write directly to info@ayvexdevelopment.com.",
+    "footer.note": "Independent development studio · All rights reserved.",
+    "footer.tagline": "Independent studio designing and building web, mobile and SaaS projects for brands and founders.",
+    "footer.colNav": "Explore",
     "footer.colProducts": "Our Products",
-    "footer.colContact":  "Contact",
-    "footer.location":    "Istanbul, Turkey",
-    "footer.hours":       "Weekdays · 09:00 – 19:00",
-
-    "stats.label1":  "Live products",
-    "stats.label2":  "ZapFile tools",
-    "stats.label3":  "Loguna topics",
-    "stats.label4":  "Average reply time",
-
+    "footer.colContact": "Contact",
+    "footer.location": "Istanbul, Turkey",
+    "footer.hours": "Weekdays · 09:00 – 17:00",
+    "stats.label1": "Live launches",
+    "stats.label2": "Live tools",
+    "stats.label3": "Published content items",
+    "stats.label4": "Average first reply",
     "a11y.skipLink": "Skip to content",
-    "cookie.text":   "This site only uses browser storage for essentials (language preference). No tracking cookies.",
+    "cookie.text": "This site only uses essential browser storage and a language-preference cookie. No tracking or marketing cookies.",
     "cookie.accept": "Got it",
-    "cookie.more":   "Details",
-
-    "testimonials.eyebrow": "User Reviews",
-    "testimonials.title":   "Real users, real experiences.",
-    "testimonials.q1":      "\"Loguna seriously improved my TYT average scores. Everything in one place, the error journal is brilliant.\"",
-    "testimonials.role1":   "TYT Student · Loguna User",
-    "testimonials.q2":      "\"I use ZapFile every single day. No sign-up needed, my files stay on my device. Fast and trustworthy.\"",
-    "testimonials.role2":   "Graphic Designer · ZapFile User",
-    "testimonials.q3":      "\"Working with AyveX was professional from start to finish. Clear proposal, transparent process, on-time delivery. Would work again.\"",
-    "testimonials.role3":   "Entrepreneur · AyveX Client",
+    "cookie.more": "Privacy",
+    "testimonials.eyebrow": "Client Reviews",
+    "testimonials.title": "From teams that hired AyveX.",
+    "testimonials.q1": "\"We wanted a site that looked credible, ranked locally and worked cleanly on mobile. AyveX handled design and delivery end-to-end and got us live much faster than expected.\"",
+    "testimonials.role1": "Founder · Haşimoğlu Yapı",
+    "testimonials.q2": "\"We brought AyveX a product idea, not a finished brief. They turned it into a real web + mobile product and managed everything from UI decisions to Play Store launch.\"",
+    "testimonials.role2": "Founding Team · Loguna",
+    "testimonials.q3": "\"ZapFile needed a broad tool library without feeling heavy or messy. AyveX solved the architecture, interface system and launch workflow with a very clear process.\"",
+    "testimonials.role3": "Product Owner · ZapFile",
+    "footer.colWork": "Selected Work",
+    "footer.colLegal": "Legal",
+    "footer.privacy": "Privacy Policy",
+    "footer.terms": "Terms of Use",
+    "footer.kvkk": "KVKK Notice",
+    "footer.copyMail": "Copy email",
+    "footer.copied": "Copied",
+    "a11y.menuOpen": "Open menu",
+    "a11y.menuClose": "Close menu",
+    "a11y.backToTop": "Back to top",
+    "a11y.cookieBanner": "Cookie notice",
+    "a11y.stackPrimary": "Our core technology stack",
+    "a11y.stackSecondary": "Our delivery and growth capabilities",
+    "a11y.switchToEnglish": "Switch language to English",
+    "a11y.switchToTurkish": "Switch language to Turkish",
+    "a11y.languageSwitcher": "Language selector",
   }
 };
 
 /* ─── Language ──────────────────────────────────────────── */
-const langToggle   = document.querySelector("#langToggle");
+const languageSwitchers = document.querySelectorAll("[data-language-switcher]");
+const langSwitchButtons = Array.from(document.querySelectorAll("[data-lang-switch]"));
 const translatable = document.querySelectorAll("[data-i18n]");
-const pageTitle    = document.querySelector("title");
-const pageMeta     = document.querySelector('meta[name="description"]');
+const ariaTranslatable = document.querySelectorAll("[data-i18n-aria-label]");
+const placeholderTranslatable = document.querySelectorAll("[data-i18n-placeholder]");
+const pageTitle = document.querySelector("title");
+const pageMeta = document.querySelector('meta[name="description"]');
+const canonicalLink = document.querySelector("#canonicalLink");
+const alternateTrLink = document.querySelector("#alternateTr");
+const alternateEnLink = document.querySelector("#alternateEn");
+const ogTitle = document.querySelector("#ogTitle");
+const ogDescription = document.querySelector("#ogDescription");
+const ogUrl = document.querySelector("#ogUrl");
+const ogLocale = document.querySelector("#ogLocale");
+const ogLocaleAlternate = document.querySelector("#ogLocaleAlternate");
+const twitterTitle = document.querySelector("#twitterTitle");
+const twitterDescription = document.querySelector("#twitterDescription");
+const orgSchema = document.querySelector("#orgSchema");
+const faqSchema = document.querySelector("#faqSchema");
+const menuToggleButton = document.querySelector(".menu-toggle");
+const heroWordRotator = document.querySelector(".word-rotator");
+const heroRotatorWords = heroWordRotator ? Array.from(heroWordRotator.querySelectorAll(".word")) : [];
+let heroRotatorWidthFrame = null;
+const LANGUAGE_STORAGE_KEY = "ayvex-language";
+const LANGUAGE_COOKIE_KEY = "ayvex-language";
+
+function parseLanguagePreference(value) {
+  if (value === "en" || value === "tr") return value;
+  return null;
+}
+
+function getLanguageCookie() {
+  const match = document.cookie
+    .split(";")
+    .map((part) => part.trim())
+    .find((part) => part.startsWith(`${LANGUAGE_COOKIE_KEY}=`));
+
+  if (!match) return null;
+  return parseLanguagePreference(decodeURIComponent(match.slice(LANGUAGE_COOKIE_KEY.length + 1)));
+}
+
+function setLanguageCookie(lang) {
+  const secureFlag = window.location.protocol === "https:" ? "; Secure" : "";
+  document.cookie = `${LANGUAGE_COOKIE_KEY}=${encodeURIComponent(lang)}; Path=/; Max-Age=31536000; SameSite=Lax${secureFlag}`;
+}
+
+function getStoredValue(key) {
+  try {
+    return localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+}
+
+function setStoredValue(key, value) {
+  try {
+    localStorage.setItem(key, value);
+  } catch {}
+}
+
+function getBrowserDefaultLanguage() {
+  const locales = Array.isArray(navigator.languages) && navigator.languages.length
+    ? navigator.languages
+    : [navigator.language];
+
+  const hasTurkeyRegion = locales.some((locale) => {
+    if (!locale) return false;
+    const parts = String(locale).replace("_", "-").split("-");
+    return parts[1] && parts[1].toUpperCase() === "TR";
+  });
+
+  if (hasTurkeyRegion) return "tr";
+
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+  if (timezone === "Europe/Istanbul") return "tr";
+
+  return "en";
+}
+
+function syncHeroRotatorWidth() {
+  if (!heroWordRotator || !heroRotatorWords.length) return;
+  let widest = 0;
+  heroRotatorWords.forEach((word) => {
+    widest = Math.max(widest, Math.ceil(word.getBoundingClientRect().width));
+  });
+  if (widest > 0) {
+    heroWordRotator.style.setProperty("--rotator-width", `${widest}px`);
+  }
+}
+
+function queueHeroRotatorWidthSync() {
+  if (heroRotatorWidthFrame) cancelAnimationFrame(heroRotatorWidthFrame);
+  heroRotatorWidthFrame = requestAnimationFrame(() => {
+    heroRotatorWidthFrame = null;
+    syncHeroRotatorWidth();
+  });
+}
+
+const seoByLang = {
+  tr: {
+    title: "AyveX Development — Web, mobil ve SaaS geliştirme stüdyosu",
+    description: "AyveX Development; markalar ve girişimler için web sitesi, mobil uygulama ve SaaS projelerini strateji, tasarım, yazılım, deploy ve bakım dahil uçtan uca geliştirir.",
+    ogTitle: "AyveX Development — Web, mobil ve SaaS geliştirme stüdyosu",
+    ogDescription: "Markalar ve girişimler için web sitesi, mobil uygulama ve SaaS projelerini tasarım, yazılım, deploy ve bakım dahil uçtan uca hayata geçiriyoruz.",
+    twitterTitle: "AyveX Development — Web, mobil ve SaaS geliştirme stüdyosu",
+    twitterDescription: "Web, mobil ve SaaS projeleri için strateji, tasarım, yazılım, deploy ve bakım desteği.",
+    locale: "tr_TR",
+    alternateLocale: "en_US"
+  },
+  en: {
+    title: "AyveX Development — Web, mobile and SaaS development studio",
+    description: "AyveX Development helps brands and founders launch websites, mobile apps and SaaS products with strategy, design, development, deployment and support in one team.",
+    ogTitle: "AyveX Development — Web, mobile and SaaS development studio",
+    ogDescription: "We design, build and launch websites, mobile apps and SaaS products for brands, founders and specialist teams.",
+    twitterTitle: "AyveX Development — Web, mobile and SaaS development studio",
+    twitterDescription: "Strategy, design, development, deployment and post-launch care for web, mobile and SaaS products.",
+    locale: "en_US",
+    alternateLocale: "tr_TR"
+  }
+};
+
+function getLanguageUrl(lang) {
+  const url = new URL(window.location.href);
+  url.hash = "";
+  if (lang === "en") url.searchParams.set("lang", "en");
+  else url.searchParams.delete("lang");
+  return url.toString();
+}
+
+function syncLanguageUrl(lang, replace = true) {
+  const nextUrl = getLanguageUrl(lang);
+  if (window.location.href === nextUrl) return;
+  const updater = replace ? history.replaceState : history.pushState;
+  updater.call(history, null, "", nextUrl);
+}
+
+function buildOrganizationSchema(lang) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ayvexdevelopment.com/#organization",
+        name: "AyveX Development",
+        alternateName: "AyveX",
+        url: "https://ayvexdevelopment.com/",
+        logo: "https://ayvexdevelopment.com/assets/ayvex-logo-alone.png",
+        image: "https://ayvexdevelopment.com/assets/ayvex-logo-alone.png",
+        email: "info@ayvexdevelopment.com",
+        description: lang === "en"
+          ? "Independent technology studio designing, building and launching websites, mobile apps and SaaS products for brands and founders."
+          : "Markalar ve girişimler için web sitesi, mobil uygulama ve SaaS projelerini strateji, tasarım, yazılım ve yayına alma dahil uçtan uca geliştiren bağımsız teknoloji stüdyosu.",
+        foundingLocation: {
+          "@type": "Place",
+          address: { "@type": "PostalAddress", addressLocality: "İstanbul", addressCountry: "TR" }
+        },
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "İstanbul",
+          addressCountry: "TR"
+        },
+        contactPoint: {
+          "@type": "ContactPoint",
+          email: "info@ayvexdevelopment.com",
+          contactType: "customer support",
+          availableLanguage: ["Turkish", "English"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ayvexdevelopment.com/#website",
+        url: "https://ayvexdevelopment.com/",
+        name: "AyveX Development",
+        publisher: { "@id": "https://ayvexdevelopment.com/#organization" },
+        inLanguage: lang
+      }
+    ]
+  };
+}
+
+function buildFaqSchema(lang) {
+  const dict = translations[lang] || translations.tr;
+  const ids = [1, 2, 3, 4, 5];
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: ids.map((id) => ({
+      "@type": "Question",
+      name: dict["faq.q" + id],
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: dict["faq.a" + id]
+      }
+    }))
+  };
+}
+
+function syncSeo(lang) {
+  const seo = seoByLang[lang] || seoByLang.tr;
+  const currentUrl = getLanguageUrl(lang);
+  document.documentElement.lang = lang;
+  if (pageTitle) pageTitle.textContent = seo.title;
+  if (pageMeta) pageMeta.setAttribute("content", seo.description);
+  if (canonicalLink) canonicalLink.setAttribute("href", currentUrl);
+  if (alternateTrLink) alternateTrLink.setAttribute("href", getLanguageUrl("tr"));
+  if (alternateEnLink) alternateEnLink.setAttribute("href", getLanguageUrl("en"));
+  if (ogTitle) ogTitle.setAttribute("content", seo.ogTitle);
+  if (ogDescription) ogDescription.setAttribute("content", seo.ogDescription);
+  if (ogUrl) ogUrl.setAttribute("content", currentUrl);
+  if (ogLocale) ogLocale.setAttribute("content", seo.locale);
+  if (ogLocaleAlternate) ogLocaleAlternate.setAttribute("content", seo.alternateLocale);
+  if (twitterTitle) twitterTitle.setAttribute("content", seo.twitterTitle);
+  if (twitterDescription) twitterDescription.setAttribute("content", seo.twitterDescription);
+}
+
+function syncSchema(lang) {
+  if (orgSchema) orgSchema.textContent = JSON.stringify(buildOrganizationSchema(lang), null, 2);
+  if (faqSchema) faqSchema.textContent = JSON.stringify(buildFaqSchema(lang), null, 2);
+}
+
+function syncLangToggle(lang, dict) {
+  if (!langSwitchButtons.length) return;
+
+  languageSwitchers.forEach((switcher) => {
+    switcher.setAttribute("aria-label", dict["a11y.languageSwitcher"]);
+    switcher.dataset.activeLang = lang;
+  });
+
+  langSwitchButtons.forEach((button) => {
+    const targetLang = button.dataset.langSwitch === "en" ? "en" : "tr";
+    const isActive = targetLang === lang;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", isActive ? "true" : "false");
+    button.setAttribute("aria-label", targetLang === "tr" ? dict["a11y.switchToTurkish"] : dict["a11y.switchToEnglish"]);
+  });
+}
+
+const customSelectRegistry = new Map();
+let customSelectHandlersBound = false;
+
+function closeCustomSelect(instance) {
+  if (!instance) return;
+  instance.root.classList.remove("is-open");
+  instance.field.classList.remove("is-open");
+  instance.trigger.setAttribute("aria-expanded", "false");
+
+  const hasOpenSelect = Array.from(customSelectRegistry.values()).some((entry) => entry.root.classList.contains("is-open"));
+  if (!hasOpenSelect) {
+    document.body.classList.remove("has-select-open");
+  }
+}
+
+function closeAllCustomSelects(except = null) {
+  customSelectRegistry.forEach((instance) => {
+    if (instance !== except) closeCustomSelect(instance);
+  });
+}
+
+function syncCustomSelectInstance(instance) {
+  const options = Array.from(instance.select.options);
+  const selectedOption = options.find((option) => option.selected) || options[0];
+
+  instance.value.textContent = selectedOption ? selectedOption.textContent.trim() : "";
+  instance.trigger.classList.toggle("is-placeholder", !instance.select.value);
+
+  instance.menu.innerHTML = "";
+
+  options.forEach((option, index) => {
+    const optionButton = document.createElement("button");
+    optionButton.type = "button";
+    optionButton.className = "contact-select-option";
+    optionButton.dataset.value = option.value;
+    optionButton.textContent = option.textContent.trim();
+    optionButton.setAttribute("role", "option");
+    optionButton.setAttribute("aria-selected", option.value === instance.select.value ? "true" : "false");
+
+    if (index === 0) optionButton.classList.add("is-placeholder");
+    if (option.value === instance.select.value) optionButton.classList.add("is-selected");
+
+    optionButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      instance.select.value = option.value;
+      instance.select.dispatchEvent(new Event("change", { bubbles: true }));
+      closeCustomSelect(instance);
+    });
+
+    instance.menu.appendChild(optionButton);
+  });
+}
+
+function syncCustomSelects() {
+  customSelectRegistry.forEach((instance) => syncCustomSelectInstance(instance));
+}
+
+function initCustomSelects() {
+  document.querySelectorAll("select[data-custom-select]").forEach((select) => {
+    if (customSelectRegistry.has(select)) {
+      syncCustomSelectInstance(customSelectRegistry.get(select));
+      return;
+    }
+
+    const field = select.closest(".contact-field");
+    if (!field) return;
+
+    field.classList.add("has-custom-select");
+    select.classList.add("contact-native-select");
+
+    const root = document.createElement("div");
+    root.className = "contact-select";
+
+    const trigger = document.createElement("button");
+    trigger.type = "button";
+    trigger.className = "contact-select-trigger is-placeholder";
+    trigger.setAttribute("aria-haspopup", "listbox");
+    trigger.setAttribute("aria-expanded", "false");
+
+    const value = document.createElement("span");
+    value.className = "contact-select-value";
+    trigger.appendChild(value);
+
+    const menu = document.createElement("div");
+    menu.className = "contact-select-menu";
+    menu.setAttribute("role", "listbox");
+
+    root.append(trigger, menu);
+    select.insertAdjacentElement("afterend", root);
+
+    const instance = { field, menu, root, select, trigger, value };
+    customSelectRegistry.set(select, instance);
+
+    trigger.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const isOpen = root.classList.contains("is-open");
+      closeAllCustomSelects(isOpen ? null : instance);
+
+      if (isOpen) {
+        closeCustomSelect(instance);
+        return;
+      }
+
+      root.classList.add("is-open");
+      field.classList.add("is-open");
+      trigger.setAttribute("aria-expanded", "true");
+      document.body.classList.add("has-select-open");
+    });
+
+    select.addEventListener("change", () => {
+      field.classList.remove("is-invalid");
+      syncCustomSelectInstance(instance);
+    });
+
+    syncCustomSelectInstance(instance);
+  });
+
+  if (customSelectHandlersBound) return;
+  customSelectHandlersBound = true;
+
+  document.addEventListener("click", (event) => {
+    if (event.target.closest(".contact-select")) return;
+    closeAllCustomSelects();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeAllCustomSelects();
+  });
+}
 
 function applyLanguage(lang) {
   const dict = translations[lang];
   if (!dict) return;
-  translatable.forEach(el => {
+
+  translatable.forEach((el) => {
     const val = dict[el.dataset.i18n];
     if (!val) return;
     const liveDot = el.querySelector(".live-dot");
     if (liveDot) {
       el.textContent = "";
-      el.append(liveDot, document.createTextNode(` ${val}`));
+      el.append(liveDot, document.createTextNode(" " + val));
       return;
     }
     el.textContent = val;
   });
-  if (lang === "tr") {
-    document.documentElement.lang = "tr";
-    pageTitle.textContent = "AyveX Development — Web, mobil ve SaaS ürün stüdyosu";
-    pageMeta.setAttribute("content", "AyveX Development; web sitesi, mobil uygulama ve SaaS ürünleri için strateji, arayüz, yazılım, deploy ve büyüme sürecini tek ekipte yönetir.");
-    langToggle.textContent = "TR";
-  } else {
-    document.documentElement.lang = "en";
-    pageTitle.textContent = "AyveX Development — Web, mobile and SaaS product studio";
-    pageMeta.setAttribute("content", "AyveX Development manages strategy, interface design, software development, deployment and growth for websites, mobile apps and SaaS products.");
-    langToggle.textContent = "EN";
+
+  ariaTranslatable.forEach((el) => {
+    const val = dict[el.dataset.i18nAriaLabel];
+    if (val) el.setAttribute("aria-label", val);
+  });
+
+  placeholderTranslatable.forEach((el) => {
+    const val = dict[el.dataset.i18nPlaceholder];
+    if (val) el.setAttribute("placeholder", val);
+  });
+
+  syncSeo(lang);
+  syncSchema(lang);
+  syncLangToggle(lang, dict);
+  syncCustomSelects();
+  queueHeroRotatorWidthSync();
+
+  if (menuToggleButton) {
+    const expanded = menuToggleButton.getAttribute("aria-expanded") === "true";
+    menuToggleButton.setAttribute("aria-label", expanded ? dict["a11y.menuClose"] : dict["a11y.menuOpen"]);
   }
 }
 
-function setLanguage(lang) {
-  localStorage.setItem("ayvex-language", lang);
-  applyLanguage(lang);
+function setLanguage(lang, options = {}) {
+  const normalized = lang === "en" ? "en" : "tr";
+  setStoredValue(LANGUAGE_STORAGE_KEY, normalized);
+  setLanguageCookie(normalized);
+  applyLanguage(normalized);
+  if (options.syncUrl !== false) {
+    syncLanguageUrl(normalized, options.replaceUrl !== false);
+  }
 }
 
-const storedLang = localStorage.getItem("ayvex-language");
-setLanguage(storedLang === "en" ? "en" : "tr");
+const urlParams = new URLSearchParams(window.location.search);
+const urlLang = urlParams.get("lang") === "en" ? "en" : "tr";
+const storedLang = parseLanguagePreference(getStoredValue(LANGUAGE_STORAGE_KEY));
+const cookieLang = getLanguageCookie();
+const initialLang = urlParams.has("lang")
+  ? urlLang
+  : (storedLang || cookieLang || getBrowserDefaultLanguage());
+setLanguage(initialLang, { replaceUrl: true, syncUrl: true });
+initCustomSelects();
+queueHeroRotatorWidthSync();
 
-langToggle.addEventListener("click", () => {
-  const cur = localStorage.getItem("ayvex-language") || "tr";
-  setLanguage(cur === "tr" ? "en" : "tr");
+window.addEventListener("resize", queueHeroRotatorWidthSync, { passive: true });
+
+if (document.fonts?.ready) {
+  document.fonts.ready.then(() => {
+    queueHeroRotatorWidthSync();
+  });
+}
+
+langSwitchButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const targetLang = button.dataset.langSwitch === "en" ? "en" : "tr";
+    const currentLang = document.documentElement.lang === "en" ? "en" : "tr";
+    if (targetLang === currentLang) return;
+    setLanguage(targetLang, { replaceUrl: false, syncUrl: true });
+  });
+});
+
+window.addEventListener("popstate", () => {
+  const nextLang = new URLSearchParams(window.location.search).get("lang") === "en" ? "en" : "tr";
+  setStoredValue(LANGUAGE_STORAGE_KEY, nextLang);
+  setLanguageCookie(nextLang);
+  applyLanguage(nextLang);
 });
 
 /* ─── Footer year ───────────────────────────────────────── */
@@ -360,13 +853,12 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
 /* ─── Hero word rotator ─────────────────────────────────── */
 (() => {
   if (prefersReducedMotion) return;
-  const words = document.querySelectorAll(".word-rotator .word");
-  if (words.length < 2) return;
+  if (heroRotatorWords.length < 2) return;
   let idx = 0;
   setInterval(() => {
-    const current = words[idx];
-    idx = (idx + 1) % words.length;
-    const next = words[idx];
+    const current = heroRotatorWords[idx];
+    idx = (idx + 1) % heroRotatorWords.length;
+    const next = heroRotatorWords[idx];
     current.classList.remove("is-active");
     current.classList.add("is-leaving");
     next.classList.add("is-active");
@@ -434,11 +926,27 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
   const accept = document.getElementById("cookieAccept");
   if (!banner || !accept) return;
   const KEY = "ayvex_cookie_ack_v1";
-  if (!localStorage.getItem(KEY)) {
-    setTimeout(() => banner.hidden = false, 1200);
+  if (!getStoredValue(KEY)) {
+    const revealBanner = () => {
+      banner.hidden = false;
+      window.removeEventListener("scroll", revealOnScroll);
+      if (revealTimer) clearTimeout(revealTimer);
+    };
+    const revealOnScroll = () => {
+      if (window.scrollY > revealOffset) revealBanner();
+    };
+    let revealTimer = null;
+    const isMobile = window.matchMedia("(max-width: 560px)").matches;
+    const revealOffset = isMobile ? Math.max(window.innerHeight * 1.35, 720) : 180;
+    if (isMobile) {
+      revealTimer = setTimeout(revealBanner, 8200);
+    } else {
+      window.addEventListener("scroll", revealOnScroll, { passive: true });
+      revealTimer = setTimeout(revealBanner, 1600);
+    }
   }
   accept.addEventListener("click", () => {
-    localStorage.setItem(KEY, "1");
+    setStoredValue(KEY, "1");
     banner.style.animation = "cookie-in 300ms reverse";
     setTimeout(() => banner.hidden = true, 280);
   });
@@ -452,18 +960,24 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
   const panel = document.getElementById("mobileMenu");
   if (!header || !toggle || !panel) return;
 
+  const currentDict = () => translations[document.documentElement.lang === "en" ? "en" : "tr"] || translations.tr;
+  const setToggleLabel = (expanded) => {
+    const dict = currentDict();
+    toggle.setAttribute("aria-label", expanded ? dict["a11y.menuClose"] : dict["a11y.menuOpen"]);
+  };
+
   const closeMenu = () => {
     header.classList.remove("is-menu-open");
     document.body.classList.remove("menu-open");
     toggle.setAttribute("aria-expanded", "false");
-    toggle.setAttribute("aria-label", "Menuyu ac");
+    setToggleLabel(false);
   };
 
   const openMenu = () => {
     header.classList.add("is-menu-open");
     document.body.classList.add("menu-open");
     toggle.setAttribute("aria-expanded", "true");
-    toggle.setAttribute("aria-label", "Menuyu kapat");
+    setToggleLabel(true);
   };
 
   toggle.addEventListener("click", () => {
@@ -471,23 +985,25 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
     else openMenu();
   });
 
-  panel.querySelectorAll("a[href^='#']").forEach(link => {
+  panel.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener("click", closeMenu);
   });
 
-  document.addEventListener("click", event => {
+  document.addEventListener("click", (event) => {
     if (!header.classList.contains("is-menu-open")) return;
     if (panel.contains(event.target) || toggle.contains(event.target)) return;
     closeMenu();
   });
 
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") closeMenu();
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && header.classList.contains("is-menu-open")) closeMenu();
   });
 
   window.addEventListener("resize", () => {
     if (window.innerWidth > 820) closeMenu();
   }, { passive: true });
+
+  setToggleLabel(false);
 })();
 
 /* Scroll progress — transform:scaleX + cached total (no forced reflow) */
@@ -557,68 +1073,14 @@ const spyOb = new IntersectionObserver(entries => {
 
 sectionMap.forEach((_, section) => spyOb.observe(section));
 
-/* 3D tilt, magnetic buttons and aurora canvas removed for performance.
+/* Heavy pointer-follow and magnetic hover effects removed for performance.
    Kept lightweight interactions: reveal-on-scroll, word rotator,
-   count-up, back-to-top, cookie banner, mobile menu, scroll progress. */
+   count-up, back-to-top, cookie banner, mobile menu and scroll progress. */
 
 /* Remove aurora canvas element from DOM if present */
 (function removeAurora() {
   const canvas = document.getElementById("aurora-canvas");
   if (canvas) canvas.remove();
-})();
-
-/* ─── Cursor Glow Tracker ───────────────────────────────── */
-(() => {
-  const glow = document.getElementById("cursorGlow");
-  if (!glow) return;
-  if (!window.matchMedia("(pointer: fine)").matches) return;
-
-  let rafId = null;
-  let mx = window.innerWidth / 2;
-  let my = window.innerHeight / 2;
-
-  window.addEventListener("mousemove", e => {
-    mx = e.clientX;
-    my = e.clientY;
-    if (rafId) return;
-    rafId = requestAnimationFrame(() => {
-      glow.style.left = mx + "px";
-      glow.style.top  = my + "px";
-      rafId = null;
-    });
-  }, { passive: true });
-})();
-
-/* ─── Magnetic Buttons ──────────────────────────────────── */
-(() => {
-  if (prefersReducedMotion) return;
-  if (!window.matchMedia("(pointer: fine)").matches) return;
-
-  const STRENGTH = 0.35; // 0 = none, 1 = full follow
-
-  document.querySelectorAll(".button-primary, .button-ghost").forEach(btn => {
-    let rafId = null;
-
-    btn.addEventListener("mousemove", e => {
-      if (rafId) return;
-      rafId = requestAnimationFrame(() => {
-        const rect = btn.getBoundingClientRect();
-        const cx   = rect.left + rect.width  / 2;
-        const cy   = rect.top  + rect.height / 2;
-        const dx   = (e.clientX - cx) * STRENGTH;
-        const dy   = (e.clientY - cy) * STRENGTH;
-        btn.style.transform = `translate(${dx}px, ${dy}px)`;
-        rafId = null;
-      });
-    }, { passive: true });
-
-    btn.addEventListener("mouseleave", () => {
-      if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
-      btn.style.transition = "transform 0.45s cubic-bezier(0.23,1,0.32,1)";
-      btn.style.transform  = "translate(0,0)";
-      setTimeout(() => { btn.style.transition = ""; }, 460);
-    }, { passive: true });
-  });
 })();
 
 /* ─── Process Timeline — Expand/Collapse ────────────────── */
@@ -645,23 +1107,141 @@ sectionMap.forEach((_, section) => spyOb.observe(section));
   });
 })();
 
-/* ─── Footer mail copy ──────────────────────────────────── */
+/* ─── Contact form + mail copy ─────────────────────────── */
 (() => {
-  const btn = document.querySelector(".footer-mail-copy");
-  if (!btn) return;
-  btn.addEventListener("click", async () => {
-    const mail = btn.dataset.mail || "info@ayvexdevelopment.com";
+  const leadForm = document.getElementById("leadForm");
+  const contactStatus = document.getElementById("contactStatus");
+  const mailCopyButtons = document.querySelectorAll(".mail-copy-button");
+  const defaultMail = "info@ayvexdevelopment.com";
+
+  const currentLang = () => document.documentElement.lang === "en" ? "en" : "tr";
+  const currentDict = () => translations[currentLang()] || translations.tr;
+  const setContactStatus = (message, isError = false) => {
+    if (!contactStatus) return;
+    contactStatus.textContent = message;
+    contactStatus.classList.toggle("is-error", isError);
+  };
+
+  const fallbackCopy = (value) => {
+    const textarea = document.createElement("textarea");
+    textarea.value = value;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "absolute";
+    textarea.style.left = "-9999px";
+    document.body.appendChild(textarea);
+    textarea.select();
+    try { document.execCommand("copy"); } catch {}
+    textarea.remove();
+  };
+
+  const copyMail = async (button) => {
+    const mail = button.dataset.copyMail || defaultMail;
     try {
-      await navigator.clipboard.writeText(mail);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(mail);
+      } else {
+        fallbackCopy(mail);
+      }
     } catch {
-      const ta = document.createElement("textarea");
-      ta.value = mail;
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand("copy"); } catch {}
-      ta.remove();
+      fallbackCopy(mail);
     }
-    btn.classList.add("is-copied");
-    setTimeout(() => btn.classList.remove("is-copied"), 1800);
+
+    button.classList.add("is-copied");
+    window.setTimeout(() => button.classList.remove("is-copied"), 1800);
+  };
+
+  const createLeadDraft = () => {
+    const dict = currentDict();
+    const lang = currentLang();
+    const formData = new FormData(leadForm);
+    const name = (formData.get("name") || "").toString().trim();
+    const email = (formData.get("email") || "").toString().trim();
+    const company = (formData.get("company") || "").toString().trim();
+    const message = (formData.get("message") || "").toString().trim();
+
+    const projectType = leadForm.querySelector("#leadProjectType")?.selectedOptions?.[0]?.textContent?.trim() || "";
+    const budget = leadForm.querySelector("#leadBudget")?.selectedOptions?.[0]?.textContent?.trim() || "";
+    const timeline = leadForm.querySelector("#leadTimeline")?.selectedOptions?.[0]?.textContent?.trim() || "";
+
+    const cleanValue = (value, placeholder) => {
+      if (!value || value === placeholder) return "";
+      return value;
+    };
+
+    const safeProjectType = cleanValue(projectType, dict["contact.projectTypePlaceholder"]);
+    const safeBudget = cleanValue(budget, dict["contact.budgetPlaceholder"]);
+    const safeTimeline = cleanValue(timeline, dict["contact.timelinePlaceholder"]);
+
+    const subject = lang === "en"
+      ? "New project inquiry" + (company ? " · " + company : "")
+      : "Yeni proje talebi" + (company ? " · " + company : "");
+
+    const lines = lang === "en"
+      ? [
+          "Hello AyveX Development,",
+          "",
+          "I would like to discuss a new project.",
+          "",
+          "Name: " + name,
+          "Email: " + email,
+          company ? "Company / Brand: " + company : "",
+          safeProjectType ? "Project type: " + safeProjectType : "",
+          safeBudget ? "Budget range: " + safeBudget : "",
+          safeTimeline ? "Preferred start time: " + safeTimeline : "",
+          "",
+          "Project summary:",
+          message
+        ]
+      : [
+          "Merhaba AyveX Development,",
+          "",
+          "Yeni bir proje hakkında görüşmek istiyorum.",
+          "",
+          "Ad: " + name,
+          "E-posta: " + email,
+          company ? "Şirket / Marka: " + company : "",
+          safeProjectType ? "Proje tipi: " + safeProjectType : "",
+          safeBudget ? "Bütçe aralığı: " + safeBudget : "",
+          safeTimeline ? "Başlangıç zamanı: " + safeTimeline : "",
+          "",
+          "Proje özeti:",
+          message
+        ];
+
+    const body = lines.filter(Boolean).join("\r\n");
+    const mailto = "mailto:" + defaultMail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    return { mailto, dict };
+  };
+
+  mailCopyButtons.forEach((button) => {
+    button.addEventListener("click", () => copyMail(button));
+  });
+
+  if (!leadForm) return;
+
+  const projectTypeSelect = leadForm.querySelector("#leadProjectType");
+  projectTypeSelect?.addEventListener("change", () => {
+    if (!projectTypeSelect.value || !contactStatus?.classList.contains("is-error")) return;
+    setContactStatus("", false);
+  });
+
+  leadForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    setContactStatus("", false);
+
+    if (!leadForm.reportValidity()) return;
+
+    if (projectTypeSelect && !projectTypeSelect.value) {
+      projectTypeSelect.closest(".contact-field")?.classList.add("is-invalid");
+      setContactStatus(currentDict()["contact.validationProjectType"], true);
+      projectTypeSelect.parentElement?.querySelector(".contact-select-trigger")?.focus();
+      return;
+    }
+
+    const draft = createLeadDraft();
+
+    setContactStatus(draft.dict["contact.statusOpening"], false);
+
+    window.location.href = draft.mailto;
   });
 })();
