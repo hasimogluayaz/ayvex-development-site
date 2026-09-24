@@ -1,3 +1,46 @@
+Today 2:42 PM knk yok ben acaba başka yere supabase koymuş olabilir miyim nerde
+bu anlamdım nasıl yayında o zaman Today 4:57 PM hepsini yaptım ma bağlı bir şey
+olmadı Knk aslında GitHub kısmı tamam. Sorun şu: Sen git push yaptığında Vercel
+henüz GitHub'a bağlı değildi. Sonra Vercel'i bağladık. Bu yüzden Vercel, o eski
+5a4db1b commit'ini otomatik olarak yeni deployment'a çevirmedi. Ekrandaki:
+Everything up-to-date şunu söylüyor: GitHub'a gönderecek yeni değişiklik yok.
+Şimdi sadece bunu yapıyoruz VS Code terminaline: git commit --allow-empty -m
+"trigger vercel deployment" Enter. Ardından: git push Enter. Bu sefer gerçekten
+yeni bir commit oluşacak ve Vercel'e bildirim gidecek. Sonra: Vercel →
+Deployments sayfasını yenile. Yeni satırın yaklaşık şöyle görünmesi lazım:
+trigger vercel deployment Ready Production master Çok önemli Şu an eski
+deployment'taki: 5bc3b6c add GSC verification commit'ine bakma. O eski sürüm.
+Senin yeni kodun: 5a4db1b update portfolio projects commit'inde. Yani şimdi
+yapacağın tek şey: git commit --allow-empty -m "trigger vercel deployment" git
+push Bunu yaptıktan sonra Vercel Deployments ekranının fotoğrafını at, yeni
+deployment oluşmuş mu beraber kontrol edelim. fotolar neden yok Heh knk, fotolar
+bilgisayarda var ama sitede görünmüyor çünkü büyük ihtimalle HTML'deki dosya
+adı/uzantıyla assets içindeki gerçek dosya adı uyuşmuyor. Ekranda assets
+klasöründe dosyalar gerçekten var: mockup-fruit-merge mockup-hasimoglu
+mockup-loguna-analysis mockup-nur-vakti mockup-pulse.png mockup-zapfile.png Ama
+sitedeki kartlar EKRAN GÖRÜNTÜSÜ YAKINDA gösteriyor. Bu, resim yüklenemediğinde
+senin mevcut kodundaki hata durumunun çalıştığını gösteriyor. En güçlü ihtimal:
+.jpg / .png uyuşmazlığı Mesela HTML'de şu varsa:
+
+<img src="./assets/mockup-pulse.jpg" />
+
+ama gerçek dosya: mockup-pulse.png ise resim asla yüklenmez. Aynı şey Fruit
+Merge, Nur Vakti ve Loguna için de olabilir. Şimdi en kolay çözüm VS Code'da
+Explorer'daki gerçek dosya adlarına sağ tık → Rename yap ve uzantıyı görünür
+hale getir. Windows'ta da: Dosya Gezgini → Görünüm → Göster → Dosya adı
+uzantıları kutusunu aç. Sonra bana şu 6 dosyanın tam adlarını gönder:
+mockup-hasimoglu.??? mockup-loguna-analysis.??? mockup-pulse.???
+mockup-fruit-merge.??? mockup-zapfile.??? mockup-nur-vakti.??? Ben de HTML'deki
+6 src satırını birebir doğru dosya adlarına göre düzelteyim. Bir de önemli
+nokta: fotoğrafların bilgisayarında bulunması tek başına yeterli değil; GitHub'a
+da commit edilmiş olmaları gerekiyor. git status temiz olduğu için onları daha
+önce commit etmiş olma ihtimalin yüksek, ama bunu GitHub'daki assets klasöründen
+de kontrol etmek gerekir. Pasted text.txt Document png miş kodu değiş Tamam knk,
+6 projenin görsel yollarını .jpg → .png olarak değiştirdim. Artık assets
+klasöründeki PNG dosyalarını çağıracak. Güncel dosya: Güncellenmiş index.html
+Bunu mevcut index.html dosyanın yerine koy, sonra: git add . git commit -m "fix
+project images" git push Vercel de yeni sürümü otomatik deploy eder.
+
 <!doctype html>
 <html lang="tr">
   <head>
@@ -605,7 +648,7 @@
                   </div>
                   <div class="browser-shot">
                     <img
-                      src="./assets/mockup-hasimoglu.jpg"
+                      src="./assets/mockup-hasimoglu.png"
                       alt="Haşimoğlu Yapı ve Mantolama web sitesi"
                       loading="lazy"
                       decoding="async"
@@ -661,7 +704,7 @@
                   </div>
                   <div class="browser-shot">
                     <img
-                      src="./assets/mockup-loguna-analysis.jpg"
+                      src="./assets/mockup-loguna-analysis.png"
                       alt="Loguna YKS ve LGS analiz uygulaması"
                       loading="lazy"
                       decoding="async"
@@ -726,7 +769,7 @@
                   </div>
                   <div class="browser-shot">
                     <img
-                      src="./assets/mockup-pulse.jpg"
+                      src="./assets/mockup-pulse.png"
                       alt="PULSE Refleks Oyunu"
                       loading="lazy"
                       decoding="async"
@@ -783,7 +826,7 @@
                   </div>
                   <div class="browser-shot">
                     <img
-                      src="./assets/mockup-fruit-merge.jpg"
+                      src="./assets/mockup-fruit-merge.png"
                       alt="Fruit Merge Meyve Birleştir mobil oyunu"
                       loading="lazy"
                       decoding="async"
@@ -839,7 +882,7 @@
                   </div>
                   <div class="browser-shot">
                     <img
-                      src="./assets/mockup-zapfile.jpg"
+                      src="./assets/mockup-zapfile.png"
                       alt="ZapFile ekran görüntüsü"
                       loading="lazy"
                       decoding="async"
@@ -897,7 +940,7 @@
                   </div>
                   <div class="browser-shot">
                     <img
-                      src="./assets/mockup-nur-vakti.jpg"
+                      src="./assets/mockup-nur-vakti.png"
                       alt="Nur Vakti uygulaması"
                       loading="lazy"
                       decoding="async"
@@ -1984,3 +2027,4 @@
     <script src="./script.js" defer></script>
   </body>
 </html>
+index.html HTML
