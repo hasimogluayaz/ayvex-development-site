@@ -12,7 +12,7 @@ Bu surum, AyveX icin iki dilli (TR/EN) sirket vitrini olarak hazirlandi.
 ## What Is Already Updated
 
 - Bilingual interface (`TR` / `EN`) with one-click language switch
-- Email updated to `info@ayvexdevelopment.com`
+- Email updated to `ayvexdevelopment@gmail.com`
 - Project cards aligned with your real focus:
   - Education application (Play Store + Web)
   - File tools web platform

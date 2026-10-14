@@ -28,7 +28,7 @@ const translations = {
     "hero.metric1Text": "Yayındaki proje",
     "hero.metric2Text": "Canlı araç",
     "hero.metric3Text": "İlk dönüş hedefi",
-    "hero.liveStatus": "Şu an canlı · 3 yayındaki iş, 71 araç aktif",
+    "hero.liveStatus": "Şu an canlı · 5 yayındaki iş, 71 araç aktif",
     "hero.panelTitle": "Teslim ve Operasyon",
     "hero.panel1Label": "Loguna",
     "hero.panel1Value": "Canlı",
@@ -122,7 +122,7 @@ const translations = {
     "contact.summary2Label": "İlk çıktı",
     "contact.summary2Value": "Kapsam ve teslim yaklaşımı",
     "contact.summary3Label": "E-posta",
-    "contact.summary3Value": "info@ayvexdevelopment.com",
+    "contact.summary3Value": "ayvexdevelopment@gmail.com",
     "contact.fieldName": "Adınız",
     "contact.fieldEmail": "E-posta",
     "contact.fieldCompany": "Şirket / Marka",
@@ -154,7 +154,7 @@ const translations = {
     "contact.submit": "Proje talebini hazırla",
     "contact.directLabel": "Doğrudan yazmak isterseniz",
     "contact.validationProjectType": "Lütfen proje tipini seçin.",
-    "contact.statusOpening": "E-posta taslağı açılıyor. Açılmazsa doğrudan info@ayvexdevelopment.com adresine yazabilirsiniz.",
+    "contact.statusOpening": "E-posta taslağı açılıyor. Açılmazsa doğrudan ayvexdevelopment@gmail.com adresine yazabilirsiniz.",
     "footer.note": "Bağımsız geliştirme stüdyosu · Tüm hakları saklıdır.",
     "footer.tagline": "Markalar ve girişimler için web, mobil ve SaaS projelerini tasarlayıp geliştiren bağımsız stüdyo.",
     "footer.colNav": "Keşfet",
@@ -219,7 +219,7 @@ const translations = {
     "hero.metric1Text": "Live client launches",
     "hero.metric2Text": "Live tools",
     "hero.metric3Text": "First reply target",
-    "hero.liveStatus": "Live now · 3 launched projects, 71 tools active",
+    "hero.liveStatus": "Live now · 5 launched projects, 71 tools active",
     "hero.panelTitle": "Delivery & Operations",
     "hero.panel1Label": "Loguna",
     "hero.panel1Value": "Online",
@@ -313,7 +313,7 @@ const translations = {
     "contact.summary2Label": "First output",
     "contact.summary2Value": "Scope and delivery approach",
     "contact.summary3Label": "Email",
-    "contact.summary3Value": "info@ayvexdevelopment.com",
+    "contact.summary3Value": "ayvexdevelopment@gmail.com",
     "contact.fieldName": "Your name",
     "contact.fieldEmail": "Email",
     "contact.fieldCompany": "Company / Brand",
@@ -345,7 +345,7 @@ const translations = {
     "contact.submit": "Prepare project inquiry",
     "contact.directLabel": "If you prefer to write directly",
     "contact.validationProjectType": "Please choose a project type.",
-    "contact.statusOpening": "Opening your draft. If nothing opens, you can write directly to info@ayvexdevelopment.com.",
+    "contact.statusOpening": "Opening your draft. If nothing opens, you can write directly to ayvexdevelopment@gmail.com.",
     "footer.note": "Independent development studio · All rights reserved.",
     "footer.tagline": "Independent studio designing and building web, mobile and SaaS projects for brands and founders.",
     "footer.colNav": "Explore",
@@ -537,7 +537,7 @@ function buildOrganizationSchema(lang) {
         url: "https://ayvexdevelopment.com/",
         logo: "https://ayvexdevelopment.com/assets/ayvex-logo-alone.png",
         image: "https://ayvexdevelopment.com/assets/ayvex-logo-alone.png",
-        email: "info@ayvexdevelopment.com",
+        email: "ayvexdevelopment@gmail.com",
         description: lang === "en"
           ? "Independent technology studio designing, building and launching websites, mobile apps and SaaS products for brands and founders."
           : "Markalar ve girişimler için web sitesi, mobil uygulama ve SaaS projelerini strateji, tasarım, yazılım ve yayına alma dahil uçtan uca geliştiren bağımsız teknoloji stüdyosu.",
@@ -552,7 +552,7 @@ function buildOrganizationSchema(lang) {
         },
         contactPoint: {
           "@type": "ContactPoint",
-          email: "info@ayvexdevelopment.com",
+          email: "ayvexdevelopment@gmail.com",
           contactType: "customer support",
           availableLanguage: ["Turkish", "English"]
         }
@@ -1112,7 +1112,7 @@ sectionMap.forEach((_, section) => spyOb.observe(section));
   const leadForm = document.getElementById("leadForm");
   const contactStatus = document.getElementById("contactStatus");
   const mailCopyButtons = document.querySelectorAll(".mail-copy-button");
-  const defaultMail = "info@ayvexdevelopment.com";
+  const defaultMail = "ayvexdevelopment@gmail.com";
 
   const currentLang = () => document.documentElement.lang === "en" ? "en" : "tr";
   const currentDict = () => translations[currentLang()] || translations.tr;
